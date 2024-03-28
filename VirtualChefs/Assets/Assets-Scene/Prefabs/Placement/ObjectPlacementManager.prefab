@@ -3317,6 +3317,14 @@ MonoBehaviour:
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
+  - ObjectName: Fridge_SBSVisualizer
+    DisplayPrefab: {fileID: 1631328263200394628, guid: b6bf3c3a1cb85604ea7c850af51d77b7, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
   m_floorObject:
   - ObjectName: TicketWheel
     DisplayPrefab: {fileID: 1970403491106562584, guid: 7121ad5422b4c4c2cb75a218eb26521c, type: 3}
