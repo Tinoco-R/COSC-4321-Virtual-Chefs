@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5c5184f2-c2f5-4063-b14b-3b1264fb3c1a
-  instanceId: 7f4ad478-d24b-4c62-9ad0-f6b45a95e929
+  instanceId: fa5323e7-3106-43a0-be50-404cb9cdfca0
   version: 1
 --- !u!33 &5229572513585786854
 MeshFilter:
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5c5184f2-c2f5-4063-b14b-3b1264fb3c1a
-  instanceId: dde5c569-33d2-4356-a013-8494e0abe63d
+  instanceId: 83249b99-8a69-4c1a-9b60-810691335017
   version: 1
 --- !u!33 &3714606433261444315
 MeshFilter:
@@ -972,7 +972,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &6206207113558189509
 MonoBehaviour:

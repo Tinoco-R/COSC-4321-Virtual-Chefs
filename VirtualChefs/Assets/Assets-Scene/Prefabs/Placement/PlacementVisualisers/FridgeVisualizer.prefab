@@ -245,7 +245,7 @@ Transform:
   m_GameObject: {fileID: 2449296809065134350}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.006, y: 0, z: -0.941}
+  m_LocalPosition: {x: 0, y: 0.348, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_userInteractableObject: 1
-  m_radius: 2
+  m_radius: 0.5
   m_placeAgainstWall: 0
   m_onTheWall: 0
   m_flipFaceDirection: 0
@@ -306,8 +306,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.55984914, y: 0.5975486, z: 0.651792}
-  m_Center: {x: -0.027335703, y: 0.43300828, z: -0.040994793}
+  m_Size: {x: 0.55984914, y: 1.128813, z: 0.651792}
+  m_Center: {x: -0.027335703, y: 0.69864047, z: -0.040994793}
 --- !u!54 &1147456700030088699
 Rigidbody:
   m_ObjectHideFlags: 0
