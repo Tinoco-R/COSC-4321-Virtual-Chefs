@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5c5184f2-c2f5-4063-b14b-3b1264fb3c1a
-  instanceId: 52a8320e-9e88-4fc5-aca8-d4a0dcf842c5
+  instanceId: d89f2646-7e9b-46ea-9d63-964424719236
   version: 1
 --- !u!33 &4796893382826154658
 MeshFilter:
@@ -226,9 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b33dbf97b022e804590d701be655893a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDisplay: {fileID: 0}
   progressBar: {fileID: 2538364271242267281}
-  cutText: {fileID: 0}
   cutProgress: 0
   cutGoal: 0
   cut: 0
@@ -296,7 +294,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551011201078936057}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -373,7 +371,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4117932916524691107}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -414,6 +412,7 @@ MonoBehaviour:
   mask: {fileID: 6768855704190574617}
   fill: {fileID: 7020180121750287349}
   color: {r: 0.047058824, g: 0.7294118, b: 0.5581559, a: 1}
+  progressBarImage: {fileID: 3183267311021157156}
 --- !u!1 &5662945838931686833
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +569,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6701002559633043619}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
