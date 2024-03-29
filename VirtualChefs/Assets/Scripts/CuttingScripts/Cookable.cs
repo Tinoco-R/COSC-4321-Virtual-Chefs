@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Cookable : MonoBehaviour
 {
+   
     [SerializeField] ProgressBar progressBar;
 
     GameObject cookedPrefab;
 
+    public TextMeshProUGUI cookText;
     public float cookProgress;
     public float cookGoal;
     public bool cooked;
 
     private string cookedPrefabDirectory;
+
+
 
     void CopyFromProgressBar(ProgressBar original)
     {
@@ -72,7 +76,9 @@ public class Cookable : MonoBehaviour
         cookGoal = 5.0f;
         cooked = false;
 
+        setCountText();
         UpdateProgressBar();
+ 
 
         // Load the prefab of cooked version of food from the Resources folder
         cookedPrefab = Resources.Load<GameObject>(cookedPrefabDirectory);
@@ -84,11 +90,20 @@ public class Cookable : MonoBehaviour
         progressBar.minimum = 0;
         progressBar.maximum = (int)cookGoal;
         progressBar.current = (int)cookProgress;
+    }
 
-        if (progressBar.current == 0)
+    // Sets count of cuts left (used for testing; not for final product)
+    void setCountText()
+    {
+        int secondsLeft = (int)cookGoal - (int)cookProgress;
+        if (secondsLeft > 0)
         {
-            progressBar.mask.enabled = false;
-            progressBar.fill.enabled = false;
+            cookText.text = "Seconds Left: " + secondsLeft.ToString();
+        }
+
+        else
+        {
+            cookText.text = "Object fully cooked!";
         }
     }
 
@@ -115,7 +130,7 @@ public class Cookable : MonoBehaviour
         // Access the Cookable component attached to the cookedObject and set initial properties
         Cookable cookedCookable = cookedObject.GetComponent<Cookable>();
         cookedCookable.InitializeCookable();
-
+  
         cookedCookable.CopyFromProgressBar(tempProgressBar);
     }
 
@@ -132,7 +147,8 @@ public class Cookable : MonoBehaviour
             // Increment cookProgress every second the meat stays on the stove
             cookProgress += Time.deltaTime;
 
-            // Update progress bar
+            // Update progress bar and text
+            setCountText();
             UpdateProgressBar();
 
             // Check if the meat has been fully cooked
@@ -142,4 +158,24 @@ public class Cookable : MonoBehaviour
             }
         }
     }
+    /*
+    private void OnTriggerEnter(Collider other)
+    {
+        // If mesh box collides with knife call cut
+        if (other.gameObject.CompareTag("Knife") && !cut)
+        {
+            cutProgress++;
+            if (cutProgress >= cutGoal)
+            {
+                setCountText();
+                fullyCut();
+            }
+            else
+            {
+                setCountText();
+            }
+            UpdateProgressBar();
+        }
+    }
+    */
 }
