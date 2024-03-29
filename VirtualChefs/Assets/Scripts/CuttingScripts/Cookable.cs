@@ -115,6 +115,7 @@ public class Cookable : MonoBehaviour
         // Access the Cookable component attached to the cookedObject and set initial properties
         Cookable cookedCookable = cookedObject.GetComponent<Cookable>();
         cookedCookable.InitializeCookable();
+
         cookedCookable.CopyFromProgressBar(tempProgressBar);
     }
 
