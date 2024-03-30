@@ -225,7 +225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea958acb1116b84cae39c1165821fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDisplay: {fileID: 0}
   progressBar: {fileID: 2538364271242267281}
+  cookText: {fileID: 0}
   cookProgress: 0
   cookGoal: 0
   cooked: 0
@@ -281,7 +283,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551011201078936057}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -358,7 +360,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4117932916524691107}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -399,7 +401,6 @@ MonoBehaviour:
   mask: {fileID: 6768855704190574617}
   fill: {fileID: 7020180121750287349}
   color: {r: 0.047058824, g: 0.7294118, b: 0.5581559, a: 1}
-  progressBarImage: {fileID: 3183267311021157156}
 --- !u!1 &5662945838931686833
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +557,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6701002559633043619}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
