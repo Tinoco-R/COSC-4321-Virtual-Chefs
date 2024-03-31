@@ -3293,6 +3293,31 @@ MonoBehaviour:
   m_againstWallObject: []
   m_onWallObject: []
   m_deskObject:
+  - ObjectName: TicketWheel
+    DisplayPrefab: {fileID: 1970403491106562584, guid: 7121ad5422b4c4c2cb75a218eb26521c, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
+  - ObjectName: Knife
+    DisplayPrefab: {fileID: 9136899274768251096, guid: e610a108113273240a94739f7b4dbe09, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
+  m_floorObject:
+  - ObjectName: Fridge
+    DisplayPrefab: {fileID: 2195659660528880652, guid: 4ddc38a31a4127c43baad1c9cdd3b82e, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
   - ObjectName: EggTable
     DisplayPrefab: {fileID: 3967299115179155971, guid: a5f9306d0c32aee4fb2a8b9e13578bc2, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
@@ -3301,33 +3326,8 @@ MonoBehaviour:
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: EggTable2
-    DisplayPrefab: {fileID: 5572763619032285465, guid: f3a2fccf6df2a3349915a570f9da8bcd, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: EggTable1
-    DisplayPrefab: {fileID: 3241462936513520556, guid: ed875bc9fc35d7f489d0217d6680f728, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: Fridge_SBSVisualizer
-    DisplayPrefab: {fileID: 1631328263200394628, guid: b6bf3c3a1cb85604ea7c850af51d77b7, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
-  m_floorObject:
-  - ObjectName: TicketWheel
-    DisplayPrefab: {fileID: 1970403491106562584, guid: 7121ad5422b4c4c2cb75a218eb26521c, type: 3}
+  - ObjectName: PlateCounter
+    DisplayPrefab: {fileID: 1970403491106562584, guid: 909b28ec3355040d9ab1d32bae01c435, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
     WallPosition: {x: 0, y: 0, z: 0}
     WallRotation: {x: 0, y: 0, z: 0, w: 0}
