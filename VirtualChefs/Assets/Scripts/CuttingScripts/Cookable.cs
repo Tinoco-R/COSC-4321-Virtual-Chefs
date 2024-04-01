@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 
@@ -40,7 +41,7 @@ public class Cookable : MonoBehaviour
         else if (currentCookLevel == "CookedMeat")
         {
             cookLevel = "BurntMeat";
-            cookedPrefabDirectory = "Prefabs/BurntMeat";
+            cookedPrefabDirectory = "Prefabs/Cook/BurntMeat";
         }
         else
         {
@@ -74,6 +75,13 @@ public class Cookable : MonoBehaviour
 
         cookProgress = 0.0f;
         cookGoal = 5.0f;
+
+        if (this.tag == "BurntMeat")
+        {
+            cooked = true;
+            return;
+        }
+
         cooked = false;
 
         setCountText();
