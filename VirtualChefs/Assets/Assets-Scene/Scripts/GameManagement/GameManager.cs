@@ -3,6 +3,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets_Scene.Scripts.Photon;
 using CrypticCabinet.Passthrough;
 using CrypticCabinet.Photon;
 using CrypticCabinet.SceneManagement;

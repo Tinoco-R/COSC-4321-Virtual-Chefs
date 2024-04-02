@@ -1,6 +1,7 @@
 // Copyright (c) Meta Platforms, Inc. and affiliates.
 
 using System;
+using Assets_Scene.Scripts.Photon;
 using Fusion;
 using Oculus.Interaction;
 using UnityEngine;
@@ -81,7 +82,7 @@ namespace CrypticCabinet.Utils
 
         public void ClearSelectionOverrides()
         {
-            if (Photon.PhotonConnector.Instance != null && Photon.PhotonConnector.Instance.IsMultiplayerSession)
+            if (PhotonConnector.Instance != null && PhotonConnector.Instance.IsMultiplayerSession)
             {
                 m_snapInteractor.ClearComputeCandidateOverride();
                 m_snapInteractor.ClearComputeShouldSelectOverride();

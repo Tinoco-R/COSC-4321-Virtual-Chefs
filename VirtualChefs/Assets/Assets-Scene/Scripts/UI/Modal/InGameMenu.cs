@@ -1,6 +1,7 @@
 // Copyright (c) Meta Platforms, Inc. and affiliates.
 
 using System.Collections.Generic;
+using Assets_Scene.Scripts.Photon;
 using CrypticCabinet.GameManagement;
 using CrypticCabinet.Passthrough;
 using CrypticCabinet.Photon;

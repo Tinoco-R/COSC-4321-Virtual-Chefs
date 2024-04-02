@@ -2,6 +2,7 @@
 
 using System.Collections;
 using System.Linq;
+using Assets_Scene.Scripts.Photon;
 using CrypticCabinet.Photon;
 using Fusion;
 using UnityEngine;

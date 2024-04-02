@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CrypticCabinet.Colocation;
 using CrypticCabinet.GameManagement;
+using CrypticCabinet.Photon;
 using CrypticCabinet.Photon.Utils;
 using CrypticCabinet.UI;
 using Fusion;
@@ -16,7 +17,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-namespace CrypticCabinet.Photon
+namespace Assets_Scene.Scripts.Photon
 {
     /// <summary>
     ///     Represents different game session states relevant to the Photon workflow.

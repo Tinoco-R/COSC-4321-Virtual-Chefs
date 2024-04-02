@@ -1,5 +1,6 @@
 // Copyright (c) Meta Platforms, Inc. and affiliates.
 
+using Assets_Scene.Scripts.Photon;
 using CrypticCabinet.GameManagement;
 using CrypticCabinet.Photon;
 using UnityEngine;

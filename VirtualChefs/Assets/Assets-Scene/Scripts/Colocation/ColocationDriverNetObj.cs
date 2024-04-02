@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections;
+using Assets_Scene.Scripts.Photon;
 using com.meta.xr.colocation;
 using CrypticCabinet.GameManagement;
 using CrypticCabinet.Photon;

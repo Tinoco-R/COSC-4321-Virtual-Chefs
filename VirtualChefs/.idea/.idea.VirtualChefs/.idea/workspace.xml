@@ -6,22 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="8cf565a9-781f-4892-b429-4dfc108581e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/TicketWheelModel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Prefabs/TicketWheelModel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/TicketWheelPrefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/TicketWheelPrefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combine/BottomBun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combine/BottomBun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combine/TopBun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Combine/TopBun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cook/CookedMeat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cook/CookedMeat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cook/UncookedMeat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cook/UncookedMeat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/CheeseBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/CheeseBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/LettuceBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/LettuceBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/TomatoBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/TomatoBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/ingredient/StoveCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/ingredient/StoveCounter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tickets.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tickets.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ingredient.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ingredient.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CuttingScripts/Cookable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CuttingScripts/Cookable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Colocation/ColocationDriverNetObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Colocation/ColocationDriverNetObj.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Colocation/ColocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Colocation/ColocationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Debugging/NetworkDebugSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Debugging/NetworkDebugSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/Puzzles/PuzzleLoadingGamePhase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/Puzzles/PuzzleLoadingGamePhase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/RoomSetup/ObjectSpawningLogicPhase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/RoomSetup/ObjectSpawningLogicPhase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/Timeline/TimelineGamePhase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/Timeline/TimelineGamePhase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/WaitForGuests/WaitForGuestsPhase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/WaitForGuests/WaitForGuestsPhase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/IntroOutro/ActThreeMultiUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/IntroOutro/ActThreeMultiUserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Photon/PhotonConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Photon/PhotonConnector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Player/CrypticCabinetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Player/CrypticCabinetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Puzzles/Cabinet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Puzzles/Cabinet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/UI/MenuTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/UI/MenuTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/UI/Modal/Credits.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/UI/Modal/Credits.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/UI/Modal/InGameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/UI/Modal/InGameMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/UI/Modal/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/UI/Modal/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/UI/Modal/MultiplayerMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/UI/Modal/MultiplayerMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Utils/NetworkedSnappedObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Utils/NetworkedSnappedObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionAddons/Photon-Fusion-TestSuit-Addon-2.0.0-RC5-824.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionDemos/Photon-Fusion-Intro-Sample-2.0.0-RC5-824.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/FusionMenu/Photon-Fusion-Menu-2.0.0-RC5-824.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +38,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../hws/hw1/Assets/_Core/Scripts/Game Logic/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ingredient/collide.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.meta.xr.sdk.core@60.0.0/Scripts/BuildingBlocks/BuildingBlock.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -48,7 +55,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "game-mgmt",
+    "git-widget-placeholder": "multiplayer-setup1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,6 +120,7 @@
       <workItem from="1710273055266" duration="988000" />
       <workItem from="1710652279580" duration="30000" />
       <workItem from="1710996872844" duration="440000" />
+      <workItem from="1712032973675" duration="500000" />
     </task>
     <servers />
   </component>
