@@ -24,12 +24,28 @@ public class ProgressBar : MonoBehaviour
     public Image mask;
     public Image fill;
     public Color color;
+    public Image progressBarImage;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        mask.enabled = false;
+        fill.enabled = false;
+        HideProgressBar();
     }
+
+    // Method to show the progress bar
+    public void ShowProgressBar()
+    {
+        progressBarImage.enabled = true;
+    }
+
+    // Method to hide the progress bar
+    public void HideProgressBar()
+    {
+        progressBarImage.enabled = false;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -39,11 +55,27 @@ public class ProgressBar : MonoBehaviour
 
     void GetCurrentFill()
     {
-        float currentOffset = (float)current - (float)minimum;
-        float maximumOffset = (float)maximum - (float)minimum;
-        float fillAmount = currentOffset / maximumOffset;
-        mask.fillAmount = fillAmount;
+        // Check if current is greater than 0
+        if (current > 0)
+        {
+            ShowProgressBar();
+            // Calculate fill amount
+            float currentOffset = (float)current - (float)minimum;
+            float maximumOffset = (float)maximum - (float)minimum;
+            float fillAmount = currentOffset / maximumOffset;
 
-        fill.color = color;
+            // Update fill amount and enable the mask and fill
+            mask.fillAmount = fillAmount;
+            mask.enabled = true;
+            fill.enabled = true;
+            fill.color = color;
+        }
+        else
+        {
+            // If current is not greater than 0, disable the mask and fill
+            mask.enabled = false;
+            fill.enabled = false;
+            HideProgressBar();
+        }
     }
 }
