@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Placement : MonoBehaviour
 {
-    public GameObject spawnPositionsParent; // Reference to the parent GameObject of spawn positions
+    public GameObject Wheel; // Reference to the parent GameObject of spawn positions
 
     private bool isGrabbed = false; // Flag to check if the item is grabbed
 
@@ -34,7 +34,7 @@ public class Placement : MonoBehaviour
         Transform nearestSpawn = null;
         float minDistance = Mathf.Infinity;
 
-        foreach (Transform spawnPos in spawnPositionsParent.transform)
+        foreach (Transform spawnPos in Wheel.transform)
         {
             float distance = Vector3.Distance(transform.position, spawnPos.position);
             if (distance < minDistance)

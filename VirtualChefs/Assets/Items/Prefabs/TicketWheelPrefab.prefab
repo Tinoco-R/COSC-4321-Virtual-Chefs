@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 7e919bf1-0d66-4409-b2c3-f69432105a92
+  instanceId: bf190171-39bf-45bb-9e48-7228959fa4c5
   version: 1
 --- !u!114 &1123880571131211332
 MonoBehaviour:
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 11f1ea78-61f7-45ff-80e9-ea954ed47aa8
+  instanceId: 5b03ddb4-53e5-4a75-9a58-7a54dbcc2cb8
   version: 1
 --- !u!114 &1403963506190423696
 MonoBehaviour:
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 623b59b9-0ae0-42f6-81d8-0743d96e0364
+  instanceId: 39c1a753-fb96-45ac-bc50-8a879a55294f
   version: 1
 --- !u!114 &722362996510103021
 MonoBehaviour:
@@ -1796,7 +1796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 715aaa75-d059-431f-8057-17169fb1e155
+  instanceId: 7da38589-504c-497d-b696-e229ba3d8930
   version: 1
 --- !u!114 &200664867133818775
 MonoBehaviour:
@@ -2702,6 +2702,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b6c4799acff9a3d43bcd1be5ac9cf8d7, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 318c0be308d4fa0408571ef9264f19a3, type: 3}
+      propertyPath: m_Name
+      value: Wheel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: 318c0be308d4fa0408571ef9264f19a3, type: 3}
