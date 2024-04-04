@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 3521717189974984601}
   - component: {fileID: 1036418955980990546}
   - component: {fileID: 5805485589648808870}
-  - component: {fileID: 1268429214200913727}
+  - component: {fileID: 5022580021704342789}
   - component: {fileID: 483922084290621513}
   - component: {fileID: 2211233476651745388}
-  - component: {fileID: 2029833954419300686}
   - component: {fileID: 9184833331289435682}
   m_Layer: 0
   m_Name: Plate
@@ -34,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.321, z: -0.795}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 803f3803-bb5e-464a-ac45-dad44c840fb6
-  instanceId: 4ed51a41-d5a4-4c42-b6ca-516a61b1b807
+  instanceId: c736fae1-81f6-446b-aeb0-3e98e1305fb5
   version: 1
 --- !u!33 &1036418955980990546
 MeshFilter:
@@ -104,7 +103,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &1268429214200913727
+--- !u!54 &5022580021704342789
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,7 +111,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2906820443647855272}
   serializedVersion: 4
-  m_Mass: 0.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -127,7 +126,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -167,8 +166,8 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 483922084290621513}
-  _rigidbody: {fileID: 1268429214200913727}
-  _physicsGrabbable: {fileID: 2029833954419300686}
+  _rigidbody: {fileID: 5022580021704342789}
+  _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 0.8
@@ -191,21 +190,6 @@ MonoBehaviour:
   _movementProvider: {fileID: 0}
   _handAligment: 1
   _handGrabPoses: []
---- !u!114 &2029833954419300686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2906820443647855272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bedaac29a943f844a7074b53c8bdf9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _grabbable: {fileID: 483922084290621513}
-  _rigidbody: {fileID: 1268429214200913727}
-  _scaleMassWithSize: 1
 --- !u!64 &9184833331289435682
 MeshCollider:
   m_ObjectHideFlags: 0
