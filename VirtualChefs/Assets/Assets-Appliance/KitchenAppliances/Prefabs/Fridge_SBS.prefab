@@ -261,6 +261,9 @@ GameObject:
   - component: {fileID: 7515683319623383414}
   - component: {fileID: 5740371405445926332}
   - component: {fileID: 8176383646511813480}
+  - component: {fileID: 2292358352877968752}
+  - component: {fileID: 4149511331800016801}
+  - component: {fileID: 2529901107553358618}
   m_Layer: 0
   m_Name: Fridge_SBS
   m_TagString: Untagged
@@ -276,7 +279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6100434731370130537}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -361,6 +364,76 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7946216644978258567, guid: 4ef85326d2b48fb48bee81014892b40d, type: 3}
+--- !u!114 &2292358352877968752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6100434731370130537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d5064da68c47aeb08140c8ebf76d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_objectType: 31
+  m_isWallObject: 0
+  m_placeAtGroundLevel: 1
+  m_onObjectPlaced:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4149511331800016801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6100434731370130537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectInterest: 1
+  DefaultInterestGroups: []
+  DestroyWhenStateAuthorityLeaves: 0
+  AllowStateAuthorityOverride: 1
+  AoiPositionSource: {fileID: 0}
+  Flags: 2305
+  NetworkGuid:
+    RawGuidValue: 51ed19930404371458e8d3152edbad78
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 2529901107553358618}
+  SimulationBehaviours: []
+--- !u!114 &2529901107553358618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6100434731370130537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 3
+  InterpolationSpace: 0
+  InterpolationTarget: {fileID: 0}
+  InterpolateErrorCorrection: 1
+  InterpolatedErrorCorrectionSettings:
+    MinRate: 3.3
+    MaxRate: 10
+    PosBlendStart: 0.25
+    PosBlendEnd: 1
+    PosMinCorrection: 0.025
+    PosTeleportDistance: 2
+    RotBlendStart: 0.1
+    RotBlendEnd: 0.5
+    RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!1 &6223964705008206678
 GameObject:
   m_ObjectHideFlags: 0

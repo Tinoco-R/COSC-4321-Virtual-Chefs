@@ -294,6 +294,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebugMaterial: {fileID: 2100000, guid: 1ff7bb944c69f4698b1423b953363bbd, type: 2}
   m_targetWallCellSize: 0.15
+--- !u!1 &352025933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3261593326283013914, guid: 51e3be741adb6b049bd8acd318195efe, type: 3}
+  m_PrefabInstance: {fileID: 7847888770016454835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &370821684
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +513,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 648194600146278268, guid: 51e3be741adb6b049bd8acd318195efe, type: 3}
   m_PrefabInstance: {fileID: 7847888770016454835}
   m_PrefabAsset: {fileID: 0}
+--- !u!81 &437643265 stripped
+AudioListener:
+  m_CorrespondingSourceObject: {fileID: 6734465931539048190, guid: 51e3be741adb6b049bd8acd318195efe, type: 3}
+  m_PrefabInstance: {fileID: 7847888770016454835}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &437643266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352025933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2103778458, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreferredRunner: 0
+  Components:
+  - {fileID: 437643265}
+  _guid: f6c54b1e-8aa2-4412-
 --- !u!114 &464616997 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7274373216697733473, guid: a37155f7bf534ad489b9a243e0f52256, type: 3}
@@ -2649,7 +2675,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 648194600146278268, guid: 51e3be741adb6b049bd8acd318195efe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1074074823}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3261593326283013914, guid: 51e3be741adb6b049bd8acd318195efe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 437643266}
   m_SourcePrefab: {fileID: 100100000, guid: 51e3be741adb6b049bd8acd318195efe, type: 3}
 --- !u!4 &7847888770016454836 stripped
 Transform:
