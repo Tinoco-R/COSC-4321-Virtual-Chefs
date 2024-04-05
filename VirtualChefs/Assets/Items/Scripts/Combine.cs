@@ -70,13 +70,13 @@ public class Combine : MonoBehaviour
     void initializeHeights()
     {
         foodHeights = new float[7];
-        foodHeights[0] = 0.0350f;    // Plate
-        foodHeights[1] = 0.0190f;    // Bottom Bun .0290f
-        foodHeights[2] = 0.0060f;    // Lettuce
-        foodHeights[3] = 0.0185f;    // Cheese
-        foodHeights[4] = 0.0270f;    // Meat
-        foodHeights[5] = 0.0090f;    // Tomato
-        foodHeights[6] = 0.0841f;    // Top Bun
+        foodHeights[0] = 0.0350f * 0.5f;    // Plate
+        foodHeights[1] = 0.0190f * 0.5f;    // Bottom Bun
+        foodHeights[2] = 0.0060f * 0.5f;    // Lettuce
+        foodHeights[3] = 0.0185f * 0.5f;    // Cheese
+        foodHeights[4] = 0.0270f * 0.5f;    // Meat
+        foodHeights[5] = 0.0090f * 0.5f;    // Tomato
+        foodHeights[6] = 0.0841f * 0.5f;    // Top Bun
     }
 
     // Second catch to ensure dupes truly dont exist
@@ -84,12 +84,12 @@ public class Combine : MonoBehaviour
     {
         foods = new bool[7];
         foods[0] = true;    // Plate
-        foods[1] = false;    // Bottom Bun
-        foods[2] = false;    // Lettuce
-        foods[3] = false;    // Cheese
-        foods[4] = false;    // Meat
-        foods[5] = false;    // Tomato
-        foods[6] = false;    // Top Bun
+        foods[1] = false;   // Bottom Bun
+        foods[2] = false;   // Lettuce
+        foods[3] = false;   // Cheese
+        foods[4] = false;   // Meat
+        foods[5] = false;   // Tomato
+        foods[6] = false;   // Top Bun
     }
 
     // To check if an  item already exists in the plate so that duplicates aren't possible
