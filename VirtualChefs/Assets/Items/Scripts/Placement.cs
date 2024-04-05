@@ -1,61 +1,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
-public class Placement : MonoBehaviour
+public class SphereInteraction : MonoBehaviour
 {
-    public GameObject Wheel; // Reference to the parent GameObject of spawn positions
+    private GameObject ticket; // Reference to the ticket object
+    private bool isTicketGrabbed = false; // Flag to check if the ticket is grabbed
 
-    private bool isGrabbed = false; // Flag to check if the item is grabbed
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (!isGrabbed && IsInsidePlacementZone())
+        // Check if the entered object has the "Ticket" tag
+        if (other.tag == "Ticket")
         {
-            // Place the item at the nearest spawn position
-            Transform nearestSpawn = GetNearestSpawnPosition();
-            if (nearestSpawn != null)
-            {
-                transform.position = nearestSpawn.position;
-            }
+            ticket = other.gameObject;
         }
     }
 
-    private bool IsInsidePlacementZone()
+    private void OnTriggerExit(Collider other)
     {
-        // Check if the item is inside the PlacementZone by comparing distances
-        float distance = Vector3.Distance(transform.position, transform.parent.position);
-        return distance <= transform.parent.localScale.x / 2; // Assuming PlacementZone is a sphere, comparing with its radius
-    }
-
-    private Transform GetNearestSpawnPosition()
-    {
-        Transform nearestSpawn = null;
-        float minDistance = Mathf.Infinity;
-
-        foreach (Transform spawnPos in Wheel.transform)
+        // Reset the ticket reference when it exits the sphere
+        if (other.tag == "Ticket")
         {
-            float distance = Vector3.Distance(transform.position, spawnPos.position);
-            if (distance < minDistance)
-            {
-                minDistance = distance;
-                nearestSpawn = spawnPos;
-            }
+            ticket = null;
         }
-
-        return nearestSpawn;
     }
 
-    public void GrabItem()
+    private void Update()
     {
-        // Called when the item is grabbed
-        isGrabbed = true;
+        // If the ticket is grabbed and released within the sphere, place it at the sphere's position
+        if (ticket != null && !isTicketGrabbed && IsInsideSphere(ticket.transform.position))
+        {
+            PlaceTicket();
+        }
     }
 
-    public void ReleaseItem()
+    private bool IsInsideSphere(Vector3 position)
     {
-        // Called when the item is released
-        isGrabbed = false;
+        // Check if the position is inside the sphere using distance comparison
+        float distance = Vector3.Distance(position, transform.position);
+        return distance <= transform.localScale.x / 2; // Assuming the sphere is a perfect sphere, comparing with its radius
+    }
+
+    private void PlaceTicket()
+    {
+        ticket.transform.position = transform.position;
+        ticket = null; // Reset the ticket reference after placing it
+    }
+
+    public void GrabTicket()
+    {
+        isTicketGrabbed = true;
+    }
+
+    public void ReleaseTicket()
+    {
+        isTicketGrabbed = false;
     }
 }
