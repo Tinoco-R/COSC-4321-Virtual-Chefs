@@ -14,6 +14,8 @@ public class RecipeMadeEvent : UnityEvent<int, string, string>
 public class RandomRecipe : MonoBehaviour
 {
     private int returnNum;
+    public double timer = 0.0;
+
     /*
     public delegate void MakeBurger();
     public static event MakeBurger makeBurger;
@@ -61,223 +63,11 @@ public class RandomRecipe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("r"))
+        timer -= Time.deltaTime;
+        if (timer <= 0)
         {
-            //recipeMade(1,"","dsdssdf");
-            string code = "";
-            string text = "";
-            int tableNum = 100;
-            if (IsTaken4 == false)
-            {
-                tableNum = 4;
-            }
-            if (IsTaken3 == false)
-            {
-                tableNum = 3;
-            }
-            if (IsTaken2 == false)
-            {
-                tableNum = 2;
-            }
-            if (IsTaken1 == false)
-            {
-                tableNum = 1;
-            }
-            if (tableNum != 100)
-            {
-                returnNum = Random.Range(0, 4);
-                switch (returnNum)
-                {
-                    case 0:
-                        if (recipeMade != null)
-                        {
-                            //classic burger
-                            code = code + returnNum;
-                            text = text + "<size=10%>1 Basic Hamburger:\n";
-                            returnNum = Random.Range(0, 2);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //notToasted
-                                    code = code + returnNum;
-                                    text = text + "Not Toasted\n";
-                                    break;
-                                case 1:
-                                    //Toasted
-                                    code = code + returnNum;
-                                    text = text + "Toasted\n";
-                                    break;
-                            }
-                            returnNum = Random.Range(0, 3);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //rare
-                                    code = code + returnNum;
-                                    text = text + "Rare\n";
-                                    break;
-                                case 1:
-                                    //medium
-                                    code = code + returnNum;
-                                    text = text + "Medium\n";
-                                    break;
-
-                                case 2:
-                                    //welldone
-                                    code = code + returnNum;
-                                    text = text + "Well Done\n";
-                                    break;
-                            }
-                            //plated
-                            code = code + "9991";
-                            recipeMade(tableNum, code, text);
-                        }
-                        break;
-                    case 1:
-                        if (recipeMade != null)
-                        {
-                            //CheeseBurger
-                            code = code + returnNum;
-                            text = text + "<size=10%>1 Cheeseburger:\n";
-                            returnNum = Random.Range(0, 2);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //notToasted
-                                    code = code + returnNum;
-                                    text = text + "Not Toasted\n";
-                                    break;
-                                case 1:
-                                    //Toasted
-                                    code = code + returnNum;
-                                    text = text + "Toasted\n";
-                                    break;
-                            }
-                            returnNum = Random.Range(0, 3);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //rare
-                                    code = code + returnNum;
-                                    text = text + "Rare\n";
-                                    break;
-                                case 1:
-                                    //medium
-                                    code = code + returnNum;
-                                    text = text + "Medium\n";
-                                    break;
-
-                                case 2:
-                                    //welldone
-                                    code = code + returnNum;
-                                    text = text + "Well Done\n";
-                                    break;
-                            }
-                            //cheese plated
-                            text = text + "Cheese\n";
-                            code = code + "1991";
-                            recipeMade(tableNum, code, text);
-                        }
-                        break;
-                    case 2:
-                        if (recipeMade != null)
-                        {
-                            //Complex Burger
-                            code = code + returnNum;
-                            text = text + "<size=10%>1 Complex Hamburger:\n";
-                            returnNum = Random.Range(0, 2);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //notToasted
-                                    code = code + returnNum;
-                                    text = text + "Not Toasted\n";
-                                    break;
-                                case 1:
-                                    //Toasted
-                                    code = code + returnNum;
-                                    text = text + "Toasted\n";
-                                    break;
-                            }
-                            returnNum = Random.Range(0, 3);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //rare
-                                    code = code + returnNum;
-                                    text = text + "Rare\n";
-                                    break;
-                                case 1:
-                                    //medium
-                                    code = code + returnNum;
-                                    text = text + "Medium\n";
-                                    break;
-
-                                case 2:
-                                    //welldone
-                                    code = code + returnNum;
-                                    text = text + "Well Done\n";
-                                    break;
-                            }
-                            returnNum = Random.Range(0, 2);
-                            if (returnNum == 1)
-                            {
-                                //cheese
-                                text = text + "Cheese\n";
-                                
-                            }
-                            code = code + returnNum;
-                            returnNum = Random.Range(0, 2);
-                            if (returnNum == 1)
-                            {
-                                //tomato
-                                text = text + "Tomato\n";
-                                
-                            }
-                            code = code + returnNum;
-                            returnNum = Random.Range(0, 2);
-                            if (returnNum == 1)
-                            {
-                                //lettuce
-                                text = text + "Lettuce\n";
-                                
-                            }
-                            code = code + returnNum;
-                            //plated
-                            code = code + "1";
-                            recipeMade(tableNum, code, text);
-                        }
-                        break;
-                    case 3:
-                        if (recipeMade != null)
-                        {
-                            //Salad
-                            text = "<size=10%>1 Salad:\nCut Tomato\nCut Lettuce\nMixed\n";
-                            code = code + returnNum;
-                            //Tomato lettuce plated
-                            code = code + "999111";
-                            recipeMade(tableNum, code, text);
-                        }
-                        break;
-                }
-            }
-
-            switch (tableNum)
-            {
-                case 1:
-                    IsTaken1 = true;
-                    break;
-                case 2:
-                    IsTaken2 = true;
-                    break;
-                case 3:
-                    IsTaken3 = true;
-                    break;
-                case 4:
-                    IsTaken4 = true;
-                    break;
-            }
-
+            GenerateRecipe();
+            timer = 30;
         }
     }
 
@@ -303,220 +93,220 @@ public class RandomRecipe : MonoBehaviour
 
     void GenerateRecipe()
     {
-            //recipeMade(1,"","dsdssdf");
-            string code = "";
-            string text = "";
-            int tableNum = 100;
-            if (IsTaken4 == false)
+        //recipeMade(1,"","dsdssdf");
+        string code = "";
+        string text = "";
+        int tableNum = 100;
+        if (IsTaken4 == false)
+        {
+            tableNum = 4;
+        }
+        if (IsTaken3 == false)
+        {
+            tableNum = 3;
+        }
+        if (IsTaken2 == false)
+        {
+            tableNum = 2;
+        }
+        if (IsTaken1 == false)
+        {
+            tableNum = 1;
+        }
+        if (tableNum != 100)
+        {
+            returnNum = Random.Range(0, 4);
+            switch (returnNum)
             {
-                tableNum = 4;
-            }
-            if (IsTaken3 == false)
-            {
-                tableNum = 3;
-            }
-            if (IsTaken2 == false)
-            {
-                tableNum = 2;
-            }
-            if (IsTaken1 == false)
-            {
-                tableNum = 1;
-            }
-            if (tableNum != 100)
-            {
-                returnNum = Random.Range(0, 4);
-                switch (returnNum)
-                {
-                    case 0:
-                        if (recipeMade != null)
+                case 0:
+                    if (recipeMade != null)
+                    {
+                        //classic burger
+                        code = code + returnNum;
+                        text = text + "<size=10%>1 Basic Hamburger:\n";
+                        returnNum = Random.Range(0, 2);
+                        switch (returnNum)
                         {
-                            //classic burger
-                            code = code + returnNum;
-                            text = text + "<size=10%>1 Basic Hamburger:\n";
-                            returnNum = Random.Range(0, 2);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //notToasted
-                                    code = code + returnNum;
-                                    text = text + "Not Toasted\n";
-                                    break;
-                                case 1:
-                                    //Toasted
-                                    code = code + returnNum;
-                                    text = text + "Toasted\n";
-                                    break;
-                            }
-                            returnNum = Random.Range(0, 3);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //rare
-                                    code = code + returnNum;
-                                    text = text + "Rare\n";
-                                    break;
-                                case 1:
-                                    //medium
-                                    code = code + returnNum;
-                                    text = text + "Medium\n";
-                                    break;
-
-                                case 2:
-                                    //welldone
-                                    code = code + returnNum;
-                                    text = text + "Well Done\n";
-                                    break;
-                            }
-                            //plated
-                            code = code + "9991";
-                            recipeMade(tableNum, code, text);
+                            case 0:
+                                //notToasted
+                                code = code + returnNum;
+                                text = text + "Not Toasted\n";
+                                break;
+                            case 1:
+                                //Toasted
+                                code = code + returnNum;
+                                text = text + "Toasted\n";
+                                break;
                         }
-                        break;
-                    case 1:
-                        if (recipeMade != null)
+                        returnNum = Random.Range(0, 3);
+                        switch (returnNum)
                         {
-                            //CheeseBurger
-                            code = code + returnNum;
-                            text = text + "<size=10%>1 Cheeseburger:\n";
-                            returnNum = Random.Range(0, 2);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //notToasted
-                                    code = code + returnNum;
-                                    text = text + "Not Toasted\n";
-                                    break;
-                                case 1:
-                                    //Toasted
-                                    code = code + returnNum;
-                                    text = text + "Toasted\n";
-                                    break;
-                            }
-                            returnNum = Random.Range(0, 3);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //rare
-                                    code = code + returnNum;
-                                    text = text + "Rare\n";
-                                    break;
-                                case 1:
-                                    //medium
-                                    code = code + returnNum;
-                                    text = text + "Medium\n";
-                                    break;
+                            case 0:
+                                //rare
+                                code = code + returnNum;
+                                text = text + "Rare\n";
+                                break;
+                            case 1:
+                                //medium
+                                code = code + returnNum;
+                                text = text + "Medium\n";
+                                break;
 
-                                case 2:
-                                    //welldone
-                                    code = code + returnNum;
-                                    text = text + "Well Done\n";
-                                    break;
-                            }
-                            //cheese plated
-                            text = text + "Cheese\n";
-                            code = code + "1991";
-                            recipeMade(tableNum, code, text);
+                            case 2:
+                                //welldone
+                                code = code + returnNum;
+                                text = text + "Well Done\n";
+                                break;
                         }
-                        break;
-                    case 2:
-                        if (recipeMade != null)
-                        {
-                            //Complex Burger
-                            code = code + returnNum;
-                            text = text + "<size=10%>1 Complex Hamburger:\n";
-                            returnNum = Random.Range(0, 2);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //notToasted
-                                    code = code + returnNum;
-                                    text = text + "Not Toasted\n";
-                                    break;
-                                case 1:
-                                    //Toasted
-                                    code = code + returnNum;
-                                    text = text + "Toasted\n";
-                                    break;
-                            }
-                            returnNum = Random.Range(0, 3);
-                            switch (returnNum)
-                            {
-                                case 0:
-                                    //rare
-                                    code = code + returnNum;
-                                    text = text + "Rare\n";
-                                    break;
-                                case 1:
-                                    //medium
-                                    code = code + returnNum;
-                                    text = text + "Medium\n";
-                                    break;
-
-                                case 2:
-                                    //welldone
-                                    code = code + returnNum;
-                                    text = text + "Well Done\n";
-                                    break;
-                            }
-                            returnNum = Random.Range(0, 2);
-                            if (returnNum == 1)
-                            {
-                                //cheese
-                                text = text + "Cheese\n";
-
-                            }
-                            code = code + returnNum;
-                            returnNum = Random.Range(0, 2);
-                            if (returnNum == 1)
-                            {
-                                //tomato
-                                text = text + "Tomato\n";
-
-                            }
-                            code = code + returnNum;
-                            returnNum = Random.Range(0, 2);
-                            if (returnNum == 1)
-                            {
-                                //lettuce
-                                text = text + "Lettuce\n";
-
-                            }
-                            code = code + returnNum;
-                            //plated
-                            code = code + "1";
-                            recipeMade(tableNum, code, text);
-                        }
-                        break;
-                    case 3:
-                        if (recipeMade != null)
-                        {
-                            //Salad
-                            text = "<size=10%>1 Salad:\nCut Tomato\nCut Lettuce\nMixed\n";
-                            code = code + returnNum;
-                            //Tomato lettuce plated
-                            code = code + "999111";
-                            recipeMade(tableNum, code, text);
-                        }
-                        break;
-                }
-            }
-
-            switch (tableNum)
-            {
+                        //plated
+                        code = code + "9991";
+                        recipeMade(tableNum, code, text);
+                    }
+                    break;
                 case 1:
-                    IsTaken1 = true;
+                    if (recipeMade != null)
+                    {
+                        //CheeseBurger
+                        code = code + returnNum;
+                        text = text + "<size=10%>1 Cheeseburger:\n";
+                        returnNum = Random.Range(0, 2);
+                        switch (returnNum)
+                        {
+                            case 0:
+                                //notToasted
+                                code = code + returnNum;
+                                text = text + "Not Toasted\n";
+                                break;
+                            case 1:
+                                //Toasted
+                                code = code + returnNum;
+                                text = text + "Toasted\n";
+                                break;
+                        }
+                        returnNum = Random.Range(0, 3);
+                        switch (returnNum)
+                        {
+                            case 0:
+                                //rare
+                                code = code + returnNum;
+                                text = text + "Rare\n";
+                                break;
+                            case 1:
+                                //medium
+                                code = code + returnNum;
+                                text = text + "Medium\n";
+                                break;
+
+                            case 2:
+                                //welldone
+                                code = code + returnNum;
+                                text = text + "Well Done\n";
+                                break;
+                        }
+                        //cheese plated
+                        text = text + "Cheese\n";
+                        code = code + "1991";
+                        recipeMade(tableNum, code, text);
+                    }
                     break;
                 case 2:
-                    IsTaken2 = true;
+                    if (recipeMade != null)
+                    {
+                        //Complex Burger
+                        code = code + returnNum;
+                        text = text + "<size=8%>1 Complex Hamburger:\n";
+                        returnNum = Random.Range(0, 2);
+                        switch (returnNum)
+                        {
+                            case 0:
+                                //notToasted
+                                code = code + returnNum;
+                                text = text + "Not Toasted\n";
+                                break;
+                            case 1:
+                                //Toasted
+                                code = code + returnNum;
+                                text = text + "Toasted\n";
+                                break;
+                        }
+                        returnNum = Random.Range(0, 3);
+                        switch (returnNum)
+                        {
+                            case 0:
+                                //rare
+                                code = code + returnNum;
+                                text = text + "Rare\n";
+                                break;
+                            case 1:
+                                //medium
+                                code = code + returnNum;
+                                text = text + "Medium\n";
+                                break;
+
+                            case 2:
+                                //welldone
+                                code = code + returnNum;
+                                text = text + "Well Done\n";
+                                break;
+                        }
+                        returnNum = Random.Range(0, 2);
+                        if (returnNum == 1)
+                        {
+                            //cheese
+                            text = text + "Cheese\n";
+
+                        }
+                        code = code + returnNum;
+                        returnNum = Random.Range(0, 2);
+                        if (returnNum == 1)
+                        {
+                            //tomato
+                            text = text + "Tomato\n";
+
+                        }
+                        code = code + returnNum;
+                        returnNum = Random.Range(0, 2);
+                        if (returnNum == 1)
+                        {
+                            //lettuce
+                            text = text + "Lettuce\n";
+
+                        }
+                        code = code + returnNum;
+                        //plated
+                        code = code + "1";
+                        recipeMade(tableNum, code, text);
+                    }
                     break;
                 case 3:
-                    IsTaken3 = true;
-                    break;
-                case 4:
-                    IsTaken4 = true;
+                    if (recipeMade != null)
+                    {
+                        //Salad
+                        text = "<size=10%>1 Salad:\nCut Tomato\nCut Lettuce\nMixed\n";
+                        code = code + returnNum;
+                        //Tomato lettuce plated
+                        code = code + "999111";
+                        recipeMade(tableNum, code, text);
+                    }
                     break;
             }
-
         }
+
+        switch (tableNum)
+        {
+            case 1:
+                IsTaken1 = true;
+                break;
+            case 2:
+                IsTaken2 = true;
+                break;
+            case 3:
+                IsTaken3 = true;
+                break;
+            case 4:
+                IsTaken4 = true;
+                break;
+        }
+
+    }
 }
