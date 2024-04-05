@@ -510,6 +510,14 @@ MonoBehaviour:
   - {fileID: 4034748431548229439}
   NetworkedBehaviours:
   - {fileID: 1455216861999152175}
+  - {fileID: 425160461884648366}
+  - {fileID: 9071080900122080565}
+  - {fileID: 2824635162802382982}
+  - {fileID: 8898387124817482529}
+  - {fileID: 4305620536000804784}
+  - {fileID: 1236147391621002905}
+  - {fileID: 5881590360965321718}
+  - {fileID: 7437122702666778039}
   SimulationBehaviours: []
 --- !u!114 &1455216861999152175
 MonoBehaviour:
@@ -793,6 +801,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 1236147391621002905}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8726916404924514605, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -905,6 +921,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 425160461884648366}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8726916404924514605, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -1017,6 +1041,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 4305620536000804784}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8726916404924514605, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -1129,6 +1161,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 2824635162802382982}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8726916404924514605, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -1241,6 +1281,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 5881590360965321718}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8726916404924514605, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -1353,6 +1401,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 8898387124817482529}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8726916404924514605, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -1465,6 +1521,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 9071080900122080565}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8726916404924514605, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -1577,6 +1641,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 7437122702666778039}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8726916404924514605, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
       propertyPath: m_UseGravity
       value: 0

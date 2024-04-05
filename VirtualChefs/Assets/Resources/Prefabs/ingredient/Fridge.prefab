@@ -942,6 +942,12 @@ MonoBehaviour:
   - {fileID: 1378431698692335748}
   NetworkedBehaviours:
   - {fileID: 5419214982403351266}
+  - {fileID: 4381672239336374921}
+  - {fileID: 7701658491389201467}
+  - {fileID: 6870798664866671462}
+  - {fileID: 5923335563511604961}
+  - {fileID: 9003712381567333521}
+  - {fileID: 7410261090827189473}
   SimulationBehaviours: []
 --- !u!114 &5419214982403351266
 MonoBehaviour:
@@ -1065,6 +1071,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 4381672239336374921}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1173,6 +1187,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 6870798664866671462}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1281,6 +1303,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 5923335563511604961}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1389,6 +1419,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 9003712381567333521}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1497,6 +1535,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 7701658491389201467}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1605,6 +1651,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 7410261090827189473}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930060668428004660, guid: d8e2288f41e9b49708e332c577cd0d9b, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
