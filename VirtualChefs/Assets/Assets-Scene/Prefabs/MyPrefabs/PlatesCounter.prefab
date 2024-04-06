@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2324866573430981636}
   - component: {fileID: 6810610028365542661}
   m_Layer: 0
-  m_Name: PlatesCounter_Test
+  m_Name: PlatesCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
