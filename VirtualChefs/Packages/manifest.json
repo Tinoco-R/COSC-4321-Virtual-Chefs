@@ -3,7 +3,6 @@
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
     "com.meta.utilities": "https://github.com/oculus-samples/Unity-Discover.git?path=Packages/com.meta.utilities",
     "com.meta.xr.colocation": "https://github.com/oculus-samples/Unity-LocalMultiplayerMR.git?path=colocation-package#075b8f0e1641bc6cacef05a57f25e82b985cb4bb",
-    "com.meta.xr.sdk.all": "63.0.0",
     "com.meta.xr.sdk.core": "60.0.0",
     "com.meta.xr.sdk.interaction": "60.0.0",
     "com.meta.xr.sdk.interaction.ovr": "60.0.0",
