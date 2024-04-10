@@ -13,6 +13,7 @@ public class ReadFood : MonoBehaviour
     public GameObject ZoneVisual;
     public List<GameObject> foodInZone = new List<GameObject>();
     public double timer = 3.0;
+    private Color baseColor;
 
     public delegate void OrderGivenEvent(int n, double s);
     public static event OrderGivenEvent orderGiven;
@@ -35,6 +36,7 @@ public class ReadFood : MonoBehaviour
         ZoneVisual.GetComponent<MeshRenderer>().enabled = false;
         foodInZone.Clear();
         currentOrder = "";
+        baseColor = ZoneVisual.GetComponent<Renderer>().material.color;
     }
 
 
@@ -53,6 +55,10 @@ public class ReadFood : MonoBehaviour
         {
             timer = 3.0;
             foodInZone.Remove(other.gameObject);
+            if(foodInZone.Count == 0)
+            {
+                ZoneVisual.GetComponent<Renderer>().material.color = baseColor;
+            }
         }
     }
 
@@ -70,14 +76,24 @@ public class ReadFood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (foodInZone.Count > 0 && timer > 0)
+        if (foodInZone.Count > 0 && timer > 0 && currentOrder != "")
         {
             timer -= Time.deltaTime;
+            float ratio = (float)timer / 3;
+            if (timer < 0)
+            {
+                ratio = 0;
+            }
+            Color lerpedColor = Color.white;
+            //lerpedColor = Color.Lerp(Color.white, new Color((float)0.0745, (float)0.4902, (float)0.5098, 1), ratio);
+            lerpedColor = Color.Lerp(Color.white, baseColor, ratio);
+            ZoneVisual.GetComponent<Renderer>().material.color = lerpedColor;
         }
         if (foodInZone.Count > 0 && timer <= 0 && currentOrder != "")
         {
-            
             turnInPlate();
+            //ZoneVisual.GetComponent<Renderer>().material.color = new Color((float)0.0745, (float)0.4902, (float)0.5098, 1);
+            ZoneVisual.GetComponent<Renderer>().material.color = baseColor;
         }
     }
 
