@@ -3309,6 +3309,22 @@ MonoBehaviour:
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
+  - ObjectName: Stove
+    DisplayPrefab: {fileID: 1970403491106562584, guid: c899ce6cd17c8764c9479dc33321c19a, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
+  - ObjectName: Chopping Board
+    DisplayPrefab: {fileID: 1970403491106562584, guid: de70d5556e25fdc4a9c6668c777bb6f5, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
   m_floorObject:
   - ObjectName: Fridge
     DisplayPrefab: {fileID: 2195659660528880652, guid: 4ddc38a31a4127c43baad1c9cdd3b82e, type: 3}
