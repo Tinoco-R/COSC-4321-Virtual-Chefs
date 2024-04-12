@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefabs:
-  - {fileID: 854753063254474775}
+  - {fileID: 522176099696603127, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
   spawnPoints:
   - {fileID: 7401194640463204715}
   respawnTime: 3
@@ -300,18 +300,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3339737672797558044}
     m_Modifications:
-    - target: {fileID: 1268429214200913727, guid: 03c3ca5f6f81246689a2dc170c7581ce, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211233476651745388, guid: 03c3ca5f6f81246689a2dc170c7581ce, type: 3}
-      propertyPath: _physicsGrabbable
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3521717189974984601, guid: 03c3ca5f6f81246689a2dc170c7581ce, type: 3}
-      propertyPath: instanceId
-      value: c736fae1-81f6-446b-aeb0-3e98e1305fb5
-      objectReference: {fileID: 0}
     - target: {fileID: 522176099696603127, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
       propertyPath: m_Name
       value: Plate (1)
@@ -372,16 +360,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1268429214200913727, guid: 03c3ca5f6f81246689a2dc170c7581ce, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211233476651745388, guid: 03c3ca5f6f81246689a2dc170c7581ce, type: 3}
+      propertyPath: _physicsGrabbable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521717189974984601, guid: 03c3ca5f6f81246689a2dc170c7581ce, type: 3}
+      propertyPath: instanceId
+      value: c736fae1-81f6-446b-aeb0-3e98e1305fb5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
---- !u!1 &854753063254474775 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 522176099696603127, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
-  m_PrefabInstance: {fileID: 928749794819092448}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7401194640463204715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7662248368466116235, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
