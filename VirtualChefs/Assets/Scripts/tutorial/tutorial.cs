@@ -5,15 +5,22 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-    public TMP_Text text;
-
-    public GameObject cuttingCounter;
-    public GameObject stove;
-    public GameObject plate;
-    public GameObject lettuce;
-    public GameObject meat;
-    public GameObject knife;
-    public GameObject ticket;
+    [SerializeField]
+    private TMP_Text text;
+    [SerializeField]
+    private GameObject cuttingCounter;
+    [SerializeField]
+    private GameObject stove;
+    [SerializeField]
+    private GameObject plate;
+    [SerializeField]
+    private GameObject lettuce;
+    [SerializeField]
+    private GameObject meat;
+    [SerializeField]
+    private GameObject knife;
+    [SerializeField]
+    private GameObject ticket;
 
     private ObjectGrabCheck knifeGrabCheck;
     private ObjectGrabCheck lettuceGrabCheck;
