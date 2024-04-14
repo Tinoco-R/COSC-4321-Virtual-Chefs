@@ -119,7 +119,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -187,7 +187,7 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 0}
+  _pointableElement: {fileID: 699297833889411180}
   _rigidbody: {fileID: 8726916404924514605}
   _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
