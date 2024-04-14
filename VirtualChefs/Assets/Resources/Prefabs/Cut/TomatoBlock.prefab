@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4607244533390354908}
   - component: {fileID: 2738110571264910453}
   - component: {fileID: 7713555486401145507}
+  - component: {fileID: 9118736484682314393}
   m_Layer: 15
   m_Name: TomatoBlock
   m_TagString: TomatoBlock
@@ -65,7 +66,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522176099696603127}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -290,6 +291,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   m_grabbable: {fileID: 1701405869273455763}
+--- !u!33 &9118736484682314393
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Mesh: {fileID: -1340541719380434750, guid: 36694ad9cc3abc04ab48fdb0373f2037, type: 3}
 --- !u!1 &2031465377213339327
 GameObject:
   m_ObjectHideFlags: 0
