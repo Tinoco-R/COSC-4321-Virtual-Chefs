@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8952f7d096c5341aa50ee270a15270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
+  timer: 2
   IsTaken1: 0
   IsTaken2: 1
   IsTaken3: 1
