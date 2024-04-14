@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8cf565a9-781f-4892-b429-4dfc108581e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/TomatoBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/TomatoBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/TomatoBlock.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/TomatoBlock.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/ingredient/CuttingCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/ingredient/CuttingCounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/Puzzles/AtlasPuzzle/AtlasStatue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/Puzzles/AtlasPuzzle/AtlasStatue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Utils/ObjectPlacementManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/Utils/ObjectPlacementManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/ScoreBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Prefabs/ScoreBox.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +36,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "place-object",
+    "git-widget-placeholder": "tutorial",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,6 +102,7 @@
       <workItem from="1710652279580" duration="30000" />
       <workItem from="1710996872844" duration="440000" />
       <workItem from="1712896018765" duration="1673000" />
+      <workItem from="1713060087552" duration="746000" />
     </task>
     <servers />
   </component>

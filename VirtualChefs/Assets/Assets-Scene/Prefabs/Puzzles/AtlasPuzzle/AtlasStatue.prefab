@@ -2008,9 +2008,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9223372036854775802, guid: 73853b584c9b53143b9d013392b47eee, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7317518846137019843}
-    - targetCorrespondingSourceObject: {fileID: 9223372036854775801, guid: 73853b584c9b53143b9d013392b47eee, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 9223372036854775800, guid: 73853b584c9b53143b9d013392b47eee, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3699633115521203052}
+      addedObject: {fileID: 5056679810471885021}
   m_SourcePrefab: {fileID: 100100000, guid: 73853b584c9b53143b9d013392b47eee, type: 3}
 --- !u!1 &127402812656578126 stripped
 GameObject:
@@ -2142,10 +2142,10 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!1 &127402812656578130 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 9223372036854775801, guid: 73853b584c9b53143b9d013392b47eee, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9223372036854775800, guid: 73853b584c9b53143b9d013392b47eee, type: 3}
   m_PrefabInstance: {fileID: 127402812656578125}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &3699633115521203052
+--- !u!54 &5056679810471885021
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
