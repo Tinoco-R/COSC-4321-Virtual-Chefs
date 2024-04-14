@@ -3291,7 +3291,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_spawnUi: {fileID: 7438812316205705168}
   m_againstWallObject: []
-  m_onWallObject: []
+  m_onWallObject:
+  - ObjectName: TutorialBox
+    DisplayPrefab: {fileID: 2858362510987313768, guid: b7ad0f47df0a2c44bbf920599c716120, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
   m_deskObject:
   - ObjectName: TicketWheel
     DisplayPrefab: {fileID: 1970403491106562584, guid: 7121ad5422b4c4c2cb75a218eb26521c, type: 3}
