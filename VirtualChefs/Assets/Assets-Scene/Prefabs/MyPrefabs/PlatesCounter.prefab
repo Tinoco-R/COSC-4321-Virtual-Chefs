@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d5064da68c47aeb08140c8ebf76d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_objectType: 32
+  m_objectType: 33
   m_isWallObject: 0
   m_placeAtGroundLevel: 1
   m_onObjectPlaced:
