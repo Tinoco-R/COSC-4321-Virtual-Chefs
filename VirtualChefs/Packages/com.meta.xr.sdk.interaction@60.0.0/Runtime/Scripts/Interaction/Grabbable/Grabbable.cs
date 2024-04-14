@@ -58,7 +58,11 @@ namespace Oculus.Interaction
         [SerializeField]
         private int _maxGrabPoints = -1;
 
+        // Gravity will initially be disabled on the object
         private bool _gravityEnabled = false;
+
+        // isKinematic will initially be enabled on the object
+        private bool _isKinematicEnabled = true;
 
         public int MaxGrabPoints
         {
@@ -195,13 +199,18 @@ namespace Oculus.Interaction
 
 
             // Enable gravity on the first grab
-            if (!_gravityEnabled)
+            if (!_gravityEnabled && _isKinematicEnabled)
             {
                 Rigidbody rigidbody = GetComponent<Rigidbody>();
                 if (rigidbody != null)
                 {
+                    // If gravity is not enabled then enable it after grabbing
                     rigidbody.useGravity = true;
                     _gravityEnabled = true;
+
+                    // If isKinematic is enabled then disable it after grabbing
+                    rigidbody.isKinematic = false;
+                    _isKinematicEnabled = false;
                 }
             }
         }
