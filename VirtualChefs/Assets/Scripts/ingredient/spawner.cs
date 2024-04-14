@@ -31,10 +31,8 @@ public class spawner : MonoBehaviour
 
     void SpawnObject(int index)
     {
-        // Get a random prefab from the list of prefabs
-        int randomIndex = Random.Range(0, objectPrefabs.Length);
         // Instantiate one of the prefabs from the list with the random index and select a spawn point position with the random index too
-        GameObject newObject = Instantiate(objectPrefabs[randomIndex], spawnPoints[index].position, Quaternion.identity);
+        GameObject newObject = Instantiate(objectPrefabs[index], spawnPoints[index].position, Quaternion.identity);
         // Keep track of the newly spawned object by placing it in the spawnedObjects list
         spawnedObjects[index] = newObject;
         // Keep track of the newly spawned object position by placing it in the lastObjectPositions list
