@@ -288,9 +288,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   IsTaken1: 0
-  IsTaken2: 0
-  IsTaken3: 0
-  IsTaken4: 0
+  IsTaken2: 1
+  IsTaken3: 1
+  IsTaken4: 1
 --- !u!114 &-6745245178752758676
 MonoBehaviour:
   m_ObjectHideFlags: 0

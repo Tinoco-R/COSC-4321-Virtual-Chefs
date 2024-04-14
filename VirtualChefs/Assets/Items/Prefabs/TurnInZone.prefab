@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5374ff3dfe8e481439f59091806c974c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tableID: 0
+  tableID: 1
   currentOrder: 
   score: 0
   ZoneVisual: {fileID: 8332575941795142979}

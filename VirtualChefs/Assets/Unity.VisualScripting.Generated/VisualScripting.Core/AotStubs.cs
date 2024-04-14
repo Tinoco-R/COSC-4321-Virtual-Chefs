@@ -1038,10 +1038,6 @@ namespace Unity.VisualScripting.Generated.Aot
 	// CrypticCabinet.Puzzles.Clock.KeyInteraction.op_Implicit
 	// CrypticCabinet.Puzzles.Clock.KeyInteraction.op_Equality
 	// CrypticCabinet.Puzzles.Clock.KeyInteraction.op_Inequality
-	// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStatue.op_Implicit
-	// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStatue.op_Implicit
-	// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStatue.op_Equality
-	// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStatue.op_Inequality
 	// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStone.op_Implicit
 	// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStone.op_Equality
 	// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStone.op_Inequality
@@ -13371,52 +13367,6 @@ namespace Unity.VisualScripting.Generated.Aot
 		// CrypticCabinet.Puzzles.Clock.KeyInteraction.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void CrypticCabinet_Puzzles_Clock_KeyInteraction_op_Inequality()
-		{
-			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
-			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
-			bool @operator = (arg0 != arg1);
-			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0, arg1);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStatue.op_Implicit
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void CrypticCabinet_Puzzles_AtlasPuzzle_AtlasStatue_op_Implicit()
-		{
-			global::Fusion.NetworkBehaviour arg0 = default(global::Fusion.NetworkBehaviour);
-			Fusion.NetworkBehaviourId conversion = ((Fusion.NetworkBehaviourId)(arg0));
-			global::Unity.VisualScripting.StaticFunctionInvoker<Fusion.NetworkBehaviour, Fusion.NetworkBehaviourId> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<Fusion.NetworkBehaviour, Fusion.NetworkBehaviourId>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStatue.op_Implicit
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void CrypticCabinet_Puzzles_AtlasPuzzle_AtlasStatue_op_Implicit_0()
-		{
-			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
-			bool conversion = ((bool)(arg0));
-			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStatue.op_Equality
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void CrypticCabinet_Puzzles_AtlasPuzzle_AtlasStatue_op_Equality()
-		{
-			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
-			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
-			bool @operator = (arg0 == arg1);
-			global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
-			optimized.Invoke(null, arg0, arg1);
-			optimized.Invoke(default(object[]));
-		}
-		
-		// CrypticCabinet.Puzzles.AtlasPuzzle.AtlasStatue.op_Inequality
-		[global::UnityEngine.Scripting.PreserveAttribute()]
-		public static void CrypticCabinet_Puzzles_AtlasPuzzle_AtlasStatue_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
