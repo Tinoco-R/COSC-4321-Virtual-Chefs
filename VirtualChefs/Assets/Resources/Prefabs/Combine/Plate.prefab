@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 4796893382826154658}
   - component: {fileID: 3200254174171096400}
   - component: {fileID: 8726916404924514605}
-  - component: {fileID: 1701405869273455763}
+  - component: {fileID: -2202355490403093083}
   - component: {fileID: 3470604421928413204}
   - component: {fileID: 2009371235241705294}
   - component: {fileID: 8911249764134592037}
@@ -160,12 +160,12 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1701405869273455763
+--- !u!114 &-2202355490403093083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,10 +174,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 522176099696603127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e6de96a246b63349ba84ad89f7a3f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
+  _transferOnSecondSelection: 1
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
   _oneGrabTransformer: {fileID: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 1701405869273455763}
+  _pointableElement: {fileID: 0}
   _rigidbody: {fileID: 8726916404924514605}
   _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1

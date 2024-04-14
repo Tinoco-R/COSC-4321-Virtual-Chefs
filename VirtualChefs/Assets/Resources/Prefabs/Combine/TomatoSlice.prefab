@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3126348274292542839}
   - component: {fileID: 4384981618812048025}
   - component: {fileID: 329057242730813761}
-  - component: {fileID: 8584927207853302184}
   - component: {fileID: 751535095431547506}
   - component: {fileID: 4885195668189085507}
+  - component: {fileID: -5778169833965060353}
   m_Layer: 0
   m_Name: TomatoSlice
   m_TagString: TomatoSlice
@@ -152,25 +152,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8584927207853302184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8195069552191914451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
 --- !u!114 &751535095431547506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +168,7 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 8584927207853302184}
+  _pointableElement: {fileID: 0}
   _rigidbody: {fileID: 329057242730813761}
   _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
@@ -224,3 +205,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807ac579987463a48a27c5eb4d22c717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5778169833965060353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8195069552191914451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transferOnSecondSelection: 0
+  _addNewPointsToFront: 0
+  _forwardElement: {fileID: 0}
+  _oneGrabTransformer: {fileID: 0}
+  _twoGrabTransformer: {fileID: 0}
+  _targetTransform: {fileID: 0}
+  _maxGrabPoints: -1
