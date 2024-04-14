@@ -1,170 +1,94 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
 
-public class Tutorial : MonoBehaviour
+public class NewTutorial : MonoBehaviour
 {
-    [SerializeField]
-    private TMP_Text text;
-    [SerializeField]
-    private GameObject cuttingCounter;
-    [SerializeField]
-    private GameObject stove;
-    [SerializeField]
-    private GameObject plate;
-    [SerializeField]
-    private GameObject lettuce;
-    [SerializeField]
-    private GameObject meat;
-    [SerializeField]
-    private GameObject knife;
-    [SerializeField]
-    private GameObject ticket;
+    [SerializeField] private TMP_Text text;
 
-    private ObjectGrabCheck knifeGrabCheck;
-    private ObjectGrabCheck lettuceGrabCheck;
-    private ObjectGrabCheck meatGrabCheck;
-    private ObjectGrabCheck plateGrabCheck;
+    [SerializeField] private GameObject knife;
+    [SerializeField] private GameObject lettuce;
+    [SerializeField] private GameObject meat;
+    [SerializeField] private GameObject plate;
+    [SerializeField] private GameObject ticket;
 
-    private bool hasGrabbedTicket = false;
-    private bool hasGrabbedBunTop = false;
-    private bool hasGrabbedBunBottom = false;
-    private bool hasGrabbedLettuce = false;
-    private bool hasGrabbedMeat = false;
-    private bool hasGrabbedKnife = false;
-    private bool hasCutLettuce = false;
-    private bool hasCookedMeat = false;
-    private bool hasPlacedIngredientsOnPlate = false;
+    private bool knifeGrabbed = false;
+    private bool lettuceGrabbed = false;
+    private bool meatGrabbed = false;
+    private bool plateGrabbed = false;
+    private bool ticketGrabbed = false;
 
-    void Start()
-    {
-        knifeGrabCheck = knife.GetComponent<ObjectGrabCheck>();
-        lettuceGrabCheck = lettuce.GetComponent<ObjectGrabCheck>();
-        meatGrabCheck = meat.GetComponent<ObjectGrabCheck>();
-        plateGrabCheck = plate.GetComponent<ObjectGrabCheck>();
-    }
-
-    void Update()
+    private void Update()
     {
         UpdateTutorialText();
     }
 
-    void OnTriggerEnter(Collider other)
+    private void UpdateTutorialText()
     {
-        if (other.gameObject == ticket)
-        {
-            hasGrabbedTicket = true;
-        }
-    }
-
-    void UpdateTutorialText()
-    {
-        string tutorialText = "";
-
         // Check if the ticket has been grabbed
-        if (!hasGrabbedTicket)
+        if (!ticketGrabbed)
         {
-            tutorialText += "Grab the ticket to start the tutorial.\n";
-            text.text = tutorialText;
+            text.text = "Grab the ticket to start the tutorial.";
             return;
         }
 
-        // Check if the buns, lettuce, and meat have been grabbed from the fridge
-        if (hasGrabbedBunTop && hasGrabbedBunBottom && hasGrabbedLettuce && hasGrabbedMeat)
-        {
-            tutorialText += "Buns, lettuce, and meat grabbed.\n";
-        }
-        else
-        {
-            tutorialText += "Go to the fridge and grab top and bottom bun, lettuce, and meat.\n";
-        }
-
         // Check if the knife has been grabbed
-        if (hasGrabbedKnife || knifeGrabCheck.IsBeingHeld())
+        if (!knifeGrabbed)
         {
-            hasGrabbedKnife = true;
-            tutorialText += "Knife grabbed.\n";
-        }
-        else
-        {
-            tutorialText += "Grab the knife.\n";
+            text.text = "Grab the knife.";
+            return;
         }
 
         // Check if the lettuce has been grabbed
-        if (hasGrabbedLettuce || lettuceGrabCheck.IsBeingHeld())
+        if (!lettuceGrabbed)
         {
-            hasGrabbedLettuce = true;
-            tutorialText += "Lettuce grabbed.\n";
-        }
-        else
-        {
-            tutorialText += "Grab the lettuce.\n";
+            text.text = "Grab the lettuce.";
+            return;
         }
 
         // Check if the meat has been grabbed
-        if (hasGrabbedMeat || meatGrabCheck.IsBeingHeld())
+        if (!meatGrabbed)
         {
-            hasGrabbedMeat = true;
-            tutorialText += "Meat grabbed.\n";
-        }
-        else
-        {
-            tutorialText += "Grab the meat.\n";
+            text.text = "Grab the meat.";
+            return;
         }
 
         // Check if the plate has been grabbed
-        if (hasGrabbedBunTop || plateGrabCheck.IsBeingHeld())
+        if (!plateGrabbed)
         {
-            hasGrabbedBunTop = true;
-            tutorialText += "Plate grabbed.\n";
-        }
-        else
-        {
-            tutorialText += "Grab the plate.\n";
+            text.text = "Grab the plate.";
+            return;
         }
 
-        // Check if the lettuce has been cut on the cutting counter
-        if (hasGrabbedKnife && cuttingCounter.transform.childCount > 0)
-        {
-            hasCutLettuce = true;
-            tutorialText += "Lettuce cut.\n";
-        }
-        else
-        {
-            tutorialText += "Go to the cutting counter and cut lettuce.\n";
-        }
-
-        // Check if the meat has been cooked on the stove
-        if (hasGrabbedMeat && stove.transform.childCount > 0)
-        {
-            hasCookedMeat = true;
-            tutorialText += "Meat cooked.\n";
-        }
-        else
-        {
-            tutorialText += "Go to the stove and cook the meat.\n";
-        }
-
-        // Check if all ingredients have been placed on the plate
-        if (hasGrabbedBunTop && hasGrabbedBunBottom && hasCutLettuce && hasCookedMeat)
-        {
-            hasPlacedIngredientsOnPlate = true;
-            tutorialText += "Ingredients placed on plate.\n";
-        }
-        else
-        {
-            tutorialText += "Grab a plate and put all the ingredients.\n";
-        }
-
-        // Display final instruction to turn in the plate
-        if (hasPlacedIngredientsOnPlate)
-        {
-            tutorialText += "Turn in the plate.";
-        }
-
-        text.text = tutorialText;
+        // All items grabbed, display a message indicating completion
+        text.text = "Tutorial completed!";
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ticket"))
+        {
+            ticketGrabbed = true;
+            text.text = "Good job! You've grabbed the ticket. Now grab the knife.";
+        }
+        else if (other.gameObject.CompareTag("Knife"))
+        {
+            knifeGrabbed = true;
+            text.text = "Good job! You've grabbed the knife. Now grab the lettuce.";
+        }
+        else if (other.gameObject.CompareTag("LettuceBlock"))
+        {
+            lettuceGrabbed = true;
+            text.text = "Good job! You've grabbed the lettuce. Now grab the meat.";
+        }
+        else if (other.gameObject.CompareTag("UncookedMeat"))
+        {
+            meatGrabbed = true;
+            text.text = "Good job! You've grabbed the meat. Now grab the plate.";
+        }
+        else if (other.gameObject.CompareTag("Plate"))
+        {
+            plateGrabbed = true;
+            text.text = "Good job! You've grabbed the plate. Tutorial completed!";
+        }
+    }
 }

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8cf565a9-781f-4892-b429-4dfc108581e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Scripts/TotalScoreReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Scripts/TotalScoreReader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Tutorial/TutorialBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Tutorial/TutorialBox.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/tutorial/tutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/tutorial/tutorial.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
@@ -24,6 +23,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ingredient/collide.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.meta.xr.sdk.core@60.0.0/Scripts/BuildingBlocks/BuildingBlock.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -104,12 +104,14 @@
       <workItem from="1710996872844" duration="440000" />
       <workItem from="1712896018765" duration="1673000" />
       <workItem from="1713060087552" duration="746000" />
+      <workItem from="1713134279367" duration="1028000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">

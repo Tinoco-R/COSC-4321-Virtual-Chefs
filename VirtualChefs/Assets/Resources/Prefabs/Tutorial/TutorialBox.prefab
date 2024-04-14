@@ -432,8 +432,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 3
+  m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 4
   m_linkedTextComponent: {fileID: 0}
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 4.1070824, z: 0, w: 4.027735}
+  m_margin: {x: 0, y: 4.1070824, z: 2.240775, w: 4.027735}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -490,12 +490,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2032481107230312398}
-  cuttingCounter: {fileID: 5683476877639825498, guid: 9bc88df32a6f9499eaad2f5bb0c4544b, type: 3}
-  stove: {fileID: 4589716710238282922, guid: 93af8b85a17635f40a5b76ed82a86c18, type: 3}
-  plate: {fileID: 522176099696603127, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
+  knife: {fileID: 7477621282432900011, guid: 8dafaed07fb9e544d8073ccd490c0476, type: 3}
   lettuce: {fileID: 522176099696603127, guid: a6979a38361f1d149ac108bbe128158a, type: 3}
   meat: {fileID: 522176099696603127, guid: 6814b67f3b9f18d42a16a81289106e3f, type: 3}
-  knife: {fileID: 7477621282432900011, guid: 8dafaed07fb9e544d8073ccd490c0476, type: 3}
+  plate: {fileID: 522176099696603127, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
   ticket: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
 --- !u!1 &7940866060635040868
 GameObject:
@@ -546,7 +544,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7940866060635040868}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
