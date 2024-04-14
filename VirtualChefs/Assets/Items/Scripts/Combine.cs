@@ -70,13 +70,13 @@ public class Combine : MonoBehaviour
     void initializeHeights()
     {
         foodHeights = new float[7];
-        foodHeights[0] = 0.0350f * 0.5f;    // Plate
-        foodHeights[1] = 0.0190f * 0.5f;    // Bottom Bun
-        foodHeights[2] = 0.0060f * 0.5f;    // Lettuce
-        foodHeights[3] = 0.0185f * 0.5f;    // Cheese
-        foodHeights[4] = 0.0270f * 0.5f;    // Meat
-        foodHeights[5] = 0.0090f * 0.5f;    // Tomato
-        foodHeights[6] = 0.0841f * 0.5f;    // Top Bun
+        foodHeights[0] = 0.0350f * 0.7f;    // Plate
+        foodHeights[1] = 0.0190f * 0.7f;    // Bottom Bun
+        foodHeights[2] = 0.0060f * 0.7f;    // Lettuce
+        foodHeights[3] = 0.0185f * 0.7f;    // Cheese
+        foodHeights[4] = 0.0270f * 0.7f;    // Meat
+        foodHeights[5] = 0.0090f * 0.7f;    // Tomato
+        foodHeights[6] = 0.0841f * 0.7f;    // Top Bun
     }
 
     // Second catch to ensure dupes truly dont exist
