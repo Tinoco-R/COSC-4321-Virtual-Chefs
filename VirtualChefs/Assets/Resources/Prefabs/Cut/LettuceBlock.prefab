@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 1036885556897244202}
   - component: {fileID: 3470604421928413204}
   - component: {fileID: 5447568777316862342}
+  - component: {fileID: 3697584047366217112}
+  - component: {fileID: 6041802278935448164}
   m_Layer: 15
   m_Name: LettuceBlock
   m_TagString: LettuceBlock
@@ -214,6 +216,30 @@ MonoBehaviour:
   _handAligment: 1
   _handGrabPoses: []
 --- !u!114 &5447568777316862342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807ac579987463a48a27c5eb4d22c717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3697584047366217112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807ac579987463a48a27c5eb4d22c717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6041802278935448164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

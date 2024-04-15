@@ -3292,8 +3292,8 @@ MonoBehaviour:
   m_spawnUi: {fileID: 7438812316205705168}
   m_againstWallObject: []
   m_onWallObject:
-  - ObjectName: ScoreBox
-    DisplayPrefab: {fileID: 3967299115179155971, guid: 6eb1ebabef5b8d746b4cf8e116825fe2, type: 3}
+  - ObjectName: TutorialBox
+    DisplayPrefab: {fileID: 2858362510987313768, guid: b7ad0f47df0a2c44bbf920599c716120, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
     WallPosition: {x: 0, y: 0, z: 0}
     WallRotation: {x: 0, y: 0, z: 0, w: 0}
