@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using Oculus.Interaction;
 using Oculus.Interaction.HandGrab;
-using UnityEditorInternal;
 
 public struct SliceShapeSize
 {

@@ -2343,6 +2343,7 @@ GameObject:
   - component: {fileID: 3069632674219116830}
   - component: {fileID: 6051975728498217257}
   - component: {fileID: 3578519208342817419}
+  - component: {fileID: 6893007157415518004}
   m_Layer: 0
   m_Name: PictureFrame
   m_TagString: Untagged
@@ -2681,6 +2682,25 @@ MonoBehaviour:
   OnFadeEnd:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6893007157415518004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165837362210919164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6de96a246b63349ba84ad89f7a3f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transferOnSecondSelection: 0
+  _addNewPointsToFront: 0
+  _forwardElement: {fileID: 0}
+  _oneGrabTransformer: {fileID: 0}
+  _twoGrabTransformer: {fileID: 0}
+  _targetTransform: {fileID: 0}
+  _maxGrabPoints: -1
 --- !u!1 &5356046007757521616
 GameObject:
   m_ObjectHideFlags: 0
