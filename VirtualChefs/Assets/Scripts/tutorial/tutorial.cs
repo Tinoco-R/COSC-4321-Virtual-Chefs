@@ -1,65 +1,103 @@
+using Oculus.Interaction;
+using Oculus.Interaction.HandGrab;
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using System.Linq; // Add this line to use LINQ
 
-public class tutorial : MonoBehaviour
+public class Tutorial : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
 
-    private ObjectGrabCheck ticketGrabCheck;
-    private ObjectGrabCheck knifeGrabCheck;
-    private ObjectGrabCheck lettuceGrabCheck;
-    private ObjectGrabCheck meatGrabCheck;
-    private ObjectGrabCheck plateGrabCheck;
-
-    [SerializeField] private GameObject ticket;
-    [SerializeField] private GameObject knife;
-    [SerializeField] private GameObject lettuce;
-    [SerializeField] private GameObject meat;
-    [SerializeField] private GameObject plate;
+    private int currentStage = 0;
+    private bool tutorialCompleted = false;
 
     private void Start()
     {
-        ticketGrabCheck = ticket.AddComponent<ObjectGrabCheck>();
-        knifeGrabCheck = knife.AddComponent<ObjectGrabCheck>();
-        lettuceGrabCheck = lettuce.AddComponent<ObjectGrabCheck>();
-        meatGrabCheck = meat.AddComponent<ObjectGrabCheck>();
-        plateGrabCheck = plate.AddComponent<ObjectGrabCheck>();
-
         UpdateTutorialText();
+        StartCoroutine(CheckGrabbedObjects());
     }
 
     private void UpdateTutorialText()
     {
-        
-        // Check if the ticket has been grabbed
-        if (!ticketGrabCheck.IsBeingHeld())
+        switch (currentStage)
         {
-            text.text = "Grab the ticket to start the tutorial.";
+            case 0:
+                text.text = "Grab the ticket to start the tutorial.";
+                break;
+            case 1:
+                text.text = "Good job! You've grabbed the ticket. Now grab the knife.";
+                break;
+            case 2:
+                text.text = "Good job! You've grabbed the knife. Now grab the lettuce.";
+                break;
+            case 3:
+                text.text = "Good job! You've grabbed the lettuce. Now grab the meat.";
+                break;
+            case 4:
+                text.text = "Good job! You've grabbed the meat. Now grab the plate.";
+                break;
+            case 5:
+                text.text = "Good job! You've grabbed the plate. Tutorial completed!";
+                tutorialCompleted = true;
+                break;
         }
-        // Check if the knife has been grabbed
-        else if (!knifeGrabCheck.IsBeingHeld())
+    }
+
+    private IEnumerator CheckGrabbedObjects()
+    {
+        while (!tutorialCompleted)
         {
-            text.text = "Good job! You've grabbed the ticket. Now grab the knife.";
+            Grabbable grabbedObject = FindGrabbedObject();
+
+            if (grabbedObject != null)
+            {
+                if (CheckGrabbable(grabbedObject, "Ticket", 0))
+                {
+                    currentStage = 1;
+                    UpdateTutorialText();
+                }
+                else if (CheckGrabbable(grabbedObject, "Knife", 1))
+                {
+                    currentStage = 2;
+                    UpdateTutorialText();
+                }
+                else if (CheckGrabbable(grabbedObject, "LettuceBlock", 2))
+                {
+                    currentStage = 3;
+                    UpdateTutorialText();
+                }
+                else if (CheckGrabbable(grabbedObject, "UncookedMeat", 3))
+                {
+                    currentStage = 4;
+                    UpdateTutorialText();
+                }
+                else if (CheckGrabbable(grabbedObject, "Plate", 4))
+                {
+                    currentStage = 5;
+                    UpdateTutorialText();
+                }
+            }
+
+            yield return null;
         }
-        // Check if the lettuce has been grabbed
-        else if (!lettuceGrabCheck.IsBeingHeld())
+    }
+
+    private Grabbable FindGrabbedObject()
+    {
+        // Find all Grabbable components in the scene
+        Grabbable[] grabbables = FindObjectsOfType<Grabbable>();
+
+        // Return the first grabbed object, or null if none are grabbed
+        return grabbables.FirstOrDefault(g => g.isGrabbed);
+    }
+
+    private bool CheckGrabbable(Grabbable grabbable, string tag, int stage)
+    {
+        if (currentStage == stage && grabbable.gameObject.CompareTag(tag))
         {
-            text.text = "Good job! You've grabbed the knife. Now grab the lettuce.";
+            return true;
         }
-        // Check if the meat has been grabbed
-        else if (!meatGrabCheck.IsBeingHeld())
-        {
-            text.text = "Good job! You've grabbed the lettuce. Now grab the meat.";
-        }
-        // Check if the plate has been grabbed
-        else if (!plateGrabCheck.IsBeingHeld())
-        {
-            text.text = "Good job! You've grabbed the meat. Now grab the plate.";
-        }
-        // All items grabbed, display a message indicating completion
-        else
-        {
-            text.text = "Good job! You've grabbed the plate. Tutorial completed!";
-        }
+        return false;
     }
 }
