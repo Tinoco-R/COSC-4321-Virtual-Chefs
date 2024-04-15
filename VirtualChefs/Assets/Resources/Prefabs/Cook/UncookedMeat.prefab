@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 1701405869273455763}
   - component: {fileID: 3470604421928413204}
   - component: {fileID: 5922634492389325207}
+  - component: {fileID: -2218395627457907134}
+  - component: {fileID: -762640570938728103}
   m_Layer: 0
   m_Name: UncookedMeat
   m_TagString: UncookedMeat
@@ -230,6 +232,30 @@ MonoBehaviour:
   cookProgress: 0
   cookGoal: 0
   cooked: 0
+--- !u!114 &-2218395627457907134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807ac579987463a48a27c5eb4d22c717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-762640570938728103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807ac579987463a48a27c5eb4d22c717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1551011201078936057
 GameObject:
   m_ObjectHideFlags: 0
