@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3200254174171096400}
   - component: {fileID: 8636089981726935302}
   - component: {fileID: 8726916404924514605}
-  - component: {fileID: 1701405869273455763}
+  - component: {fileID: 6342050430608044917}
   - component: {fileID: 3470604421928413204}
   - component: {fileID: 7561102431090071636}
   - component: {fileID: 4041721510175226617}
@@ -116,9 +116,9 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.25, y: 0.09, z: 0.15}
   m_Center: {x: -0.01, y: 0.03, z: 0}
@@ -144,12 +144,12 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1701405869273455763
+--- !u!114 &6342050430608044917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
+  _transferOnSecondSelection: 1
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
   _oneGrabTransformer: {fileID: 0}
@@ -184,7 +184,7 @@ MonoBehaviour:
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
-  _pointableElement: {fileID: 1701405869273455763}
+  _pointableElement: {fileID: 6342050430608044917}
   _rigidbody: {fileID: 8726916404924514605}
   _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_snapLayers:
     serializedVersion: 2
     m_Bits: 128
-  m_grabbable: {fileID: 1701405869273455763}
+  m_grabbable: {fileID: 0}
 --- !u!114 &1891820397393637985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
   _candidateTiebreaker: {fileID: 0}
   _maxIterationsPerFrame: 3
   _data: {fileID: 0}
-  _pointableElement: {fileID: 1701405869273455763}
+  _pointableElement: {fileID: 0}
   _rigidbody: {fileID: 8726916404924514605}
   _distanceThreshold: 0.01
   _snapPoseTransform: {fileID: 0}

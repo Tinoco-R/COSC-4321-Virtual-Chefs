@@ -61,6 +61,7 @@ namespace CrypticCabinet.Utils
             COUNTER,
             KNIFE,
             CUTTING_COUNTER,
+            CHOPPING_BOARD,
             TURN_IN_ZONE,
             STOVE,
             BURGER,

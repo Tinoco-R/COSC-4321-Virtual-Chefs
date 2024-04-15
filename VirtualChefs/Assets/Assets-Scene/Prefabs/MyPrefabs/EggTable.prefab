@@ -164,7 +164,8 @@ MonoBehaviour:
   Flags: 2305
   NetworkGuid:
     RawGuidValue: d86f001c0a9236440b367314445a79fd
-  NestedObjects: []
+  NestedObjects:
+  - {fileID: 2324685601904316737}
   NetworkedBehaviours:
   - {fileID: -5113354856592944287}
   SimulationBehaviours: []
@@ -390,6 +391,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1616774846941945077, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
+      propertyPath: Flags
+      value: 3073
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616774846941945077, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616774846941945077, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5898114119369247349, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
       propertyPath: m_Name
       value: TurnInZone
@@ -399,6 +412,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
+--- !u!114 &2324685601904316737 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1616774846941945077, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
+  m_PrefabInstance: {fileID: 3903777640535428532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4096088071929743114 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1077833050834619070, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}

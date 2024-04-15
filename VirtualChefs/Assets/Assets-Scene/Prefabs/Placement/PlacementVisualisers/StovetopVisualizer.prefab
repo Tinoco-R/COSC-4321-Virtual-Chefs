@@ -398,7 +398,7 @@ MonoBehaviour:
   m_wallObjectPlacementHeight: 1.92555
   m_wallObjectWidth: 1.2
   m_wallObjectVerticalSize: 1.92555
-  m_objectType: 30
+  m_objectType: 31
   m_grabbable: {fileID: 8713484567708071133}
   m_userWarningLayers:
     serializedVersion: 2

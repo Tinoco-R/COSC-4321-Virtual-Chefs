@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6706f61472a099542b1b418471acf442, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 0.40000004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6706f61472a099542b1b418471acf442, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 0.40000004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6706f61472a099542b1b418471acf442, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.75
+      value: 0.40000004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6706f61472a099542b1b418471acf442, type: 3}
       propertyPath: m_LocalPosition.x
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d5064da68c47aeb08140c8ebf76d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_objectType: 28
+  m_objectType: 29
   m_isWallObject: 0
   m_placeAtGroundLevel: 0
   m_onObjectPlaced:
