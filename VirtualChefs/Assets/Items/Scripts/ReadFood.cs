@@ -10,8 +10,10 @@ public class ReadFood : MonoBehaviour
     public int tableID;
     public string currentOrder;
     public double score;
+    public GameObject ZoneVisual;
     public List<GameObject> foodInZone = new List<GameObject>();
     public double timer = 3.0;
+    private Color baseColor;
 
     public delegate void OrderGivenEvent(int n, double s);
     public static event OrderGivenEvent orderGiven;
@@ -31,8 +33,10 @@ public class ReadFood : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ZoneVisual.GetComponent<MeshRenderer>().enabled = false;
         foodInZone.Clear();
         currentOrder = "";
+        baseColor = ZoneVisual.GetComponent<Renderer>().material.color;
     }
 
 
@@ -51,14 +55,20 @@ public class ReadFood : MonoBehaviour
         {
             timer = 3.0;
             foodInZone.Remove(other.gameObject);
+            if(foodInZone.Count == 0)
+            {
+                ZoneVisual.GetComponent<Renderer>().material.color = baseColor;
+            }
         }
     }
 
 
     public void OrderReceived(int n, string c, string t)
     {
+        ZoneVisual.GetComponent<MeshRenderer>().enabled = true;
         if (n == tableID)
         {
+            score = 0;
             currentOrder = c;
         }
     }
@@ -66,14 +76,24 @@ public class ReadFood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (foodInZone.Count > 0)
+        if (foodInZone.Count > 0 && timer > 0 && currentOrder != "")
         {
             timer -= Time.deltaTime;
+            float ratio = (float)timer / 3;
+            if (timer < 0)
+            {
+                ratio = 0;
+            }
+            Color lerpedColor = Color.white;
+            //lerpedColor = Color.Lerp(Color.white, new Color((float)0.0745, (float)0.4902, (float)0.5098, 1), ratio);
+            lerpedColor = Color.Lerp(Color.white, baseColor, ratio);
+            ZoneVisual.GetComponent<Renderer>().material.color = lerpedColor;
         }
         if (foodInZone.Count > 0 && timer <= 0 && currentOrder != "")
         {
-            
             turnInPlate();
+            //ZoneVisual.GetComponent<Renderer>().material.color = new Color((float)0.0745, (float)0.4902, (float)0.5098, 1);
+            ZoneVisual.GetComponent<Renderer>().material.color = baseColor;
         }
     }
 
@@ -98,14 +118,16 @@ public class ReadFood : MonoBehaviour
                 if (items.tag == "Plate")
                 {
                     //ignore
-                    print("hello");
+                    //print("plate");
                     correctCount++;
                     totalCount++;
+                    Plate = true;
                 }
                 if (items.tag == "CookedMeat")
                 {
                     if (currentOrder[2] != '9' && Meat != true)
                     {
+                        //print("meat");
                         correctCount++;
                         totalCount++;
                         Meat = true;
@@ -118,6 +140,7 @@ public class ReadFood : MonoBehaviour
                 if (items.tag == "TopBun")
                 {
                     if (TopBun != true && currentOrder[0] != 3) {
+                        //print("top");
                         correctCount++;
                         totalCount++;
                         TopBun = true;
@@ -130,6 +153,7 @@ public class ReadFood : MonoBehaviour
                 {
                     if (BotBun != true && currentOrder[0] != 3)
                     {
+                        //print("bot");
                         correctCount++;
                         totalCount++;
                         BotBun = true;
@@ -143,6 +167,7 @@ public class ReadFood : MonoBehaviour
                 {
                     if (currentOrder[4] != '9' && currentOrder[4] != '0' && Tomato != true)
                     {
+                        //print("tomato");
                         correctCount++;
                         totalCount++;
                         Tomato = true;
@@ -156,9 +181,10 @@ public class ReadFood : MonoBehaviour
                 {
                     if (currentOrder[3] != '9' && currentOrder[3] != '0' && Cheese != true)
                     {
+                        //print("cheese");
                         correctCount++;
                         totalCount++;
-                        Tomato = true;
+                        Cheese = true;
                     }
                     else
                     {
@@ -169,9 +195,10 @@ public class ReadFood : MonoBehaviour
                 {
                     if (currentOrder[5] != '9' && currentOrder[5] != '0' && Lettuce != true)
                     {
+                        //print("lettuce");
                         correctCount++;
                         totalCount++;
-                        Tomato = true;
+                        Lettuce = true;
                     }
                     else
                     {
@@ -182,37 +209,47 @@ public class ReadFood : MonoBehaviour
             if (Plate == false) 
             {
                 totalCount++;
+                //print("noe");
             }
             if (currentOrder[1] != '9' && TopBun == false)
             {
                 totalCount++;
+                //print("n");
             }
             if (currentOrder[1] != '9' && BotBun == false)
             {
                 totalCount++;
+                //print("no");
             }
-            if (currentOrder[4] != '9' && currentOrder[4] != '0' && Tomato != false)
+            if (currentOrder[4] != '9' && currentOrder[4] != '0' && Tomato == false)
             {
                 totalCount++;
+                //print("nomasd");
             }
-            if (currentOrder[3] != '9' && currentOrder[3] != '0' && Cheese != false)
+            if (currentOrder[3] != '9' && currentOrder[3] != '0' && Cheese == false)
             {
                 totalCount++;
+                //print("nom");
             }
-            if (currentOrder[2] != '9' && Meat != false)
+            if (currentOrder[2] != '9' && Meat == false)
             {
                 totalCount++;
+                //print("noa");
             }
-            if (currentOrder[5] != '9' && currentOrder[5] != '0' && Lettuce != false)
+            if (currentOrder[5] != '9' && currentOrder[5] != '0' && Lettuce == false)
             {
                 totalCount++;
+                //print("nob");
             }
             score = correctCount / totalCount * 100;
-            print(correctCount);
-            print(totalCount);
-            print(score);
+            //print(correctCount);
+            //print(totalCount);
+            //print(score);
+            ZoneVisual.GetComponent<MeshRenderer>().enabled = false;
             orderGiven(tableID, score);
             currentOrder = "";
+            timer = 3;
+            
             foreach (Food items in obj.GetComponent<Combine>().plate)
             {
                 if (items.tag != "Plate")
@@ -220,8 +257,8 @@ public class ReadFood : MonoBehaviour
                     Destroy(items.item);
                 }
             }
-            Destroy(obj);
             foodInZone.Remove(obj);
+            Destroy(obj);
             break;
         }
     }

@@ -2477,6 +2477,10 @@ PrefabInstance:
       propertyPath: requestEyeTrackingPermissionOnStartup
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4463869442996139304, guid: 51e3be741adb6b049bd8acd318195efe, type: 3}
+      propertyPath: requestBodyTrackingPermissionOnStartup
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4571439241912830660, guid: 51e3be741adb6b049bd8acd318195efe, type: 3}
       propertyPath: m_CastShadows
       value: 0

@@ -61,10 +61,12 @@ namespace CrypticCabinet.Utils
             COUNTER,
             KNIFE,
             CUTTING_COUNTER,
+            CHOPPING_BOARD,
             TURN_IN_ZONE,
             STOVE,
             BURGER,
-            PLATE_SPAWN_STATION
+            PLATE_SPAWN_STATION,
+            SCORE_BOX
         }
 
         [Serializable]

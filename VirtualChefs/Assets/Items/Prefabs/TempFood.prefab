@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7470113845856359531}
   m_Layer: 0
   m_Name: TempFood
-  m_TagString: Food
+  m_TagString: Plate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -146,4 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95e457106a5ee9447a8d3df71fe71127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodHeights: []
+  foods: 
   size: 0

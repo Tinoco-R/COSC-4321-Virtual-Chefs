@@ -149,6 +149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 6012174296194381259}
   tableID: 1
+  TicketBody: {fileID: 0}
+  Housing: {fileID: 0}
 --- !u!1 &2825507053607212370
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +271,7 @@ GameObject:
   - component: {fileID: 1294541991250876972}
   m_Layer: 0
   m_Name: Ticket
-  m_TagString: Untagged
+  m_TagString: Ticket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,7 +286,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.658, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.07499998, z: 0.0024999997}
+  m_LocalScale: {x: 0.3, y: 0.44999987, z: 0.014999999}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6402200984302131794}
