@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5c5184f2-c2f5-4063-b14b-3b1264fb3c1a
-  instanceId: 88edd708-eb96-48f1-839d-ba75a6f64d8b
+  instanceId: 23f44a15-d29c-4e6c-ad02-4f74f05c5725
   version: 1
 --- !u!33 &4796893382826154658
 MeshFilter:
@@ -175,6 +175,7 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!114 &3470604421928413204
 MonoBehaviour:
   m_ObjectHideFlags: 0

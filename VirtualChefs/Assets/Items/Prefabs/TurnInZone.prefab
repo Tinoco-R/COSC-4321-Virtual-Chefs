@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 127280930131867612}
   m_Layer: 0
   m_Name: TurnInZone
-  m_TagString: Untagged
+  m_TagString: TurnInZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

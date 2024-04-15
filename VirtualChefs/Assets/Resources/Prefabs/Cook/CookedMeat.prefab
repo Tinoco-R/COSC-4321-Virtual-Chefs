@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 3200254174171096400}
   - component: {fileID: 8636089981726935302}
   - component: {fileID: 8726916404924514605}
-  - component: {fileID: 4098870524401839128}
   - component: {fileID: 3470604421928413204}
   - component: {fileID: 4125152236303868641}
   - component: {fileID: 3814713210485362703}
+  - component: {fileID: 1416439749720834930}
   m_Layer: 0
   m_Name: CookedMeat
   m_TagString: CookedMeat
@@ -154,25 +154,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4098870524401839128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522176099696603127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e6de96a246b63349ba84ad89f7a3f68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 1
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
 --- !u!114 &3470604421928413204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +223,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807ac579987463a48a27c5eb4d22c717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1416439749720834930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transferOnSecondSelection: 0
+  _addNewPointsToFront: 0
+  _forwardElement: {fileID: 0}
+  _oneGrabTransformer: {fileID: 0}
+  _twoGrabTransformer: {fileID: 0}
+  _targetTransform: {fileID: 0}
+  _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!1 &1551011201078936057
 GameObject:
   m_ObjectHideFlags: 0
