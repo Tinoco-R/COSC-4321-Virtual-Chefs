@@ -504,3 +504,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 8504498174076283490}
+  CompleteSound: {fileID: 8300000, guid: 14e5936562fae0f4f9093bbb2a79105b, type: 3}

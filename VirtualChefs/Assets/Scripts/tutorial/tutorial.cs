@@ -8,12 +8,20 @@ using System.Linq; // Add this line to use LINQ
 public class Tutorial : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
+    [SerializeField] private AudioClip CompleteSound;
 
     private int currentStage = 0;
     private bool tutorialCompleted = false;
+    private AudioSource audioSource;
 
     private void Start()
     {
+        
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
         UpdateTutorialText();
         StartCoroutine(CheckGrabbedObjects());
     }
@@ -27,18 +35,24 @@ public class Tutorial : MonoBehaviour
                 break;
             case 1:
                 text.text = "Good job! You've grabbed the ticket. Now grab the knife.";
+                PlaySound(CompleteSound);
+               
                 break;
             case 2:
                 text.text = "Good job! You've grabbed the knife. Now grab the lettuce.";
+                PlaySound(CompleteSound);
                 break;
             case 3:
                 text.text = "Good job! You've grabbed the lettuce. Now grab the meat.";
+                PlaySound(CompleteSound);
                 break;
             case 4:
                 text.text = "Good job! You've grabbed the meat. Now grab the plate.";
+                PlaySound(CompleteSound);
                 break;
             case 5:
                 text.text = "Good job! You've grabbed the plate. Tutorial completed!";
+                PlaySound(CompleteSound);
                 tutorialCompleted = true;
                 break;
         }
@@ -99,5 +113,13 @@ public class Tutorial : MonoBehaviour
             return true;
         }
         return false;
+    }
+    
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 }

@@ -7,9 +7,7 @@
     <list default="true" id="8cf565a9-781f-4892-b429-4dfc108581e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/TutorialBoxTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/TutorialBoxTest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/Ticket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Prefabs/Ticket.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/tutorial/tutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/tutorial/tutorial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/com.meta.xr.sdk.interaction@60.0.0/Runtime/Scripts/Interaction/Grabbable/Grabbable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.meta.xr.sdk.interaction@60.0.0/Runtime/Scripts/Interaction/Grabbable/Grabbable.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
