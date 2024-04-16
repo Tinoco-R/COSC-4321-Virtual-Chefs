@@ -39,7 +39,7 @@ public class Tutorial : MonoBehaviour
                
                 break;
             case 2:
-                text.text = "Good job! You've grabbed the knife. Now grab the lettuce.";
+                text.text = "Good job! You've grabbed the knife. Now grab the Cheese.";
                 PlaySound(CompleteSound);
                 break;
             case 3:
@@ -90,7 +90,7 @@ public class Tutorial : MonoBehaviour
                     currentStage = 2;
                     UpdateTutorialText();
                 }
-                else if (CheckGrabbable(grabbedObject, "LettuceBlock", 2))
+                else if (CheckGrabbable(grabbedObject, "CheeseBlock", 2))
                 {
                     currentStage = 3;
                     UpdateTutorialText();
@@ -108,7 +108,7 @@ public class Tutorial : MonoBehaviour
                     UpdateTutorialText();
                 }
                 
-                else if (CheckGrabbable(grabbedObject, "LettuceSlice", 5))
+                else if (CheckGrabbable(grabbedObject, "CheeseSlice", 5))
                 {
                     currentStage = 6;
                     UpdateTutorialText();
