@@ -50,10 +50,10 @@ public class RandomRecipe : MonoBehaviour
 
     private void Start()
     {
-        IsTaken1 = false;
-        IsTaken2 = false;
-        IsTaken3 = false;
-        IsTaken4 = false;
+        //IsTaken1 = false;
+        //IsTaken2 = false;
+        //IsTaken3 = false;
+        //IsTaken4 = false;
         //if (m_MyEvent == null)
         //{
         //m_MyEvent = new RecipeMadeEvent();
@@ -115,7 +115,7 @@ public class RandomRecipe : MonoBehaviour
         }
         if (tableNum != 100)
         {
-            returnNum = Random.Range(0, 4);
+            returnNum = Random.Range(0, 3);
             switch (returnNum)
             {
                 case 0:
@@ -130,12 +130,14 @@ public class RandomRecipe : MonoBehaviour
                             case 0:
                                 //notToasted
                                 code = code + returnNum;
-                                text = text + "Not Toasted\n";
+                                //text = text + "Not Toasted\n";
+                                text = text + "Top Bun\nBottom Bun\n";
                                 break;
                             case 1:
                                 //Toasted
                                 code = code + returnNum;
-                                text = text + "Toasted\n";
+                                //text = text + "Toasted\n";
+                                text = text + "Top Bun\nBottom Bun\n";
                                 break;
                         }
                         returnNum = Random.Range(0, 3);
@@ -144,18 +146,21 @@ public class RandomRecipe : MonoBehaviour
                             case 0:
                                 //rare
                                 code = code + returnNum;
-                                text = text + "Rare\n";
+                                //text = text + "Rare\n";
+                                text = text + "Cooked Meat\n";
                                 break;
                             case 1:
                                 //medium
                                 code = code + returnNum;
-                                text = text + "Medium\n";
+                                //text = text + "Medium\n";
+                                text = text + "Cooked Meat\n";
                                 break;
 
                             case 2:
                                 //welldone
                                 code = code + returnNum;
-                                text = text + "Well Done\n";
+                                //text = text + "Well Done\n";
+                                text = text + "Cooked Meat\n";
                                 break;
                         }
                         //plated
@@ -175,12 +180,14 @@ public class RandomRecipe : MonoBehaviour
                             case 0:
                                 //notToasted
                                 code = code + returnNum;
-                                text = text + "Not Toasted\n";
+                                //text = text + "Not Toasted\n";
+                                text = text + "Top Bun\nBottom Bun\n";
                                 break;
                             case 1:
                                 //Toasted
                                 code = code + returnNum;
-                                text = text + "Toasted\n";
+                                //text = text + "Toasted\n";
+                                text = text + "Top Bun\nBottom Bun\n";
                                 break;
                         }
                         returnNum = Random.Range(0, 3);
@@ -189,22 +196,25 @@ public class RandomRecipe : MonoBehaviour
                             case 0:
                                 //rare
                                 code = code + returnNum;
-                                text = text + "Rare\n";
+                                //text = text + "Rare\n";
+                                text = text + "Cooked Meat\n";
                                 break;
                             case 1:
                                 //medium
                                 code = code + returnNum;
-                                text = text + "Medium\n";
+                                //text = text + "Medium\n";
+                                text = text + "Cooked Meat\n";
                                 break;
 
                             case 2:
                                 //welldone
                                 code = code + returnNum;
-                                text = text + "Well Done\n";
+                                //text = text + "Well Done\n";
+                                text = text + "Cooked Meat\n";
                                 break;
                         }
                         //cheese plated
-                        text = text + "Cheese\n";
+                        text = text + "Cheese Slice\n";
                         code = code + "1991";
                         recipeMade(tableNum, code, text);
                     }
@@ -221,12 +231,14 @@ public class RandomRecipe : MonoBehaviour
                             case 0:
                                 //notToasted
                                 code = code + returnNum;
-                                text = text + "Not Toasted\n";
+                                //text = text + "Not Toasted\n";
+                                text = text + "Top Bun\nBottom Bun\n";
                                 break;
                             case 1:
                                 //Toasted
                                 code = code + returnNum;
-                                text = text + "Toasted\n";
+                                //text = text + "Toasted\n";
+                                text = text + "Top Bun\nBottom Bun\n";
                                 break;
                         }
                         returnNum = Random.Range(0, 3);
@@ -235,25 +247,28 @@ public class RandomRecipe : MonoBehaviour
                             case 0:
                                 //rare
                                 code = code + returnNum;
-                                text = text + "Rare\n";
+                                //text = text + "Rare\n";
+                                text = text + "Cooked Meat\n";
                                 break;
                             case 1:
                                 //medium
                                 code = code + returnNum;
-                                text = text + "Medium\n";
+                                //text = text + "Medium\n";
+                                text = text + "Cooked Meat\n";
                                 break;
 
                             case 2:
                                 //welldone
                                 code = code + returnNum;
-                                text = text + "Well Done\n";
+                                //text = text + "Well Done\n";
+                                text = text + "Cooked Meat\n";
                                 break;
                         }
                         returnNum = Random.Range(0, 2);
                         if (returnNum == 1)
                         {
                             //cheese
-                            text = text + "Cheese\n";
+                            text = text + "Cheese Slice\n";
 
                         }
                         code = code + returnNum;
@@ -261,7 +276,7 @@ public class RandomRecipe : MonoBehaviour
                         if (returnNum == 1)
                         {
                             //tomato
-                            text = text + "Tomato\n";
+                            text = text + "Tomato Slice\n";
 
                         }
                         code = code + returnNum;
@@ -269,7 +284,7 @@ public class RandomRecipe : MonoBehaviour
                         if (returnNum == 1)
                         {
                             //lettuce
-                            text = text + "Lettuce\n";
+                            text = text + "Lettuce Slice\n";
 
                         }
                         code = code + returnNum;

@@ -376,7 +376,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2520766445094104837, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: instanceId
-      value: 783faa47-44ad-40a5-ba0f-b199924b271e
+      value: 2955f9b1-fb26-4e6f-b030-2f7e25d8ac5d
       objectReference: {fileID: 0}
     - target: {fileID: 3384907975746721336, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: Housing
@@ -447,6 +447,10 @@ PrefabInstance:
       value: Ticket2
       objectReference: {fileID: 0}
     - target: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: m_TagString
       value: Ticket
       objectReference: {fileID: 0}
@@ -475,7 +479,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2520766445094104837, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: instanceId
-      value: 6f65ddba-9a3a-465d-86a7-39431842f307
+      value: 6280c050-138f-479b-9c79-51ad40fea0d9
       objectReference: {fileID: 0}
     - target: {fileID: 3384907975746721336, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: Housing
@@ -574,7 +578,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2520766445094104837, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: instanceId
-      value: 7c382b0f-1067-4d80-bbe4-794d21ada65d
+      value: 6a7db198-b549-4f89-a9d5-f7efefa6f16d
       objectReference: {fileID: 0}
     - target: {fileID: 3384907975746721336, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: Housing
@@ -673,7 +677,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2520766445094104837, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: instanceId
-      value: 476be457-42d9-4b2c-ab06-7c695d87fe65
+      value: e024c665-fc93-4d44-ac67-513e74ffc857
       objectReference: {fileID: 0}
     - target: {fileID: 3384907975746721336, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: Housing
