@@ -233,6 +233,7 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!138 &7339735888234283767
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -1022,7 +1023,7 @@ MonoBehaviour:
   objectPrefabs:
   - {fileID: 522176099696603127, guid: e70f4aabdeac3944c8564533670696a3, type: 3}
   - {fileID: 522176099696603127, guid: bf3a3152954ce5742874cc8d5b576460, type: 3}
-  - {fileID: 522176099696603127, guid: a6979a38361f1d149ac108bbe128158a, type: 3}
+  - {fileID: 522176099696603127, guid: 30297c18be39c48359745e20e1fcfcf0, type: 3}
   - {fileID: 522176099696603127, guid: 6814b67f3b9f18d42a16a81289106e3f, type: 3}
   - {fileID: 522176099696603127, guid: 22a9fc55953b2d14d8aa141cdb05c041, type: 3}
   - {fileID: 522176099696603127, guid: eec523e15970d7c499024e74ecbdfb73, type: 3}

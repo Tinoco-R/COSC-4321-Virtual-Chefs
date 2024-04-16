@@ -35,6 +35,7 @@ TagManager:
   - LettuceSlice
   - TomatoSlice
   - CookedMeat
+  - TurnInZone
   layers:
   - Default
   - TransparentFX

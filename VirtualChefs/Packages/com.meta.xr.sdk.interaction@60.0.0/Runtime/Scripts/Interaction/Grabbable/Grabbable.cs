@@ -162,7 +162,7 @@ namespace Oculus.Interaction
                 PointerEventType.Move, releaseEvent.Pose, releaseEvent.Data);
             ProcessPointerEvent(moveEvent);
         }
-
+        public bool isGrabbed = false;
         // Whenever we change the number of grab points, we save the
         // current transform data
         private void BeginTransform()
@@ -197,7 +197,7 @@ namespace Oculus.Interaction
 
             _activeTransformer.BeginTransform();
 
-
+            isGrabbed = true;
             // Enable gravity on the first grab
             if (!_gravityEnabled && _isKinematicEnabled)
             {
