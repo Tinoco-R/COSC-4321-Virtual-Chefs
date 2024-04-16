@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2738110571264910453}
   - component: {fileID: 7713555486401145507}
   - component: {fileID: 9118736484682314393}
+  - component: {fileID: 2072472388668774030}
   m_Layer: 15
   m_Name: TomatoBlock
   m_TagString: TomatoBlock
@@ -118,7 +119,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.15, y: 0.15, z: 0.15}
   m_Center: {x: 0, y: 0.06, z: 0}
@@ -168,6 +169,7 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!114 &3470604421928413204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,6 +300,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522176099696603127}
+  m_Mesh: {fileID: -1340541719380434750, guid: 36694ad9cc3abc04ab48fdb0373f2037, type: 3}
+--- !u!64 &2072472388668774030
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1340541719380434750, guid: 36694ad9cc3abc04ab48fdb0373f2037, type: 3}
 --- !u!1 &2031465377213339327
 GameObject:

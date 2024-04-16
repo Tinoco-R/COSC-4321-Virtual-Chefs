@@ -6,14 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="8cf565a9-781f-4892-b429-4dfc108581e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/TurnInZone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Prefabs/TurnInZone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Appliance/KitchenAppliances/Prefabs/Stovetop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Appliance/KitchenAppliances/Prefabs/Stovetop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/Fridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/Fridge.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/TutorialBoxTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/TutorialBoxTest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/Ticket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Prefabs/Ticket.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cook/CookedMeat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cook/CookedMeat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cook/UncookedMeat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cook/UncookedMeat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/LettuceBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/LettuceBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/LettuceBlock.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/LettuceBlock.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Knife.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Knife.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/tutorial/tutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/tutorial/tutorial.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "tutorial",
+    "git-widget-placeholder": "physics",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
