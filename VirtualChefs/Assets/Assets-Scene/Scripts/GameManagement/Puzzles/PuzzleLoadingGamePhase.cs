@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Linq;
 using CrypticCabinet.Photon;
+using CrypticCabinet.UI;
 using Fusion;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace CrypticCabinet.GameManagement.Puzzles
     public class SandPuzzleGamePhase : GamePhase
     {
         [SerializeField] private GameObject[] m_prefabSandPuzzlePrefabs;
+        private float waveTimer = 0f;
+        private int currentWave = 1;
 
         protected override void InitializeInternal()
         {
@@ -24,6 +27,9 @@ namespace CrypticCabinet.GameManagement.Puzzles
             if (PhotonConnector.Instance != null && PhotonConnector.Instance.Runner != null)
             {
                 _ = GameManager.Instance.StartCoroutine(HandleSpawn());
+                _ = GameManager.Instance.StartCoroutine(HandleWaves());
+                UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
+             
             }
             else
             {
@@ -49,6 +55,77 @@ namespace CrypticCabinet.GameManagement.Puzzles
             });
             return spawned;
         }
+        private IEnumerator HandleWaves()
+        {
+            while (true)
+            {
+                waveTimer += Time.deltaTime;
+        
+                if (currentWave == 1 && waveTimer >= 180f) // 3 minutes for Wave 1
+                {
+                    GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
+                    if (turnInZoneInstance != null)
+                    {
+                        ReadFood readFood = turnInZoneInstance.GetComponent<ReadFood>();
+                        if (readFood.score >= 100)
+                        {
+                            currentWave++;
+                            UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
+                            waveTimer = 0f;
+                        }
+                        else
+                        {
+                            UISystem.Instance.ShowMessage("Game Over", null, -1);
+                            
+                            yield break;
+                        }
+                    }
+                }
+                else if (currentWave == 2 && waveTimer >= 120f) // 2 minutes for Wave 2
+                {
+                    GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
+                    if (turnInZoneInstance != null)
+                    {
+                        ReadFood readFood = turnInZoneInstance.GetComponent<ReadFood>();
+                        if (readFood.score >= 70)
+                        {
+                            currentWave++;
+                            UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
+                            waveTimer = 0f;
+                        }
+                        else
+                        {
+                            UISystem.Instance.ShowMessage("Game Over", null, -1);
+                            
+                            yield break;
+                        }
+                    }
+                }
+                else if (currentWave == 3 && waveTimer >= 60f) // 2 minutes for Wave 3
+                {
+                    GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
+                    if (turnInZoneInstance != null)
+                    {
+                        ReadFood readFood = turnInZoneInstance.GetComponent<ReadFood>();
+                        if (readFood.score >= 50)
+                        {
+                            currentWave++;
+                            UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
+                            waveTimer = 0f;
+                        }
+                        else
+                        {
+                            UISystem.Instance.ShowMessage("Game Over", null, -1);
+                            
+                            yield break;
+                        }
+                    }
+                }
+        
+                yield return null;
+            }
+    
+}
 
     }
 }
