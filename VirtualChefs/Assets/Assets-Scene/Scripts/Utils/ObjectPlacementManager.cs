@@ -8,6 +8,7 @@ using CrypticCabinet.UI;
 using Cysharp.Threading.Tasks;
 using Oculus.Interaction.Input;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace CrypticCabinet.Utils
 {
@@ -88,6 +89,8 @@ namespace CrypticCabinet.Utils
         [SerializeField] private List<SceneObject> m_deskObject = new();
         [SerializeField] private List<SceneObject> m_floorObject = new();
         [SerializeField] private List<SceneObject> m_anyHorizontalObject = new();
+        // Custom code
+        [SerializeField] private GameObject m_virtualTablePrefab;
 
         public Action ConfirmObjectPlacementsCallback;
 
@@ -160,6 +163,13 @@ namespace CrypticCabinet.Utils
             foreach (var deskObject in m_deskObject.Where(o => !o.SuccessfullyPlaced).ToList())
             {
                 m_sceneUnderstandingLocationPlacer.RequestTotallyRandomDeskLocation(out var position);
+
+                // If a desk location was not found then spawn the object on a virtual table
+                if (position == Vector3.zero)
+                {
+                    SpawnDeskObjectsOnVirtualTable(deskObject, 0.5f, out position);
+                }
+
                 PlaceObjectLookAtUser(deskObject, userPos, position);
             }
 
@@ -174,6 +184,48 @@ namespace CrypticCabinet.Utils
                 m_sceneUnderstandingLocationPlacer.RequestTotallyRandomFloorLocation(out var position);
                 PlaceObjectLookAtUser(sceneObject, userPos, position);
             }
+        }
+
+        private void SpawnDeskObjectsOnVirtualTable(SceneObject sceneObject, float radiusMultiplier, out Vector3 position)
+        {
+            if (m_virtualTablePrefab == null)
+            {
+                Debug.LogError("Virtual Table prefab is not assigned in the Inspector!");
+                position = Vector3.zero;
+
+            }
+
+            // Find the Disabled Prefab under the Virtual Table prefab
+            // Get the Object Type of the sceneObject
+            LoadableSceneObjects objectType = sceneObject.DisplayPrefab.GetComponent<ObjectPlacementVisualiser>().GetObjectType;
+
+            // Find the child object under the Virtual Table with the same Object Type
+            Transform prefabTransform = null;
+
+            foreach (Transform childTransform in m_virtualTablePrefab.transform)
+            {
+                SimpleSceneObjectPlacer simpleSceneObjectPlacer = childTransform.GetComponent<SimpleSceneObjectPlacer>();
+                if (simpleSceneObjectPlacer != null && simpleSceneObjectPlacer.GetObjectType == objectType)
+                {
+                    prefabTransform = childTransform;
+                    break;
+                }
+            }
+
+            if (prefabTransform == null)
+            {
+                Debug.LogError($"Prefab not found under the Virtual Table for Object Type: {objectType}");
+                position = Vector3.zero;
+
+            }
+
+            /*// Enable the prefab
+            prefabTransform.gameObject.SetActive(true);*/
+
+            // Set the position of the sceneObject to the position of the prefab
+            position = prefabTransform.position;
+
+
         }
 
         private static void PlaceObject(SceneObject sceneObject, Vector3 targetPosition, Quaternion targetRotation)
@@ -439,6 +491,8 @@ namespace CrypticCabinet.Utils
 
             for (var i = 0; i < m_deskObject.Count; i++)
             {
+
+                UISystem.Instance.ShowMessage("Inside the loop...");
                 var sceneObject = m_deskObject[i];
                 var successfullyPlaced = RequestRandomDeskLocation(ref sceneObject, 1.05f);
 
@@ -446,26 +500,42 @@ namespace CrypticCabinet.Utils
                 {
                     successfullyPlaced = RequestRandomDeskLocation(ref sceneObject, 0.5f);
                 }
-
-                if (!successfullyPlaced)
-                {
-                    // failed to find any desk location looking for any horizontal location
-                    successfullyPlaced = RequestRandomLocation(ref sceneObject, 1.05f);
-                }
-
+ 
+                // Set the SuccessfullyPlaced property of the sceneObject to the value of successfullyPlaced
+                // This indicates whether the object was successfully placed or not
                 sceneObject.SuccessfullyPlaced = successfullyPlaced;
+
+                // Set the WallPosition of the sceneObject to the same value as its MainPosition
+                // This is used when the object is placed against a wall
                 sceneObject.WallPosition = sceneObject.MainPosition;
+
+                // Calculate the rotation of the sceneObject based on its MainPosition and the FlipFaceDir property of its DisplayPrefab
+                // This ensures that the object is facing towards the user
                 sceneObject.MainRotation = GetRotationTowardsUser(sceneObject.MainPosition, sceneObject.DisplayPrefab.GetFlipFaceDir);
+
+                // Update the sceneObject in the m_deskObject list at index i with the modified sceneObject
                 m_deskObject[i] = sceneObject;
+
+                // Check if the DisplayPrefab of the sceneObject is null
                 if (sceneObject.DisplayPrefab == null)
                 {
+                    // If the DisplayPrefab is null, log an error message and skip the placement of this object
                     Debug.LogError("Scene Object without object visualizer! Skip placement");
+
+                    // Continue to the next iteration of the loop
                     continue;
                 }
 
+                // Instantiate a visualizer object for the sceneObject using the InstantiateVisualizer method
+                // This creates a visual representation of the object in the scene
                 var objectPlacementVisualiser = InstantiateVisualizer(ref sceneObject);
+
+                // Set up the instantiated visualizer object with the necessary information
+                // This includes passing the ObjectPlacementManager instance (this) and the MainPosition of the sceneObject
                 objectPlacementVisualiser.Setup(this, sceneObject.MainPosition);
 
+                // Update the sceneObject in the m_deskObject list at index i with the modified sceneObject again
+                // This is redundant and can be removed
                 m_deskObject[i] = sceneObject;
             }
         }
@@ -596,5 +666,7 @@ namespace CrypticCabinet.Utils
 
             return m_cameraRig.CameraRig.centerEyeAnchor.position;
         }
+
+
     }
 }
