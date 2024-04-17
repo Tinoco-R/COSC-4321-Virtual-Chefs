@@ -405,7 +405,7 @@ MonoBehaviour:
     m_Bits: 24576
   m_physicsEnvironmentLayers:
     serializedVersion: 2
-    m_Bits: 14336
+    m_Bits: 8192
   m_placementEaseTime: 3
   m_distFromEdgeLeft: 0.6
   m_distFromEdgeRight: 0.6
