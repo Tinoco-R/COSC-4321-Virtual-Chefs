@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Linq;
 using CrypticCabinet.Photon;
+using CrypticCabinet.UI;
 using Fusion;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace CrypticCabinet.GameManagement.Puzzles
     public class SandPuzzleGamePhase : GamePhase
     {
         [SerializeField] private GameObject[] m_prefabSandPuzzlePrefabs;
+        private float waveTimer = 0f;
+        private int currentWave = 1;
 
         protected override void InitializeInternal()
         {
@@ -24,6 +27,9 @@ namespace CrypticCabinet.GameManagement.Puzzles
             if (PhotonConnector.Instance != null && PhotonConnector.Instance.Runner != null)
             {
                 _ = GameManager.Instance.StartCoroutine(HandleSpawn());
+                _ = GameManager.Instance.StartCoroutine(HandleWaves());
+                UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 3f);
+
             }
             else
             {
@@ -48,6 +54,34 @@ namespace CrypticCabinet.GameManagement.Puzzles
                 spawned = true;
             });
             return spawned;
+        }
+        private IEnumerator HandleWaves()
+        {
+            while (true)
+            {
+                waveTimer += Time.deltaTime;
+
+                if (waveTimer >= 30f)
+                {
+                    GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
+                    if (turnInZoneInstance != null)
+                    {
+                        ReadFood readFood = turnInZoneInstance.GetComponent<ReadFood>();
+                        if (readFood.score >= 100)
+                        {
+                            currentWave++;
+                            UISystem.Instance.ShowMessage($"Wave {currentWave}",null,3f);
+                            waveTimer = 0f;
+                        }
+                        else
+                        {
+                            UISystem.Instance.ShowMessage("Game Over");
+                        }
+                    }
+                }
+
+                yield return null;
+            }
         }
 
     }
