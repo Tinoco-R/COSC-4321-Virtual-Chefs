@@ -3,8 +3,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using CrypticCabinet.Utils;
 using Meta.Utilities;
 using UnityEngine;
+using UnityEngine.UIElements;
+using static CrypticCabinet.Utils.ObjectPlacementManager;
 using Random = UnityEngine.Random;
 
 namespace CrypticCabinet.SceneManagement
@@ -439,7 +442,7 @@ namespace CrypticCabinet.SceneManagement
 
         public void RequestTotallyRandomDeskLocation(out Vector3 position)
         {
-            var foundDesks = m_horizontalSurfaces.Where(finder => finder is DeskSpaceFinder or FloorSpaceFinder).ToList();
+            var foundDesks = m_horizontalSurfaces.Where(finder => finder is DeskSpaceFinder).ToList();
 
             if (foundDesks.Count > 0)
             {
