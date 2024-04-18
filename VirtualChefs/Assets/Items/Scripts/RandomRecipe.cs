@@ -15,7 +15,7 @@ public class RandomRecipe : MonoBehaviour
 {
     private int returnNum;
     public double timer = 0.0;
-
+    public int numPlatesCompleted = 0;
     /*
     public delegate void MakeBurger();
     public static event MakeBurger makeBurger;
@@ -73,6 +73,7 @@ public class RandomRecipe : MonoBehaviour
 
     void ClearTable(int n, double s)
     {
+        numPlatesCompleted++;
         if (n == 1)
         {
             IsTaken1 = false;
