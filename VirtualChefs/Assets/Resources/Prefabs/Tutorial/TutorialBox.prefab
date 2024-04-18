@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d5064da68c47aeb08140c8ebf76d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_objectType: 33
+  m_objectType: 34
   m_isWallObject: 1
   m_placeAtGroundLevel: 0
   m_onObjectPlaced:
@@ -490,11 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2032481107230312398}
-  knife: {fileID: 7477621282432900011, guid: 8dafaed07fb9e544d8073ccd490c0476, type: 3}
-  lettuce: {fileID: 522176099696603127, guid: a6979a38361f1d149ac108bbe128158a, type: 3}
-  meat: {fileID: 522176099696603127, guid: 6814b67f3b9f18d42a16a81289106e3f, type: 3}
-  plate: {fileID: 522176099696603127, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
-  ticket: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
+  CompleteSound: {fileID: 0}
 --- !u!1 &7940866060635040868
 GameObject:
   m_ObjectHideFlags: 0

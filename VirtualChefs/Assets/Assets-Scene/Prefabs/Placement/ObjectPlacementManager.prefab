@@ -3300,15 +3300,23 @@ MonoBehaviour:
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
-  m_deskObject:
-  - ObjectName: Knife
-    DisplayPrefab: {fileID: 9136899274768251096, guid: e610a108113273240a94739f7b4dbe09, type: 3}
+  - ObjectName: ScoreBox
+    DisplayPrefab: {fileID: 3967299115179155971, guid: 6eb1ebabef5b8d746b4cf8e116825fe2, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
     WallPosition: {x: 0, y: 0, z: 0}
     WallRotation: {x: 0, y: 0, z: 0, w: 0}
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
+  - ObjectName: GameTimer
+    DisplayPrefab: {fileID: 7613726669539040848, guid: 9834faa67d9dc3348a8bb2ed489c2f2e, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
+  m_deskObject:
   - ObjectName: TicketWheelVisualizer
     DisplayPrefab: {fileID: 1970403491106562584, guid: 7121ad5422b4c4c2cb75a218eb26521c, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
@@ -3317,8 +3325,8 @@ MonoBehaviour:
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: CuttingBoard
-    DisplayPrefab: {fileID: 1970403491106562584, guid: de70d5556e25fdc4a9c6668c777bb6f5, type: 3}
+  - ObjectName: Stove
+    DisplayPrefab: {fileID: 1970403491106562584, guid: c899ce6cd17c8764c9479dc33321c19a, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
     WallPosition: {x: 0, y: 0, z: 0}
     WallRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -3344,6 +3352,14 @@ MonoBehaviour:
     SpawnedDisplayObject: {fileID: 0}
   - ObjectName: PlateCounter
     DisplayPrefab: {fileID: 1970403491106562584, guid: 909b28ec3355040d9ab1d32bae01c435, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
+  - ObjectName: EggTable1
+    DisplayPrefab: {fileID: 3241462936513520556, guid: ed875bc9fc35d7f489d0217d6680f728, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
     WallPosition: {x: 0, y: 0, z: 0}
     WallRotation: {x: 0, y: 0, z: 0, w: 0}

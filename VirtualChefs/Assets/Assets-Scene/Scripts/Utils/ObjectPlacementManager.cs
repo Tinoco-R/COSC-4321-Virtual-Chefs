@@ -67,7 +67,9 @@ namespace CrypticCabinet.Utils
             STOVE,
             BURGER,
             PLATE_SPAWN_STATION,
-            TUTORIAL_BOX
+            TUTORIAL_BOX,
+            SCORE_BOX,
+            GAME_TIMER
         }
 
         [Serializable]
