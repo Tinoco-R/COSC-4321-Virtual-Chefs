@@ -25,6 +25,26 @@ public class ProgressBar : MonoBehaviour
     public Image fill;
     public Color color;
     public Image progressBarImage;
+    public bool ticket;
+
+    // Method to change the fill color
+    public void SetFillColor(Color color)
+    {
+        this.color = color;
+        fill.color = color;
+    }
+
+    // Set Minimum value
+    public void SetMinimum(int min)
+    {
+        minimum = min;
+    }
+
+    // Set Minimum value
+    public void SetMaximum(int max)
+    {
+        maximum = max;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +52,10 @@ public class ProgressBar : MonoBehaviour
         mask.enabled = false;
         fill.enabled = false;
         HideProgressBar();
+        if (current > 0)
+        {
+            ticket = true;
+        }
     }
 
     // Method to show the progress bar
@@ -50,9 +74,41 @@ public class ProgressBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetCurrentFill();
+        if (ticket)
+        {
+            GetCurrentFillTicket();
+        }
+        else
+        {
+            GetCurrentFill();
+        }
     }
 
+    void GetCurrentFillTicket()
+    {
+        // Check if current is greater than 0
+        if (current != maximum)
+        {
+            ShowProgressBar();
+            // Calculate fill amount
+            float currentOffset = (float)current - (float)minimum;
+            float maximumOffset = (float)maximum - (float)minimum;
+            float fillAmount = currentOffset / maximumOffset;
+
+            // Update fill amount and enable the mask and fill
+            mask.fillAmount = fillAmount;
+            mask.enabled = true;
+            fill.enabled = true;
+            fill.color = color;
+        }
+        else
+        {
+            // If current is not greater than 0, disable the mask and fill
+            mask.enabled = false;
+            fill.enabled = false;
+            HideProgressBar();
+        }
+    }
     void GetCurrentFill()
     {
         // Check if current is greater than 0
