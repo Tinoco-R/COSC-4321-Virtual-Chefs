@@ -18,6 +18,9 @@ namespace CrypticCabinet.Utils
 
         [SerializeField] private UnityEvent m_onObjectPlaced;
 
+        // Make GetObjectType point to m_objectType to be able to get the object type across other classes
+        public ObjectPlacementManager.LoadableSceneObjects GetObjectType => m_objectType;
+
         private bool m_spawned;
 
         private void Start()

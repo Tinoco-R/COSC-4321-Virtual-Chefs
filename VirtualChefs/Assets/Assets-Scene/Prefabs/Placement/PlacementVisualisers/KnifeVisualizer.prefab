@@ -278,7 +278,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.348, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6481084614573546015}
   - {fileID: 274845560082915217}
@@ -313,7 +313,7 @@ MonoBehaviour:
     m_Bits: 24576
   m_physicsEnvironmentLayers:
     serializedVersion: 2
-    m_Bits: 14336
+    m_Bits: 8192
   m_placementEaseTime: 3
   m_distFromEdgeLeft: 0
   m_distFromEdgeRight: 0
@@ -333,12 +333,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.049190246, y: 0.022874773, z: 0.27623457}
+  m_Center: {x: -0.0991642, y: 0.021849364, z: -0.088376015}
 --- !u!54 &2901111705198870353
 Rigidbody:
   m_ObjectHideFlags: 0

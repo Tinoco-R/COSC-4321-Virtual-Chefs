@@ -3301,14 +3301,6 @@ MonoBehaviour:
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
   m_deskObject:
-  - ObjectName: TicketWheel
-    DisplayPrefab: {fileID: 1970403491106562584, guid: 7121ad5422b4c4c2cb75a218eb26521c, type: 3}
-    MainPosition: {x: 0, y: 0, z: 0}
-    WallPosition: {x: 0, y: 0, z: 0}
-    WallRotation: {x: 0, y: 0, z: 0, w: 0}
-    SuccessfullyPlaced: 0
-    MainRotation: {x: 0, y: 0, z: 0, w: 0}
-    SpawnedDisplayObject: {fileID: 0}
   - ObjectName: Knife
     DisplayPrefab: {fileID: 9136899274768251096, guid: e610a108113273240a94739f7b4dbe09, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
@@ -3317,15 +3309,15 @@ MonoBehaviour:
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: Stove
-    DisplayPrefab: {fileID: 1970403491106562584, guid: c899ce6cd17c8764c9479dc33321c19a, type: 3}
+  - ObjectName: TicketWheelVisualizer
+    DisplayPrefab: {fileID: 1970403491106562584, guid: 7121ad5422b4c4c2cb75a218eb26521c, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
     WallPosition: {x: 0, y: 0, z: 0}
     WallRotation: {x: 0, y: 0, z: 0, w: 0}
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: Chopping Board
+  - ObjectName: CuttingBoard
     DisplayPrefab: {fileID: 1970403491106562584, guid: de70d5556e25fdc4a9c6668c777bb6f5, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
     WallPosition: {x: 0, y: 0, z: 0}
@@ -3359,6 +3351,7 @@ MonoBehaviour:
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
   m_anyHorizontalObject: []
+  m_virtualTablePrefab: {fileID: 3887891705319317937, guid: b3e2edc5ed911224097c9751bb63d0eb, type: 3}
 --- !u!114 &3356639559488727692
 MonoBehaviour:
   m_ObjectHideFlags: 0
