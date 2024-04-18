@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -8886095440241117275}
   - component: {fileID: -7989307531212305996}
   - component: {fileID: -8391876572046200873}
+  - component: {fileID: 9163711520507922865}
   m_Layer: 0
   m_Name: Stovetop
   m_TagString: Stove
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.5, z: 0.25}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -179,3 +180,24 @@ MonoBehaviour:
   m_onObjectPlaced:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &9163711520507922865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718505410737859772}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.077437, y: 0.1143617, z: 1.9237723}
+  m_Center: {x: 0.004173279, y: -0.02213967, z: 0.038113832}
