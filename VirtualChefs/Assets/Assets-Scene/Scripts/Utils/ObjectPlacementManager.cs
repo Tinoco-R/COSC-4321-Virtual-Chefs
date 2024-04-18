@@ -68,6 +68,7 @@ namespace CrypticCabinet.Utils
             BURGER,
             PLATE_SPAWN_STATION,
             TUTORIAL_BOX,
+            SCORE_BOX,
             GAME_TIMER
         }
 
