@@ -162,8 +162,17 @@ namespace CrypticCabinet.Utils
 
             foreach (var deskObject in m_deskObject.Where(o => !o.SuccessfullyPlaced).ToList())
             {
+
                 m_sceneUnderstandingLocationPlacer.RequestTotallyRandomDeskLocation(out var position);
 
+                var objectOnTables = new List<string> { "KNIFE", "CHOPPING_BOARD" };
+
+                // The objects inside this list we want them to always spawn on the virtual table even if a valid location on the real table was found
+                if (objectOnTables.Contains(deskObject.DisplayPrefab.GetObjectType.ToString()))
+                {
+                    position = Vector3.zero;
+                }
+                
                 // If a desk location was not found then spawn the object on a virtual table
                 if (position == Vector3.zero)
                 {
