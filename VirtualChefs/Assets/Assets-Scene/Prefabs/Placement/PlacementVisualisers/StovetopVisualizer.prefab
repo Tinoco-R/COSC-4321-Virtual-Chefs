@@ -368,8 +368,8 @@ Transform:
   m_GameObject: {fileID: 8045472780145166155}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.35782, z: -0.20657}
-  m_LocalScale: {x: 0.8579907, y: 0.3, z: 0.8579907}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3092953552703882141}
@@ -395,9 +395,9 @@ MonoBehaviour:
   m_onTheWall: 0
   m_flipFaceDirection: 0
   m_forceToGroundLevel: 1
-  m_wallObjectPlacementHeight: 1.92555
-  m_wallObjectWidth: 1.2
-  m_wallObjectVerticalSize: 1.92555
+  m_wallObjectPlacementHeight: 0
+  m_wallObjectWidth: 0
+  m_wallObjectVerticalSize: 0
   m_objectType: 31
   m_grabbable: {fileID: 8713484567708071133}
   m_userWarningLayers:
@@ -429,8 +429,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5013638, y: 0.40965942, z: 0.42872897}
-  m_Center: {x: -0.010409686, y: 0.20210859, z: 0.01772066}
+  m_Size: {x: 0.5069443, y: 0.032364704, z: 0.5069165}
+  m_Center: {x: 0.002520278, y: -0.009378869, z: -0.050776184}
 --- !u!54 &9152792109826418118
 Rigidbody:
   m_ObjectHideFlags: 0
