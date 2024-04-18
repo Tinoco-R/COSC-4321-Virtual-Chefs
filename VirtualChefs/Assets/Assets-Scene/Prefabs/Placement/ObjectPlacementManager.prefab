@@ -3300,6 +3300,14 @@ MonoBehaviour:
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
+  - ObjectName: ScoreBox
+    DisplayPrefab: {fileID: 3967299115179155971, guid: 6eb1ebabef5b8d746b4cf8e116825fe2, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
   m_deskObject:
   - ObjectName: Knife
     DisplayPrefab: {fileID: 9136899274768251096, guid: e610a108113273240a94739f7b4dbe09, type: 3}
@@ -3317,7 +3325,7 @@ MonoBehaviour:
     SuccessfullyPlaced: 0
     MainRotation: {x: 0, y: 0, z: 0, w: 0}
     SpawnedDisplayObject: {fileID: 0}
-  - ObjectName: CuttingBoard
+  - ObjectName: ChoppingBoard
     DisplayPrefab: {fileID: 1970403491106562584, guid: de70d5556e25fdc4a9c6668c777bb6f5, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
     WallPosition: {x: 0, y: 0, z: 0}
@@ -3352,6 +3360,14 @@ MonoBehaviour:
     SpawnedDisplayObject: {fileID: 0}
   - ObjectName: PlateCounter
     DisplayPrefab: {fileID: 1970403491106562584, guid: 909b28ec3355040d9ab1d32bae01c435, type: 3}
+    MainPosition: {x: 0, y: 0, z: 0}
+    WallPosition: {x: 0, y: 0, z: 0}
+    WallRotation: {x: 0, y: 0, z: 0, w: 0}
+    SuccessfullyPlaced: 0
+    MainRotation: {x: 0, y: 0, z: 0, w: 0}
+    SpawnedDisplayObject: {fileID: 0}
+  - ObjectName: EggTable1
+    DisplayPrefab: {fileID: 3241462936513520556, guid: ed875bc9fc35d7f489d0217d6680f728, type: 3}
     MainPosition: {x: 0, y: 0, z: 0}
     WallPosition: {x: 0, y: 0, z: 0}
     WallRotation: {x: 0, y: 0, z: 0, w: 0}

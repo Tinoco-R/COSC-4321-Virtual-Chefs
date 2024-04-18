@@ -176,10 +176,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_userInteractableObject: 1
   m_radius: 0.5
-  m_placeAgainstWall: 0
-  m_onTheWall: 0
-  m_flipFaceDirection: 0
-  m_forceToGroundLevel: 1
+  m_placeAgainstWall: 1
+  m_onTheWall: 1
+  m_flipFaceDirection: 1
+  m_forceToGroundLevel: 0
   m_wallObjectPlacementHeight: 0
   m_wallObjectWidth: 0
   m_wallObjectVerticalSize: 0
