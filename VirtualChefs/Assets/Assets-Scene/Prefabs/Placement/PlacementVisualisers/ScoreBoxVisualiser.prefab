@@ -180,9 +180,9 @@ MonoBehaviour:
   m_onTheWall: 1
   m_flipFaceDirection: 1
   m_forceToGroundLevel: 0
-  m_wallObjectPlacementHeight: 0
-  m_wallObjectWidth: 0
-  m_wallObjectVerticalSize: 0
+  m_wallObjectPlacementHeight: 1.5
+  m_wallObjectWidth: 0.4
+  m_wallObjectVerticalSize: 0.1
   m_objectType: 35
   m_grabbable: {fileID: -6175843907688598857}
   m_userWarningLayers:
