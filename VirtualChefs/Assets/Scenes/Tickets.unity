@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -350,6 +350,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4093222690246313813, guid: 914e4c70133a14cae8f312cf6654f605, type: 3}
+      propertyPath: Flags
+      value: 2561
+      objectReference: {fileID: 0}
+    - target: {fileID: -4093222690246313813, guid: 914e4c70133a14cae8f312cf6654f605, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 4129758455984667112
+      objectReference: {fileID: 0}
+    - target: {fileID: -4093222690246313813, guid: 914e4c70133a14cae8f312cf6654f605, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 19085988111121843
+      objectReference: {fileID: 0}
     - target: {fileID: 208584710324833104, guid: 914e4c70133a14cae8f312cf6654f605, type: 3}
       propertyPath: m_Name
       value: TicketWheelModel - w grab
@@ -5170,6 +5182,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6343349555788373825, guid: 1d20538b6a228eb4c9f7c2bc9e2e2129, type: 3}
+      propertyPath: Flags
+      value: 2561
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343349555788373825, guid: 1d20538b6a228eb4c9f7c2bc9e2e2129, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: -1923707524941286709
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343349555788373825, guid: 1d20538b6a228eb4c9f7c2bc9e2e2129, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 5410059426986582657
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5911,6 +5935,7 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!54 &1787497077
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6939,6 +6964,18 @@ PrefabInstance:
     - target: {fileID: 1077833050834619070, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616774846941945077, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
+      propertyPath: Flags
+      value: 2561
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616774846941945077, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: -1276002047476982244
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616774846941945077, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: -2234098896266392944
       objectReference: {fileID: 0}
     - target: {fileID: 2205345814391932129, guid: 1d6eb9fbb0fb5d346b1ce264f746cdae, type: 3}
       propertyPath: text
