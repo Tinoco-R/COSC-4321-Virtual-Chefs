@@ -13,6 +13,8 @@ public class ReadFood : MonoBehaviour
     public GameObject ZoneVisual;
     public List<GameObject> foodInZone = new List<GameObject>();
     public double timer = 3.0;
+    public double ticketTimerBase = 60;
+    public double ticketTimer = 60;
     private Color baseColor;
 
     public delegate void OrderGivenEvent(int n, double s);
@@ -33,6 +35,7 @@ public class ReadFood : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ticketTimer = ticketTimerBase;
         ZoneVisual.GetComponent<MeshRenderer>().enabled = false;
         foodInZone.Clear();
         currentOrder = "";
@@ -69,6 +72,7 @@ public class ReadFood : MonoBehaviour
         if (n == tableID)
         {
             score = 0;
+            ticketTimer = ticketTimerBase;
             currentOrder = c;
         }
     }
@@ -88,6 +92,10 @@ public class ReadFood : MonoBehaviour
             //lerpedColor = Color.Lerp(Color.white, new Color((float)0.0745, (float)0.4902, (float)0.5098, 1), ratio);
             lerpedColor = Color.Lerp(Color.white, baseColor, ratio);
             ZoneVisual.GetComponent<Renderer>().material.color = lerpedColor;
+        }
+        if (currentOrder != "" && ticketTimer > 0)
+        {
+            ticketTimer -= Time.deltaTime;
         }
         if (foodInZone.Count > 0 && timer <= 0 && currentOrder != "")
         {
@@ -241,7 +249,16 @@ public class ReadFood : MonoBehaviour
                 totalCount++;
                 //print("nob");
             }
-            score = correctCount / totalCount * 100;
+            double multiplier = (ticketTimer / ticketTimerBase) * 2;
+            if (multiplier < 0.25)
+            {
+                multiplier = 0.25;
+            }
+            score = correctCount / totalCount * 100 * multiplier;
+            if (correctCount == 1)
+            {
+                score = 0;
+            }
             //print(correctCount);
             //print(totalCount);
             //print(score);
@@ -249,7 +266,7 @@ public class ReadFood : MonoBehaviour
             orderGiven(tableID, score);
             currentOrder = "";
             timer = 3;
-            
+            ticketTimer = ticketTimerBase;
             foreach (Food items in obj.GetComponent<Combine>().plate)
             {
                 if (items.tag != "Plate")
