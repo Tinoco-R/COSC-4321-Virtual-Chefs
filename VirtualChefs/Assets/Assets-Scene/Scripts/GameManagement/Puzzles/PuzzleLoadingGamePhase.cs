@@ -59,12 +59,9 @@ namespace CrypticCabinet.GameManagement.Puzzles
         {
             while (true)
             {
-                GameObject timerInstance = GameObject.FindGameObjectWithTag("Timer");
-                countdownTimer countdownTimer = timerInstance.GetComponent<countdownTimer>();
-                
-             
+                waveTimer += Time.deltaTime;
         
-                if (currentWave == 1 && countdownTimer.gameTime <= 0f) // 3 minutes for Wave 1
+                if (currentWave == 1 && waveTimer >= 180f) // 3 minutes for Wave 1
                 {
                     GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
                     if (turnInZoneInstance != null)
@@ -74,7 +71,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         {
                             currentWave++;
                             UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
-                            countdownTimer.gameTime = 120f;
+                            waveTimer = 0f;
                         }
                         else
                         {
@@ -84,7 +81,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         }
                     }
                 }
-                else if (currentWave == 2 && countdownTimer.gameTime <= 0f) // 2 minutes for Wave 2
+                else if (currentWave == 2 && waveTimer >= 120f) // 2 minutes for Wave 2
                 {
                     GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
                     if (turnInZoneInstance != null)
@@ -94,7 +91,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         {
                             currentWave++;
                             UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
-                            countdownTimer.gameTime = 60f;
+                            waveTimer = 0f;
                         }
                         else
                         {
@@ -104,7 +101,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         }
                     }
                 }
-                else if (currentWave == 3 && countdownTimer.gameTime <= 0f) // 1 minutes for Wave 3
+                else if (currentWave == 3 && waveTimer >= 60f) // 2 minutes for Wave 3
                 {
                     GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
                     if (turnInZoneInstance != null)
@@ -113,8 +110,8 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         if (readFood.score >= 50)
                         {
                             currentWave++;
-                            UISystem.Instance.ShowMessage("You win!", null, -1);
-                           
+                            UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
+                            waveTimer = 0f;
                         }
                         else
                         {
