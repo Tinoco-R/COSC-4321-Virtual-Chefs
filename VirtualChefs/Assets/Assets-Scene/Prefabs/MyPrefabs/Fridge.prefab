@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_objectType: 24
-  m_isWallObject: 0
+  m_isWallObject: 1
   m_placeAtGroundLevel: 1
   m_onObjectPlaced:
     m_PersistentCalls:
