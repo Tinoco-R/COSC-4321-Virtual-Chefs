@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefabs:
   - {fileID: 522176099696603127, guid: e70f4aabdeac3944c8564533670696a3, type: 3}
-  - {fileID: 522176099696603127, guid: bf3a3152954ce5742874cc8d5b576460, type: 3}
+  - {fileID: 522176099696603127, guid: 2c09d795c19854b7bb9fdaac1e321665, type: 3}
   - {fileID: 522176099696603127, guid: 30297c18be39c48359745e20e1fcfcf0, type: 3}
   - {fileID: 522176099696603127, guid: 6814b67f3b9f18d42a16a81289106e3f, type: 3}
   - {fileID: 522176099696603127, guid: 22a9fc55953b2d14d8aa141cdb05c041, type: 3}

@@ -9,6 +9,11 @@
       <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/gameTimer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/gameTimer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/Puzzles/PuzzleLoadingGamePhase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/Puzzles/PuzzleLoadingGamePhase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/countdownTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/countdownTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/Fridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/Fridge.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/CheeseBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/CheeseBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/LettuceBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/LettuceBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/TomatoBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/TomatoBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/TomatoBlock.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Cut/TomatoBlock.prefab.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +45,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "cuttable-tomato",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
