@@ -5,8 +5,10 @@ using TMPro;
 
 public class countdownTimer : MonoBehaviour
 {
-    [SerializeField] public float gameTime;
-    [SerializeField] TMP_Text timeTextBox;
+    [SerializeField] private float gameTime;
+    [SerializeField] TextMeshProUGUI timeTextBox;
+    private bool isGameOver = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,18 +18,31 @@ public class countdownTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateGameTimer();
+        if (!isGameOver)
+        {
+            UpdateGameTimer();
+        }
     }
 
     private void UpdateGameTimer() 
     {
         gameTime -= Time.deltaTime;
 
-        var minutes = Mathf.FloorToInt(gameTime / 60);
-        var seconds = Mathf.FloorToInt(gameTime - minutes * 60);
+        if (gameTime <= 0)
+        {
+            gameTime = 0;
+            isGameOver = true;
+            timeTextBox.text = "Game Over";
+            // You can add more game over logic here like stopping the game, showing a game over screen, etc.
+        }
+        else
+        {
+            var minutes = Mathf.FloorToInt(gameTime / 60);
+            var seconds = Mathf.FloorToInt(gameTime - minutes * 60);
 
-        string gameTimeClockDisplay = string.Format("{0:0}:{1:00}", minutes, seconds);
+            string gameTimeClockDisplay = string.Format("{0:0}:{1:00}", minutes, seconds);
 
-        timeTextBox.text = gameTimeClockDisplay;
+            timeTextBox.text = gameTimeClockDisplay;
+        }
     }
 }
