@@ -224,8 +224,8 @@ GameObject:
   - component: {fileID: 7432650379587736251}
   - component: {fileID: -2908484046457126709}
   m_Layer: 0
-  m_Name: TutorialBoxTest
-  m_TagString: Untagged
+  m_Name: TimerTest
+  m_TagString: Timer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,7 +266,7 @@ MonoBehaviour:
   AoiPositionSource: {fileID: 0}
   Flags: 2305
   NetworkGuid:
-    RawGuidValue: 79e93e5df3dd1b442bbccd8f819649f4
+    RawGuidValue: 02a7851809b7f4e6e90424dce523d06c
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 7432650379587736251}
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d5064da68c47aeb08140c8ebf76d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_objectType: 34
+  m_objectType: 36
   m_isWallObject: 1
   m_placeAtGroundLevel: 0
   m_onObjectPlaced:
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 4261681258771277340}
   - component: {fileID: 6521597264786189315}
   - component: {fileID: 8504498174076283490}
-  - component: {fileID: 2680275271594628830}
+  - component: {fileID: 8523060345229988978}
   m_Layer: 0
   m_Name: text
   m_TagString: Untagged
@@ -417,9 +417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tutorial
-
-'
+  m_text: Timer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92f57b8ed75d6a549bad9f95fe368fcd, type: 2}
   m_sharedMaterial: {fileID: 7804206988038685639, guid: 92f57b8ed75d6a549bad9f95fe368fcd, type: 2}
@@ -491,7 +489,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6521597264786189315}
   m_maskType: 0
---- !u!114 &2680275271594628830
+--- !u!114 &8523060345229988978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -500,8 +498,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7838665969036501098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61064744c81fd4d8fba9b6f8f178eb36, type: 3}
+  m_Script: {fileID: 11500000, guid: a092c074a2aeae14192ff00879465756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 8504498174076283490}
-  CompleteSound: {fileID: 8300000, guid: 14e5936562fae0f4f9093bbb2a79105b, type: 3}
+  gameTime: 300
+  timeTextBox: {fileID: 8504498174076283490}

@@ -27,8 +27,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.659, y: 0.093, z: 1.856}
-  m_LocalScale: {x: 25, y: 25, z: 25}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9092672384028569001}
   m_Father: {fileID: 0}
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableID: 1
+  grow: 0
   parent: 1
-  startSize: {x: 0, y: 0, z: 0}
 --- !u!1001 &9092672384028568999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196,8 +196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableID: 1
+  grow: 0
   parent: 0
-  startSize: {x: 0, y: 0, z: 0}
 --- !u!1 &274856380047477748 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9079209777379944019, guid: e12ca80342b2d594c928bb177dca1561, type: 3}
@@ -216,8 +216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableID: 1
+  grow: 0
   parent: 0
-  startSize: {x: 0, y: 0, z: 0}
 --- !u!1 &2611538853130589226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6490150626058320269, guid: e12ca80342b2d594c928bb177dca1561, type: 3}
@@ -236,8 +236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableID: 1
+  grow: 0
   parent: 0
-  startSize: {x: 0, y: 0, z: 0}
 --- !u!1 &9092672384028569000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e12ca80342b2d594c928bb177dca1561, type: 3}
@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableID: 1
+  grow: 0
   parent: 0
-  startSize: {x: 0, y: 0, z: 0}
 --- !u!4 &9092672384028569001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e12ca80342b2d594c928bb177dca1561, type: 3}

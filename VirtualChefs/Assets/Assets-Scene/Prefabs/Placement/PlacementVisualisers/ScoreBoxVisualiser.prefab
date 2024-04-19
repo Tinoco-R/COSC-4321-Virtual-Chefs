@@ -176,18 +176,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_userInteractableObject: 1
   m_radius: 0.5
-  m_placeAgainstWall: 0
-  m_onTheWall: 0
-  m_flipFaceDirection: 0
-  m_forceToGroundLevel: 1
-  m_wallObjectPlacementHeight: 0
-  m_wallObjectWidth: 0
-  m_wallObjectVerticalSize: 0
-  m_objectType: 34
+  m_placeAgainstWall: 1
+  m_onTheWall: 1
+  m_flipFaceDirection: 1
+  m_forceToGroundLevel: 0
+  m_wallObjectPlacementHeight: 1.5
+  m_wallObjectWidth: 0.4
+  m_wallObjectVerticalSize: 0.1
+  m_objectType: 35
   m_grabbable: {fileID: -6175843907688598857}
   m_userWarningLayers:
     serializedVersion: 2
-    m_Bits: 24576
+    m_Bits: 16384
   m_physicsEnvironmentLayers:
     serializedVersion: 2
     m_Bits: 14336

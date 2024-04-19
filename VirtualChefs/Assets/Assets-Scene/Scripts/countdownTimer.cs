@@ -5,8 +5,8 @@ using TMPro;
 
 public class countdownTimer : MonoBehaviour
 {
-    [SerializeField] private float gameTime;
-    [SerializeField] TextMeshProUGUI timeTextBox;
+    [SerializeField] public float gameTime;
+    [SerializeField] TMP_Text timeTextBox;
     // Start is called before the first frame update
     void Start()
     {

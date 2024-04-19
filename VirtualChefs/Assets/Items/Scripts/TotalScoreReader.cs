@@ -10,10 +10,12 @@ public class TotalScoreReader : MonoBehaviour
     public double totalScore;
     [SerializeField]
     private TMP_Text text;
+    [SerializeField] TextMeshProUGUI highScoreText;
 
     private void Start()
     {
         totalScore = 0;
+        UpdateHighScoreText();
     }
 
     private void OnEnable()
@@ -31,6 +33,20 @@ public class TotalScoreReader : MonoBehaviour
 
         totalScore += s;
         text.text = "Total Score: " + (((int)(totalScore * 100)) / 100);
+    }
+
+    void CheckHighScore()
+    {
+        if(totalScore > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", (int)totalScore);
+            UpdateHighScoreText();
+        }
+    }
+
+    void UpdateHighScoreText()
+    {
+        highScoreText.text = $"HighScore: {PlayerPrefs.GetInt("HighScore", 0)}";
     }
 
 }
