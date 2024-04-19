@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -5017491632316555618}
   - component: {fileID: 4011472533428527980}
   - component: {fileID: 1891820397393637985}
+  - component: {fileID: -6903592112554881137}
   m_Layer: 15
   m_Name: LettuceBlock
   m_TagString: LettuceBlock
@@ -291,8 +292,37 @@ MonoBehaviour:
     RawGuidValue: 30297c18be39c48359745e20e1fcfcf0
   NestedObjects: []
   NetworkedBehaviours:
+  - {fileID: -6903592112554881137}
   - {fileID: 8105769384847553823}
   SimulationBehaviours: []
+--- !u!114 &-6903592112554881137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 3
+  InterpolationSpace: 0
+  InterpolationTarget: {fileID: 0}
+  InterpolateErrorCorrection: 1
+  InterpolatedErrorCorrectionSettings:
+    MinRate: 3.3
+    MaxRate: 10
+    PosBlendStart: 0.25
+    PosBlendEnd: 1
+    PosMinCorrection: 0.025
+    PosTeleportDistance: 2
+    RotBlendStart: 0.1
+    RotBlendEnd: 0.5
+    RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!1 &1542186686878851862
 GameObject:
   m_ObjectHideFlags: 0

@@ -49,8 +49,8 @@ MonoBehaviour:
   m_cameraRig: {fileID: 0}
   m_colocateButtons: 010000000200000000200000
   m_controller: {fileID: 0}
-  m_positionOffset: {x: 0, y: -1.584, z: -2.086}
-  m_rotationOffset: {x: 45, y: -27, z: -17}
+  m_positionOffset: {x: 0, y: 0, z: 0}
+  m_rotationOffset: {x: 0, y: 0, z: 0}
   m_onColocationCompleted:
     m_PersistentCalls:
       m_Calls: []
