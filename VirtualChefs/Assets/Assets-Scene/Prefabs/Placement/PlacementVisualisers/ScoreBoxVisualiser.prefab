@@ -187,7 +187,7 @@ MonoBehaviour:
   m_grabbable: {fileID: -6175843907688598857}
   m_userWarningLayers:
     serializedVersion: 2
-    m_Bits: 24576
+    m_Bits: 16384
   m_physicsEnvironmentLayers:
     serializedVersion: 2
     m_Bits: 14336
