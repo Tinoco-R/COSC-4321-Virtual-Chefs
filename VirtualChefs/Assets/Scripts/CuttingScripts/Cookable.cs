@@ -146,7 +146,6 @@ public class Cookable : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         // Check if the collider is the stove
-        UpdateProgressBar();
         if (other.gameObject.CompareTag("Stove") && !cooked && this.tag != "BurntMeat")
         {
             // Increment cookProgress every second the meat stays on the stove
