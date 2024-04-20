@@ -92,9 +92,7 @@ public class Cookable : MonoBehaviour
         {
             return;
         }
-        {
-            
-        }
+        
         progressBar.minimum = 0;
         progressBar.maximum = (int)cookGoal;
         progressBar.current = (int)cookProgress;
