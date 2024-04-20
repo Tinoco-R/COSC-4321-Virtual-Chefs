@@ -12,7 +12,9 @@ public class countdownTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Set initial color to green
+        timeTextBox.color = Color.red;
+
     }
 
     // Update is called once per frame
@@ -28,12 +30,15 @@ public class countdownTimer : MonoBehaviour
     {
         gameTime -= Time.deltaTime;
 
+        // Stop timer when it reaches 0, and display game over
         if (gameTime <= 0)
         {
             gameTime = 0;
             isGameOver = true;
             timeTextBox.text = "Game Over";
-            // You can add more game over logic here like stopping the game, showing a game over screen, etc.
+
+            // Change timer text color to red when it reaches 0
+            timeTextBox.color = Color.red;
         }
         else
         {
@@ -43,6 +48,10 @@ public class countdownTimer : MonoBehaviour
             string gameTimeClockDisplay = string.Format("{0:0}:{1:00}", minutes, seconds);
 
             timeTextBox.text = gameTimeClockDisplay;
+
+            // Change text color based on remaining time
+            float normalizedTime = gameTime / 60.0f; // Timer at 60 seconds
+            timeTextBox.color = Color.Lerp(Color.green, Color.red, 1 - normalizedTime);
         }
     }
 }
