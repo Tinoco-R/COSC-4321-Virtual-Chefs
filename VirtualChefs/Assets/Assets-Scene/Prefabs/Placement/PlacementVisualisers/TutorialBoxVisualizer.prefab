@@ -88,7 +88,7 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 12288
+    m_Bits: 2048
   m_placementType: 0
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
@@ -102,10 +102,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3174835673847257631}
   - component: {fileID: 2858362510987313768}
+  - component: {fileID: 2020005742082281495}
   - component: {fileID: 7829942840066773935}
   - component: {fileID: 5268573368274059993}
   - component: {fileID: 6474570754799009075}
-  - component: {fileID: 2020005742082281495}
   m_Layer: 14
   m_Name: TutorialBoxVisualizer
   m_TagString: Untagged
@@ -121,16 +121,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3629720223307774259}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2097749176582658207}
   - {fileID: 8011279227425014547}
   - {fileID: 6300623857899606949}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2858362510987313768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,8 +150,8 @@ MonoBehaviour:
   m_flipFaceDirection: 0
   m_forceToGroundLevel: 0
   m_wallObjectPlacementHeight: 1.5
-  m_wallObjectWidth: 0.417375
-  m_wallObjectVerticalSize: 0.1575
+  m_wallObjectWidth: 0
+  m_wallObjectVerticalSize: 0
   m_objectType: 34
   m_grabbable: {fileID: 5268573368274059993}
   m_userWarningLayers:
@@ -164,6 +164,27 @@ MonoBehaviour:
   m_distFromEdgeLeft: 0
   m_distFromEdgeRight: 0
   m_boxCollider: {fileID: 2020005742082281495}
+--- !u!65 &2020005742082281495
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3629720223307774259}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9993608, y: 0.5286195, z: 0.10428344}
+  m_Center: {x: -0.0003194809, y: 0.23569024, z: 0.0031570941}
 --- !u!54 &7829942840066773935
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -222,27 +243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc7a26c40c509c34ca7218a7a242f913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &2020005742082281495
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3629720223307774259}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.13456789, y: 0.34263867, z: 1.0242331}
-  m_Center: {x: 0.14068308, y: -0.08385001, z: -0.043855786}
 --- !u!1 &8281590480088123415
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +347,7 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 12288
+    m_Bits: 2048
   m_placementType: 0
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
@@ -470,7 +470,7 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 12288
+    m_Bits: 2048
   m_placementType: 0
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
