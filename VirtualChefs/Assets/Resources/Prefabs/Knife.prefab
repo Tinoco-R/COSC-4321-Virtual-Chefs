@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5c5184f2-c2f5-4063-b14b-3b1264fb3c1a
-  instanceId: 183d3043-3334-4380-a0b9-834b3a697d09
+  instanceId: 4b2b0a73-b3e5-4e66-a17a-435bfe5a3ccb
   version: 1
 --- !u!33 &1924989833960123105
 MeshFilter:
@@ -209,8 +209,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.03, z: 0.55}
-  m_Center: {x: 0.012, y: 0, z: -0.16}
+  m_Size: {x: 0.08839544, y: 0.014650021, z: 0.5407093}
+  m_Center: {x: 0.015484464, y: 0.0028391483, z: -0.16187508}
 --- !u!54 &3219499552317200144
 Rigidbody:
   m_ObjectHideFlags: 0
