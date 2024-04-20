@@ -88,6 +88,11 @@ public class Cookable : MonoBehaviour
     // Used to set progress bar UI element
     void UpdateProgressBar()
     {
+        if (this.tag == "BurntMeat")
+        {
+            return;
+        }
+        
         progressBar.minimum = 0;
         progressBar.maximum = (int)cookGoal;
         progressBar.current = (int)cookProgress;
@@ -95,6 +100,20 @@ public class Cookable : MonoBehaviour
         if (progressBar.current == 0) {
             progressBar.mask.enabled = false;
             progressBar.fill.enabled = false;
+        }
+        // Color progress bar to warn user of potential burnt meat
+        if (cookedPrefabDirectory == "Prefabs/Cook/BurntMeat")
+        {
+            if (cookProgress < 3.0f)
+            {
+                // Make bar yellow!!!
+                progressBar.SetFillColor(Color.yellow);
+            }
+            else if (cookProgress >= 3.0f)
+            {
+                // Make bar orange!!!
+                progressBar.SetFillColor(Color.red);
+            }
         }
     }
 
@@ -127,7 +146,7 @@ public class Cookable : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         // Check if the collider is the stove
-        if (other.gameObject.CompareTag("Stove") && !cooked)
+        if (other.gameObject.CompareTag("Stove") && !cooked && this.tag != "BurntMeat")
         {
             // Increment cookProgress every second the meat stays on the stove
             cookProgress += Time.deltaTime;
