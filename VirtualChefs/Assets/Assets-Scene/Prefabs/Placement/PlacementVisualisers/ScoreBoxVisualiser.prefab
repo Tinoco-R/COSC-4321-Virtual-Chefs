@@ -104,8 +104,8 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 12288
-  m_placementType: 2
+    m_Bits: 2048
+  m_placementType: 0
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
 --- !u!114 &3133448298754275716
@@ -154,7 +154,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8573350997146103726}
@@ -178,16 +178,16 @@ MonoBehaviour:
   m_radius: 0.5
   m_placeAgainstWall: 1
   m_onTheWall: 1
-  m_flipFaceDirection: 1
+  m_flipFaceDirection: 0
   m_forceToGroundLevel: 0
   m_wallObjectPlacementHeight: 1.5
-  m_wallObjectWidth: 0.4
-  m_wallObjectVerticalSize: 0.1
+  m_wallObjectWidth: 0
+  m_wallObjectVerticalSize: 0
   m_objectType: 35
   m_grabbable: {fileID: -6175843907688598857}
   m_userWarningLayers:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 24576
   m_physicsEnvironmentLayers:
     serializedVersion: 2
     m_Bits: 14336
@@ -210,12 +210,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.29507482, y: 0.50494087, z: 0.94836277}
-  m_Center: {x: -0.2009291, y: 0.04175234, z: 0.0055301487}
+  m_Size: {x: 0.9993608, y: 0.5286195, z: 0.10428344}
+  m_Center: {x: -0.0003194809, y: 0.23569024, z: 0.0031570941}
 --- !u!54 &963856128668540112
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -362,8 +362,8 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 12288
-  m_placementType: 2
+    m_Bits: 2048
+  m_placementType: 0
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
 --- !u!1 &8227718821737053878
@@ -470,8 +470,8 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 12288
-  m_placementType: 2
+    m_Bits: 2048
+  m_placementType: 0
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
 --- !u!114 &2733497235652440902

@@ -104,8 +104,8 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 12288
-  m_placementType: 2
+    m_Bits: 2048
+  m_placementType: 0
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
 --- !u!114 &7319173508032634746
@@ -211,8 +211,8 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 12288
-  m_placementType: 2
+    m_Bits: 2048
+  m_placementType: 0
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
 --- !u!1 &6725975123840890843
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 5690930018338009402}
   - component: {fileID: 3966819942881748126}
   m_Layer: 14
-  m_Name: GameTimerVisualiser 1
+  m_Name: TimerBoxVisualizer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,8 +245,8 @@ Transform:
   m_GameObject: {fileID: 6725975123840890843}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.11, y: 1.49, z: 0}
-  m_LocalScale: {x: 1, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5712157631385171579}
@@ -270,11 +270,11 @@ MonoBehaviour:
   m_radius: 0.5
   m_placeAgainstWall: 1
   m_onTheWall: 1
-  m_flipFaceDirection: 1
+  m_flipFaceDirection: 0
   m_forceToGroundLevel: 0
   m_wallObjectPlacementHeight: 1.5
-  m_wallObjectWidth: 0.4
-  m_wallObjectVerticalSize: 0.1
+  m_wallObjectWidth: 0
+  m_wallObjectVerticalSize: 0
   m_objectType: 36
   m_grabbable: {fileID: 5690930018338009402}
   m_userWarningLayers:
@@ -302,12 +302,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.411581, y: 0.45276806, z: 0.4489521}
-  m_Center: {x: 0.357324, y: 0.06783877, z: 0.2552353}
+  m_Size: {x: 0.9993608, y: 0.5286195, z: 0.10428344}
+  m_Center: {x: -0.0003194809, y: 0.23569024, z: 0.0031570941}
 --- !u!54 &2983311687523416334
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -470,8 +470,8 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 12288
-  m_placementType: 2
+    m_Bits: 2048
+  m_placementType: 0
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
 --- !u!114 &7972884218892437956

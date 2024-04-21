@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5c5184f2-c2f5-4063-b14b-3b1264fb3c1a
-  instanceId: 11f96d60-7a40-49b3-837f-4e0e892befa1
+  instanceId: 7a618f5a-3026-453d-b40f-fe254802db3a
   version: 1
 --- !u!23 &3200254174171096400
 MeshRenderer:
@@ -121,8 +121,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.16417532, y: 0.13678493, z: 0.15}
-  m_Center: {x: 0.032912336, y: 0.053392462, z: 0}
+  m_Size: {x: 0.14078882, y: 0.13911332, z: 0.1407888}
+  m_Center: {x: -0.00000014528632, y: 0.06789064, z: -0.000000067055225}
 --- !u!54 &8726916404924514605
 Rigidbody:
   m_ObjectHideFlags: 0

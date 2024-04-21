@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 8726916404924514605}
   - component: {fileID: 7895980418945181907}
   - component: {fileID: 3470604421928413204}
-  - component: {fileID: 2009371235241705294}
   - component: {fileID: 8911249764134592037}
   - component: {fileID: 7545566421078173082}
   m_Layer: 0
@@ -226,28 +225,6 @@ MonoBehaviour:
   _movementProvider: {fileID: 0}
   _handAligment: 1
   _handGrabPoses: []
---- !u!64 &2009371235241705294
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522176099696603127}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 808474172911093344, guid: 36694ad9cc3abc04ab48fdb0373f2037, type: 3}
 --- !u!114 &8911249764134592037
 MonoBehaviour:
   m_ObjectHideFlags: 0

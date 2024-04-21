@@ -123,8 +123,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.22, y: 0.05, z: 0.22}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.21767089, y: 0.05471135, z: 0.21901001}
+  m_Center: {x: 0.00051280484, y: -0.009559198, z: 0}
 --- !u!54 &8726916404924514605
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -171,6 +171,7 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
+  isGrabbed: 0
 --- !u!114 &3470604421928413204
 MonoBehaviour:
   m_ObjectHideFlags: 0
