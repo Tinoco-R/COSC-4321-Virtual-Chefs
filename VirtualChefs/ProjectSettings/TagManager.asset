@@ -39,6 +39,11 @@ TagManager:
   - MediumMeat
   - RareMeat
   - WellDoneMeat
+  - Timer
+  - BottomBunToasted
+  - TopBunToasted
+  - BottomBunBurnt
+  - TopBunBurnt
   layers:
   - Default
   - TransparentFX

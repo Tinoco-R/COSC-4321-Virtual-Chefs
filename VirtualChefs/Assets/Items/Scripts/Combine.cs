@@ -36,13 +36,13 @@ public struct Food
         int p = -1;
 
         if (tag == "Plate") { p = 0; }
-        else if (tag == "BottomBun") { p = 1; }
+        else if (tag == "BottomBun" ^ tag == "BottomBunToasted") { p = 1; }
         else if (tag == "LettuceSlice") { p = 2; }
         else if (tag == "CheeseSlice") { p = 3; }
         //else if (tag == "CookedMeat" ^ ) { p = 4; }
         else if (tag == "RareMeat" ^ tag == "MediumMeat" ^ tag == "WellDoneMeat") { p = 4; }
         else if (tag == "TomatoSlice") { p = 5; }
-        else if (tag == "TopBun") { p = 6; }
+        else if (tag == "TopBun" ^ tag == "TopBunToasted") { p = 6; }
 
         return p;
     }
@@ -148,6 +148,11 @@ public class Combine : MonoBehaviour
     // Called when an item collides with plate
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag != "Untagged")
+        {
+            print("Collision with " + other.tag);
+        }
+
         Food food = new Food(other.gameObject, foodHeights);
         if (food.priority < 0 || inPlateAlready(food.tag))
         {
