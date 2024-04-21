@@ -39,7 +39,8 @@ public struct Food
         else if (tag == "BottomBun") { p = 1; }
         else if (tag == "LettuceSlice") { p = 2; }
         else if (tag == "CheeseSlice") { p = 3; }
-        else if (tag == "CookedMeat") { p = 4; }
+        //else if (tag == "CookedMeat" ^ ) { p = 4; }
+        else if (tag == "RareMeat" ^ tag == "MediumMeat" ^ tag == "WellDoneMeat") { p = 4; }
         else if (tag == "TomatoSlice") { p = 5; }
         else if (tag == "TopBun") { p = 6; }
 
