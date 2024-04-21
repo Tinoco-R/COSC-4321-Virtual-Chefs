@@ -36,6 +36,9 @@ TagManager:
   - TomatoSlice
   - CookedMeat
   - TurnInZone
+  - MediumMeat
+  - RareMeat
+  - WellDoneMeat
   layers:
   - Default
   - TransparentFX

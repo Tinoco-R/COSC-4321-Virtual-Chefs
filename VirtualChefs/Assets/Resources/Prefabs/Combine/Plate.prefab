@@ -49,9 +49,6 @@ GameObject:
   - component: {fileID: 3470604421928413204}
   - component: {fileID: 8911249764134592037}
   - component: {fileID: 7545566421078173082}
-  - component: {fileID: -5833155994601861446}
-  - component: {fileID: -5018215978106015443}
-  - component: {fileID: 706270871147713664}
   m_Layer: 0
   m_Name: Plate
   m_TagString: Plate
@@ -88,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5c5184f2-c2f5-4063-b14b-3b1264fb3c1a
-  instanceId: 8702c490-0155-4117-8b37-347a8a49854c
+  instanceId: 503fb63c-b3c9-468a-bc96-abd764e98ba5
   version: 1
 --- !u!33 &4796893382826154658
 MeshFilter:
@@ -255,51 +252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807ac579987463a48a27c5eb4d22c717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-5833155994601861446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522176099696603127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 807ac579987463a48a27c5eb4d22c717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-5018215978106015443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522176099696603127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 807ac579987463a48a27c5eb4d22c717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &706270871147713664
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522176099696603127}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.42469153, y: 0.033400167, z: 0.42469153}
-  m_Center: {x: 0, y: 0.015588788, z: 0}
 --- !u!1 &4617701470562256165
 GameObject:
   m_ObjectHideFlags: 0

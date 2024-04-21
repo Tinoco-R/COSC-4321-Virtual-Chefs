@@ -27,23 +27,43 @@ public class Cookable : MonoBehaviour
 
     string NextCookLevel(string currentCookLevel)
     {
-        string cookLevel;
-
+        string nextCookLevel;
         if (currentCookLevel == "UncookedMeat")
+        {
+            nextCookLevel = "RareMeat";
+            cookedPrefabDirectory = "Prefabs/Cook/RareMeat";
+        }
+        /*if (currentCookLevel == "UncookedMeat")
         {
             cookLevel = "CookedMeat";
             cookedPrefabDirectory = "Prefabs/Cook/CookedMeat";
         }
-        else if (currentCookLevel == "CookedMeat")
+        /*else if (currentCookLevel == "CookedMeat")
         {
             cookLevel = "BurntMeat";
+            cookedPrefabDirectory = "Prefabs/Cook/BurntMeat";
+        }
+        */
+        else if (currentCookLevel == "RareMeat")
+        {
+            nextCookLevel = "MediumMeat";
+            cookedPrefabDirectory = "Prefabs/Cook/MediumMeat";
+        }
+        else if (currentCookLevel == "MediumMeat")
+        {
+            nextCookLevel = "WellDoneMeat";
+            cookedPrefabDirectory = "Prefabs/Cook/WellDoneMeat";
+        }
+        else if (currentCookLevel == "WellDoneMeat")
+        {
+            nextCookLevel = "BurntMeat";
             cookedPrefabDirectory = "Prefabs/Cook/BurntMeat";
         }
         else
         {
             return currentCookLevel;
         }
-        return cookLevel;
+        return nextCookLevel;
     }
 
     // Food objects are: NameOfFoodBlock, so remove "block" to be able to use when dynamically loading cut game object later
