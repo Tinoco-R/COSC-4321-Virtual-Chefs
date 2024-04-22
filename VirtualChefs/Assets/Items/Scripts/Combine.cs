@@ -15,6 +15,7 @@ public struct Food
     public float height;
     public int priority;
 
+
     public Food(GameObject food, float[] foodHeights)
     {
         item = food;
@@ -36,12 +37,13 @@ public struct Food
         int p = -1;
 
         if (tag == "Plate") { p = 0; }
-        else if (tag == "BottomBun") { p = 1; }
+        else if (tag == "BottomBun" ^ tag == "BottomBunToasted") { p = 1; }
         else if (tag == "LettuceSlice") { p = 2; }
         else if (tag == "CheeseSlice") { p = 3; }
-        else if (tag == "CookedMeat") { p = 4; }
+        //else if (tag == "CookedMeat" ^ ) { p = 4; }
+        else if (tag == "RareMeat" ^ tag == "MediumMeat" ^ tag == "WellDoneMeat") { p = 4; }
         else if (tag == "TomatoSlice") { p = 5; }
-        else if (tag == "TopBun") { p = 6; }
+        else if (tag == "TopBun" ^ tag == "TopBunToasted") { p = 6; }
 
         return p;
     }
@@ -52,6 +54,7 @@ public class Combine : MonoBehaviour
     private HandGrabInteractor handGrab; // Reference to the HandGrabInteractor component
 
     public List<Food> plate = new List<Food>();
+    public Collider foodCatcherCollider;
     public float[] foodHeights;
     public bool[] foods;
     public int size;
@@ -143,10 +146,10 @@ public class Combine : MonoBehaviour
         food.item.transform.localPosition = new Vector3(0, foodPosition + (food.height / 4), 0); // Place food exactly where it needs to be
     }
 
-
-    // Called when an item collides with plate
-    private void OnTriggerEnter(Collider other)
+    // Called after an item collides with the plate
+    public void AddFoodToPlate(Collider other)
     {
+
         Food food = new Food(other.gameObject, foodHeights);
         if (food.priority < 0 || inPlateAlready(food.tag))
         {
@@ -202,7 +205,8 @@ public class Combine : MonoBehaviour
         }
 
         // Check if the object is still within the collision area of the plate
-        if (other.gameObject.GetComponent<Collider>().bounds.Intersects(GetComponent<Collider>().bounds))
+        //if (other.gameObject.GetComponent<Collider>().bounds.Intersects(GetComponent<Collider>().bounds))
+        if (other.gameObject.GetComponent<Collider>().bounds.Intersects(foodCatcherCollider.bounds))
         {
 
             // Food already physically placed

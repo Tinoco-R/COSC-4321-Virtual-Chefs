@@ -36,6 +36,14 @@ TagManager:
   - TomatoSlice
   - CookedMeat
   - TurnInZone
+  - MediumMeat
+  - RareMeat
+  - WellDoneMeat
+  - Timer
+  - BottomBunToasted
+  - TopBunToasted
+  - BottomBunBurnt
+  - TopBunBurnt
   - Timer
   layers:
   - Default
