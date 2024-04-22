@@ -27,23 +27,58 @@ public class Cookable : MonoBehaviour
 
     string NextCookLevel(string currentCookLevel)
     {
-        string cookLevel;
+        string nextCookLevel;
 
+        // Meats
         if (currentCookLevel == "UncookedMeat")
         {
-            cookLevel = "CookedMeat";
-            cookedPrefabDirectory = "Prefabs/Cook/CookedMeat";
+            nextCookLevel = "RareMeat";
+            cookedPrefabDirectory = "Prefabs/Cook/RareMeat";
         }
-        else if (currentCookLevel == "CookedMeat")
+        else if (currentCookLevel == "RareMeat")
         {
-            cookLevel = "BurntMeat";
+            nextCookLevel = "MediumMeat";
+            cookedPrefabDirectory = "Prefabs/Cook/MediumMeat";
+        }
+        else if (currentCookLevel == "MediumMeat")
+        {
+            nextCookLevel = "WellDoneMeat";
+            cookedPrefabDirectory = "Prefabs/Cook/WellDoneMeat";
+        }
+        else if (currentCookLevel == "WellDoneMeat")
+        {
+            nextCookLevel = "BurntMeat";
             cookedPrefabDirectory = "Prefabs/Cook/BurntMeat";
         }
+
+        // Breads
+        else if (currentCookLevel == "BottomBun")
+        {
+            nextCookLevel = "BottomBunToasted";
+            cookedPrefabDirectory = "Prefabs/Combine/BottomBunToasted";
+        }
+        else if (currentCookLevel == "BottomBunToasted")
+        {
+            nextCookLevel = "BottomBunBurnt";
+            cookedPrefabDirectory = "Prefabs/Combine/BottomBunBurnt";
+        }
+        else if (currentCookLevel == "TopBun")
+        {
+            nextCookLevel = "TopBunToasted";
+            cookedPrefabDirectory = "Prefabs/Combine/TopBunToasted";
+        }
+        else if (currentCookLevel == "TopBunToasted")
+        {
+            nextCookLevel = "TopBunBurnt";
+            cookedPrefabDirectory = "Prefabs/Combine/TopBunBurnt";
+        }
+
+        // Non-cookable / Fully cooked version of food
         else
         {
             return currentCookLevel;
         }
-        return cookLevel;
+        return nextCookLevel;
     }
 
     // Food objects are: NameOfFoodBlock, so remove "block" to be able to use when dynamically loading cut game object later
@@ -51,8 +86,9 @@ public class Cookable : MonoBehaviour
     {
         string tag = this.tag;
         int meatIndex = tag.IndexOf("Meat");
+        int breadIndex = tag.IndexOf("Bun");
 
-        if (meatIndex != -1)
+        if (meatIndex != -1 ^ breadIndex != -1)
         {
             tag = NextCookLevel(tag);
         }
@@ -72,7 +108,7 @@ public class Cookable : MonoBehaviour
         cookProgress = 0.0f;
         cookGoal = 5.0f;
 
-        if (this.tag == "BurntMeat")
+        if (this.tag == "BurntMeat" ^ this.tag == "BottomBunBurnt" ^ this.tag == "TopBunBurnt")
         {
             cooked = true;
             return;
@@ -88,6 +124,11 @@ public class Cookable : MonoBehaviour
     // Used to set progress bar UI element
     void UpdateProgressBar()
     {
+        if (this.tag == "BurntMeat" ^ this.tag == "BottomBunBurnt" ^ this.tag == "TopBunBurnt")
+        {
+            return;
+        }
+        
         progressBar.minimum = 0;
         progressBar.maximum = (int)cookGoal;
         progressBar.current = (int)cookProgress;
@@ -95,6 +136,20 @@ public class Cookable : MonoBehaviour
         if (progressBar.current == 0) {
             progressBar.mask.enabled = false;
             progressBar.fill.enabled = false;
+        }
+        // Color progress bar to warn user of potential burnt meat
+        if (cookedPrefabDirectory == "Prefabs/Cook/BurntMeat" ^ cookedPrefabDirectory == "Prefabs/Combine/BottomBunBurnt" ^ cookedPrefabDirectory == "Prefabs/Combine/TopBunBurnt")
+        {
+            if (cookProgress < 3.0f)
+            {
+                // Make bar yellow!!!
+                progressBar.SetFillColor(Color.yellow);
+            }
+            else if (cookProgress >= 3.0f)
+            {
+                // Make bar orange!!!
+                progressBar.SetFillColor(Color.red);
+            }
         }
     }
 
@@ -126,8 +181,10 @@ public class Cookable : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+
+        int burntIndex = this.tag.IndexOf("Burnt");
         // Check if the collider is the stove
-        if (other.gameObject.CompareTag("Stove") && !cooked)
+        if (other.gameObject.CompareTag("Stove") && burntIndex == -1/*!cooked && this.tag != "BurntMeat" && this.tag != "BottomBunBurnt" && this.tag != "TopBunBurnt"*/)
         {
             // Increment cookProgress every second the meat stays on the stove
             cookProgress += Time.deltaTime;

@@ -224,8 +224,8 @@ GameObject:
   - component: {fileID: 7432650379587736251}
   - component: {fileID: -2908484046457126709}
   m_Layer: 0
-  m_Name: TimerTest
-  m_TagString: Timer
+  m_Name: ScoreBox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,7 +266,7 @@ MonoBehaviour:
   AoiPositionSource: {fileID: 0}
   Flags: 2305
   NetworkGuid:
-    RawGuidValue: 02a7851809b7f4e6e90424dce523d06c
+    RawGuidValue: 7a11b3bc784ff42ecac4bbfdf1d820b9
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 7432650379587736251}
@@ -311,8 +311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d5064da68c47aeb08140c8ebf76d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_objectType: 36
-  m_isWallObject: 1
+  m_objectType: 35
+  m_isWallObject: 0
   m_placeAtGroundLevel: 0
   m_onObjectPlaced:
     m_PersistentCalls:
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 4261681258771277340}
   - component: {fileID: 6521597264786189315}
   - component: {fileID: 8504498174076283490}
-  - component: {fileID: 8523060345229988978}
+  - component: {fileID: 188735191213867015}
   m_Layer: 0
   m_Name: text
   m_TagString: Untagged
@@ -344,15 +344,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7838665969036501098}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.6691957}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3358978348411285693}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1416555, y: -0.17999999}
+  m_AnchoredPosition: {x: 0.06, y: -0.181}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6521597264786189315
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Timer
+  m_text: 'Score : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92f57b8ed75d6a549bad9f95fe368fcd, type: 2}
   m_sharedMaterial: {fileID: 7804206988038685639, guid: 92f57b8ed75d6a549bad9f95fe368fcd, type: 2}
@@ -444,8 +444,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1
-  m_fontSizeBase: 1
+  m_fontSize: 2
+  m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6521597264786189315}
   m_maskType: 0
---- !u!114 &8523060345229988978
+--- !u!114 &188735191213867015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -498,8 +498,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7838665969036501098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a092c074a2aeae14192ff00879465756, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e5113c7bd7ed724d86a470b4d461770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTime: 300
-  timeTextBox: {fileID: 8504498174076283490}
+  totalScore: 0
+  text: {fileID: 8504498174076283490}
+  highScoreText: {fileID: 0}

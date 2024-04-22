@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -5017491632316555618}
   - component: {fileID: 4011472533428527980}
   - component: {fileID: 1891820397393637985}
+  - component: {fileID: -2476847272748003239}
   m_Layer: 15
   m_Name: TomatoBlock
   m_TagString: TomatoBlock
@@ -57,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5c5184f2-c2f5-4063-b14b-3b1264fb3c1a
-  instanceId: 11f96d60-7a40-49b3-837f-4e0e892befa1
+  instanceId: b872d965-88b1-47ff-8f5c-ad1c36457615
   version: 1
 --- !u!23 &3200254174171096400
 MeshRenderer:
@@ -79,7 +80,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 92885db60779e5f4fbc5d34db3037571, type: 2}
+  - {fileID: -8876429951165359728, guid: 1490c1a2a58371d4b9cc957fc7b17d59, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,8 +121,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.16417532, y: 0.13678493, z: 0.15}
-  m_Center: {x: 0.032912336, y: 0.053392462, z: 0}
+  m_Size: {x: 0.14078882, y: 0.13911332, z: 0.1407888}
+  m_Center: {x: -0.00000014528632, y: 0.06789064, z: -0.000000067055225}
 --- !u!54 &8726916404924514605
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -291,8 +292,37 @@ MonoBehaviour:
     RawGuidValue: 2c09d795c19854b7bb9fdaac1e321665
   NestedObjects: []
   NetworkedBehaviours:
+  - {fileID: -2476847272748003239}
   - {fileID: 8105769384847553823}
   SimulationBehaviours: []
+--- !u!114 &-2476847272748003239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 3
+  InterpolationSpace: 0
+  InterpolationTarget: {fileID: 0}
+  InterpolateErrorCorrection: 1
+  InterpolatedErrorCorrectionSettings:
+    MinRate: 3.3
+    MaxRate: 10
+    PosBlendStart: 0.25
+    PosBlendEnd: 1
+    PosMinCorrection: 0.025
+    PosTeleportDistance: 2
+    RotBlendStart: 0.1
+    RotBlendEnd: 0.5
+    RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!1 &1542186686878851862
 GameObject:
   m_ObjectHideFlags: 0

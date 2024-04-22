@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 7432650379587736251}
   - component: {fileID: -2908484046457126709}
   m_Layer: 0
-  m_Name: TutorialBoxTest
+  m_Name: TutorialBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_objectType: 34
-  m_isWallObject: 1
+  m_isWallObject: 0
   m_placeAtGroundLevel: 0
   m_onObjectPlaced:
     m_PersistentCalls:
@@ -344,15 +344,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7838665969036501098}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.6691957}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3358978348411285693}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1416555, y: -0.17999999}
+  m_AnchoredPosition: {x: 0.06, y: -0.181}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6521597264786189315
@@ -446,8 +446,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1
-  m_fontSizeBase: 1
+  m_fontSize: 1.6
+  m_fontSizeBase: 1.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
