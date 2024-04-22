@@ -5,6 +5,7 @@ using CrypticCabinet.OVR;
 using Meta.Utilities;
 using Oculus.Interaction;
 using UnityEngine;
+using TMPro;
 
 namespace CrypticCabinet.Utils
 {
@@ -149,8 +150,23 @@ namespace CrypticCabinet.Utils
                     return;
                 }
 
+                // Assign the color to the primitive renderer
                 m_validationPrimitiveRenderer.material.color = GetCorrectColor();
+
                 m_hasGeometry = true;
+
+                // Find the child GameObject named "Text" on the validation renderer
+                Transform textTransform = m_validationPrimitiveRenderer.transform.Find("Text");
+              
+                // Get the Text component on the child GameObject
+                TMP_Text textComponent = textTransform.GetComponent<TMP_Text>();
+               
+                // Call the custom function to get the name of the object type
+                string objectTypeName = GetCorrectText(m_objectType);
+
+                // Set the text of the Text component to match the name of the object type
+                textComponent.SetText(objectTypeName);
+
             }
         }
 
@@ -169,7 +185,7 @@ namespace CrypticCabinet.Utils
 
             // Will always detect it's self so count for hitting others must be higher than 1.
             m_validationPrimitiveRenderer.material.color = hitCount > 1 ?
-                ObjectPlacementValidator.Instance.GetPlacementColorIncorrect : GetCorrectColor();
+            ObjectPlacementValidator.Instance.GetPlacementColorIncorrect : GetCorrectColor();
         }
 
         private void FixedUpdate()
@@ -216,7 +232,7 @@ namespace CrypticCabinet.Utils
                 }
 
                 if (!Physics.ComputePenetration(m_boxCollider, thisTransform.position, thisTransform.rotation,
-                        other, otherTransform.position, otherTransform.rotation, out var dir, out var distance))
+                    other, otherTransform.position, otherTransform.rotation, out var dir, out var distance))
                 {
                     continue;
                 }
@@ -234,8 +250,36 @@ namespace CrypticCabinet.Utils
         private Color GetCorrectColor()
         {
             return m_userInteractableObject ?
-                ObjectPlacementValidator.Instance.GetPlacementColorCorrectAccessible :
-                ObjectPlacementValidator.Instance.GetPlacementColorCorrectViewable;
+            ObjectPlacementValidator.Instance.GetPlacementColorCorrectAccessible :
+            ObjectPlacementValidator.Instance.GetPlacementColorCorrectViewable;
+        }
+
+        // Custom function to get the name of the object type
+        private string GetCorrectText(ObjectPlacementManager.LoadableSceneObjects objectType)
+        {
+            switch (objectType)
+            {
+                case ObjectPlacementManager.LoadableSceneObjects.FRIDGE:
+                return "Fridge";
+                case ObjectPlacementManager.LoadableSceneObjects.TABLE:
+                return "Customer";
+                case ObjectPlacementManager.LoadableSceneObjects.TABLE_1:
+                return "Kitchen Counter";
+                case ObjectPlacementManager.LoadableSceneObjects.PLATE_SPAWN_STATION:
+                return "Plate Station";
+                case ObjectPlacementManager.LoadableSceneObjects.TICKET_WHEEL:
+                return "Ticket Wheel";
+                case ObjectPlacementManager.LoadableSceneObjects.SCORE_BOX:
+                return "Score";
+                case ObjectPlacementManager.LoadableSceneObjects.TUTORIAL_BOX:
+                return "Tutorial";
+                case ObjectPlacementManager.LoadableSceneObjects.GAME_TIMER:
+                return "Timer";
+                case ObjectPlacementManager.LoadableSceneObjects.STOVE:
+                return "Stove";
+                default:
+                return "Unknown";
+            }
         }
     }
 }
