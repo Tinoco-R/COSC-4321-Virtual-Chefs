@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 8636089981726935302}
   - component: {fileID: 8726916404924514605}
   - component: {fileID: 3470604421928413204}
-  - component: {fileID: 4125152236303868641}
   - component: {fileID: 3814713210485362703}
   - component: {fileID: 1416439749720834930}
+  - component: {fileID: 5692956070907221308}
   m_Layer: 0
   m_Name: RareMeat
   m_TagString: RareMeat
@@ -38,6 +38,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 3778174832950237871}
   - {fileID: 3111420870223920882}
   - {fileID: 7291586434149201548}
   m_Father: {fileID: 0}
@@ -55,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 5c5184f2-c2f5-4063-b14b-3b1264fb3c1a
-  instanceId: eee95a5e-0f6d-494c-97b6-c050d1664e60
+  instanceId: 836e091c-ec12-4b84-b634-d9da314e5604
   version: 1
 --- !u!33 &4796893382826154658
 MeshFilter:
@@ -196,22 +197,6 @@ MonoBehaviour:
   _movementProvider: {fileID: 0}
   _handAligment: 1
   _handGrabPoses: []
---- !u!114 &4125152236303868641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522176099696603127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fea958acb1116b84cae39c1165821fef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progressBar: {fileID: 2538364271242267281}
-  cookProgress: 0
-  cookGoal: 0
-  cooked: 0
 --- !u!114 &3814713210485362703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +229,22 @@ MonoBehaviour:
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
   isGrabbed: 0
+--- !u!114 &5692956070907221308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea958acb1116b84cae39c1165821fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBar: {fileID: 2538364271242267281}
+  cookProgress: 0
+  cookGoal: 0
+  cooked: 0
 --- !u!1 &1551011201078936057
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +724,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1 &7323278594420339511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3778174832950237871}
+  - component: {fileID: 6377456280744606302}
+  m_Layer: 0
+  m_Name: ScriptCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3778174832950237871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7323278594420339511}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.005, z: 0}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7662248368466116235}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6377456280744606302
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7323278594420339511}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.165, y: 0.025, z: 0.165}
+  m_Center: {x: 0, y: -0.0025, z: 0}
 --- !u!1 &8163727740098823299
 GameObject:
   m_ObjectHideFlags: 0
