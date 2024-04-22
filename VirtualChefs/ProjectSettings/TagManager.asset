@@ -44,11 +44,12 @@ TagManager:
   - TopBunToasted
   - BottomBunBurnt
   - TopBunBurnt
+  - Timer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Hands
   - Water
   - UI
   - SceneUnderstanding
@@ -61,8 +62,8 @@ TagManager:
   - DeskSurface
   - PlacementVisualisers
   - Sliceable
-  - 
-  - 
+  - FridgeDoor
+  - FridgeBody
   - 
   - 
   - 
