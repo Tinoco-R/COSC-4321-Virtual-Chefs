@@ -88,7 +88,7 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 8192
   m_placementType: 2
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
@@ -196,7 +196,7 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 8192
   m_placementType: 2
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
@@ -319,7 +319,7 @@ MonoBehaviour:
     m_Bits: 2048
   m_layerMaskFloor:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 8192
   m_placementType: 2
   m_useMaxWallHeight: 0
   m_maxWallHeight: 1
@@ -368,8 +368,8 @@ Transform:
   m_GameObject: {fileID: 8045472780145166155}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.35782, z: -0.20657}
-  m_LocalScale: {x: 0.8579907, y: 0.8579907, z: 0.8579907}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3092953552703882141}
@@ -390,13 +390,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_userInteractableObject: 1
-  m_radius: 0.5145
+  m_radius: 0.28875
   m_placeAgainstWall: 0
   m_onTheWall: 0
   m_flipFaceDirection: 0
-  m_forceToGroundLevel: 1
-  m_wallObjectPlacementHeight: 0
-  m_wallObjectWidth: 0
+  m_forceToGroundLevel: 0
+  m_wallObjectPlacementHeight: 1.8
+  m_wallObjectWidth: 0.6787725
   m_wallObjectVerticalSize: 0
   m_objectType: 25
   m_grabbable: {fileID: 8713484567708071133}
@@ -405,7 +405,7 @@ MonoBehaviour:
     m_Bits: 24576
   m_physicsEnvironmentLayers:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 14336
   m_placementEaseTime: 3
   m_distFromEdgeLeft: 0
   m_distFromEdgeRight: 0
@@ -430,7 +430,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.5013638, y: 0.40965942, z: 0.42872897}
-  m_Center: {x: -0.010409686, y: 0.20210859, z: 0.01772066}
+  m_Center: {x: 0, y: 0.21, z: 0}
 --- !u!54 &9152792109826418118
 Rigidbody:
   m_ObjectHideFlags: 0
