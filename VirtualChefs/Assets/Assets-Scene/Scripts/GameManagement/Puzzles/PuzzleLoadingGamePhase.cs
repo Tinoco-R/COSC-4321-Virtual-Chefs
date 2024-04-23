@@ -78,8 +78,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         }
                         else
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}", null, 2f);
-                            UISystem.Instance.ShowMessage("Game Over", null, -1);
+                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}! \n Game Over!!", null, -1);
                             
                             yield break;
                         }
@@ -102,8 +101,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         }
                         else
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}", null, 2f);
-                            UISystem.Instance.ShowMessage("Game Over", null, -1);
+                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}! \n Game Over!!", null, -1);
                             
                             yield break;
                         }
@@ -125,8 +123,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         }
                         else
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}", null, 2f);
-                            UISystem.Instance.ShowMessage("Game Over", null, -1);
+                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}! \n Game Over!!", null, -1);
                             
                             yield break;
                         }
