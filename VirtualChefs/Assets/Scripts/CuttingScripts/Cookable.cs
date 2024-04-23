@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+// Steam Hissing sounds by Bart from https://opengameart.org/content/steam-release-sounds
+// File Names: steam hisses - Marker # 1-5; found within Assets\Assets-Scene\Audio
 
 public class Cookable : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class Cookable : MonoBehaviour
     public bool cooked;
     public bool cooking;
     public AudioSource cookSound;
+    public AudioSource switchSound;
 
     private string cookedPrefabDirectory;
 

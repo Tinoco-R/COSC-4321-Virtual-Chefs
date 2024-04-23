@@ -55,6 +55,7 @@ public class Combine : MonoBehaviour
 
     public List<Food> plate = new List<Food>();
     public Collider foodCatcherCollider;
+    public AudioSource combineSound;
     public float[] foodHeights;
     public bool[] foods;
     public int size;
@@ -130,6 +131,7 @@ public class Combine : MonoBehaviour
             ingredient.item.transform.localPosition = newPosition;
         }
 
+        combineSound.Play();
         food.item.transform.SetParent(transform);               // Plate becomes parent to food object [so that when the plate moves, all children move together]
         food.item.GetComponent<Rigidbody>().isKinematic = true; // Prevent unwanted physics to occur on child food items
         food.item.GetComponent<Collider>().isTrigger = false;   // Prevent triggers from constantly occurring for children in the plate
