@@ -64,10 +64,12 @@ namespace CrypticCabinet.GameManagement.Puzzles
                 if (currentWave == 1 && waveTimer >= 20f) // 3 minutes for Wave 1
                 {
                     GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
+
                     if (ScoreInstance != null)
                     {
                         TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
-                        if (totalScore.totalScore >= 100)
+                        
+                        if (totalScore.totalScore >= 20)
                         {
                             UISystem.Instance.ShowMessage($"Your Score: {totalScore.totalScore}", null, 2f);
                             totalScore.totalScore = 0;

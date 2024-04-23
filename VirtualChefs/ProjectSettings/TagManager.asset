@@ -45,6 +45,7 @@ TagManager:
   - BottomBunBurnt
   - TopBunBurnt
   - Timer
+  - ScoreBox
   layers:
   - Default
   - TransparentFX

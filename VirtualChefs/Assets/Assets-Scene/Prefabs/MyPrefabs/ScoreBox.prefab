@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 427522780173943087}
   - component: {fileID: 7432650379587736251}
   - component: {fileID: -2908484046457126709}
+  - component: {fileID: 7790707289869146909}
   m_Layer: 0
   m_Name: ScoreBox
   m_TagString: ScoreBox
@@ -317,6 +318,21 @@ MonoBehaviour:
   m_onObjectPlaced:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7790707289869146909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592370215941094674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5113c7bd7ed724d86a470b4d461770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalScore: 0
+  text: {fileID: 8504498174076283490}
+  highScoreText: {fileID: 0}
 --- !u!1 &7838665969036501098
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +344,6 @@ GameObject:
   - component: {fileID: 4261681258771277340}
   - component: {fileID: 6521597264786189315}
   - component: {fileID: 8504498174076283490}
-  - component: {fileID: 188735191213867015}
   m_Layer: 0
   m_Name: text
   m_TagString: Untagged
@@ -489,18 +504,3 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6521597264786189315}
   m_maskType: 0
---- !u!114 &188735191213867015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7838665969036501098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5113c7bd7ed724d86a470b4d461770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalScore: 0
-  text: {fileID: 8504498174076283490}
-  highScoreText: {fileID: 0}

@@ -20,28 +20,16 @@ public class countdownTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isGameOver)
-        {
-            UpdateGameTimer();
-        }
+
+        UpdateGameTimer();
+        
     }
 
     private void UpdateGameTimer() 
     {
         gameTime -= Time.deltaTime;
 
-        // Stop timer when it reaches 0, and display game over
-        if (gameTime <= 0)
-        {
-            gameTime = 0;
-            isGameOver = true;
-            timeTextBox.text = "Game Over";
 
-            // Change timer text color to red when it reaches 0
-            timeTextBox.color = Color.red;
-        }
-        else
-        {
             var minutes = Mathf.FloorToInt(gameTime / 60);
             var seconds = Mathf.FloorToInt(gameTime - minutes * 60);
 
@@ -52,6 +40,6 @@ public class countdownTimer : MonoBehaviour
             // Change text color based on remaining time
             float normalizedTime = gameTime / 60.0f; // Timer at 60 seconds
             timeTextBox.color = Color.Lerp(Color.green, Color.red, 1 - normalizedTime);
-        }
+        
     }
 }
