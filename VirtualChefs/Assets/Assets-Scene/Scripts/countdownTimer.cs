@@ -40,6 +40,10 @@ public class countdownTimer : MonoBehaviour
             // Change text color based on remaining time
             float normalizedTime = gameTime / 60.0f; // Timer at 60 seconds
             timeTextBox.color = Color.Lerp(Color.green, Color.red, 1 - normalizedTime);
+            if (gameTime == 0)
+            {
+                timeTextBox.text = "GameOver";
+            }
         
     }
 }

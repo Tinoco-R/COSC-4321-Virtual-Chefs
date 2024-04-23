@@ -15,7 +15,7 @@ public class TotalScoreReader : MonoBehaviour
     private void Start()
     {
         totalScore = 0;
-        UpdateHighScoreText();
+      
     }
 
     private void OnEnable()
@@ -32,7 +32,8 @@ public class TotalScoreReader : MonoBehaviour
     {
 
         totalScore += s;
-        text.text = "Total Score: " + (((int)(totalScore * 100)) / 100);
+        TMP_Text textComponent = text.GetComponent<TMP_Text>();
+        textComponent.SetText("Total Score: " + (((int)(totalScore * 100)) / 100));
     }
 
     void CheckHighScore()
@@ -40,13 +41,10 @@ public class TotalScoreReader : MonoBehaviour
         if(totalScore > PlayerPrefs.GetInt("HighScore", 0))
         {
             PlayerPrefs.SetInt("HighScore", (int)totalScore);
-            UpdateHighScoreText();
+           
         }
     }
 
-    void UpdateHighScoreText()
-    {
-        highScoreText.text = $"HighScore: {PlayerPrefs.GetInt("HighScore", 0)}";
-    }
+
 
 }

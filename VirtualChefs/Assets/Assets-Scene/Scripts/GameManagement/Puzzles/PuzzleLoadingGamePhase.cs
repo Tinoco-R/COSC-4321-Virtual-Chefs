@@ -71,61 +71,59 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         
                         if (totalScore.totalScore >= 20)
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {totalScore.totalScore}", null, 2f);
-                            totalScore.totalScore = 0;
+                
                             currentWave++;
                             
-                            UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
+                            UISystem.Instance.ShowMessage($" Your Score: {(int)(totalScore.totalScore)}! \n Wave {currentWave}", null, 2f);
                             waveTimer = 0f;
+                            totalScore.totalScore = 0;
                         }
                         else
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {totalScore.totalScore}! \n Game Over!!", null, -1);
+                            UISystem.Instance.ShowMessage($"Your Score: {(int)(totalScore.totalScore)}! \n Game Over!!", null, -1);
                             
                             yield break;
                         }
                     }
                 }
-                else if (currentWave == 2 && waveTimer >= 120f) // 2 minutes for Wave 2
+                else if (currentWave == 2 && waveTimer >= 20f) // 2 minutes for Wave 2
                 {
-                    GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
-                    if (turnInZoneInstance != null)
+                    GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
+                    if (ScoreInstance != null)
                     {
                         
-                        ReadFood readFood = turnInZoneInstance.GetComponent<ReadFood>();
-                        if (readFood.score >= 70)
+                        TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
+                        if (totalScore.totalScore >= 20)
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}", null, 2f);
-                            readFood.score = 0;
+                   
                             currentWave++;
-                            UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
+                            UISystem.Instance.ShowMessage($"Your Score: {(int)(totalScore.totalScore)}! \n Wave {currentWave}", null, 2f);
                             waveTimer = 0f;
                         }
                         else
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}! \n Game Over!!", null, -1);
+                            UISystem.Instance.ShowMessage($"Your Score: {(int)(totalScore.totalScore)}! \n Game Over!!", null, -1);
                             
                             yield break;
                         }
                     }
                 }
-                else if (currentWave == 3 && waveTimer >= 60f) // 2 minutes for Wave 3
+                else if (currentWave == 3 && waveTimer >= 20f) // 2 minutes for Wave 3
                 {
-                    GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
-                    if (turnInZoneInstance != null)
+                    GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
+                    if (ScoreInstance != null)
                     {
-                        ReadFood readFood = turnInZoneInstance.GetComponent<ReadFood>();
-                        if (readFood.score >= 50)
+                        TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
+                        if (totalScore.totalScore >= 50)
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}", null, 2f);
-                            readFood.score = 0;
-                            currentWave++;
-                            UISystem.Instance.ShowMessage("You Won", null, -1);
+                         
+                  
+                            UISystem.Instance.ShowMessage($" Your Score: {(int)(totalScore.totalScore)}! \nYou Won!", null, -1);
                             waveTimer = 0f;
                         }
                         else
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}! \n Game Over!!", null, -1);
+                            UISystem.Instance.ShowMessage($"Your Score: {(int)(totalScore.totalScore)}! \n Game Over!!", null, -1);
                             
                             yield break;
                         }
