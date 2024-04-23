@@ -13,6 +13,8 @@ public class Cookable : MonoBehaviour
     public float cookProgress;
     public float cookGoal;
     public bool cooked;
+    public bool cooking;
+    public AudioSource cookSound;
 
     private string cookedPrefabDirectory;
 
@@ -101,7 +103,7 @@ public class Cookable : MonoBehaviour
         InitializeCookable();
     }
 
-    void InitializeCookable()
+    void InitializeCookable(float initialPlaybackTime = 0.0f)
     {
         string foodType = GetFoodTypeFromTag();
 
@@ -114,7 +116,24 @@ public class Cookable : MonoBehaviour
             return;
         }
 
+
         cooked = false;
+        cooking = false;
+        cookSound = GetComponent<AudioSource>();
+
+        if (cookSound == null)
+        {
+            print("Null audio source in " + this.tag);
+        }
+        else
+        {
+            cookSound.time = initialPlaybackTime;
+            if (cooking)
+            {
+                cookSound.Play();
+            }
+        }
+
         UpdateProgressBar();
 
         // Load the prefab of cooked version of food from the Resources folder
@@ -153,7 +172,7 @@ public class Cookable : MonoBehaviour
         }
     }
 
-    void fullyCooked()
+    void fullyCooked(float initialPlaybackTime = 0.0f)
     {
         cooked = true;
         // Removes progress bar with some kind of UI to show task completed (smoke effect, stars, object shimmer, etc.)
@@ -175,7 +194,7 @@ public class Cookable : MonoBehaviour
 
         // Access the Cookable component attached to the cookedObject and set initial properties
         Cookable cookedCookable = cookedObject.GetComponent<Cookable>();
-        cookedCookable.InitializeCookable();
+        cookedCookable.InitializeCookable(initialPlaybackTime);
         cookedCookable.CopyFromProgressBar(tempProgressBar);
     }
 
@@ -186,16 +205,34 @@ public class Cookable : MonoBehaviour
         // Check if the collider is the stove
         if (other.gameObject.CompareTag("Stove") && burntIndex == -1/*!cooked && this.tag != "BurntMeat" && this.tag != "BottomBunBurnt" && this.tag != "TopBunBurnt"*/)
         {
+            cooking = true;
+            // Play cook sound effect
+            if (!cookSound.isPlaying)
+            {
+                cookSound.Play();
+            }
             // Increment cookProgress every second the meat stays on the stove
             cookProgress += Time.deltaTime;
-
             // Update progress bar
             UpdateProgressBar();
 
             // Check if the meat has been fully cooked
             if (cookProgress >= cookGoal)
             {
-                fullyCooked();
+                fullyCooked(cookSound.time);
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        // Check if the collider is the stove
+        if (other.gameObject.CompareTag("Stove"))
+        {
+            cooking = false;
+            // Stop the cooking sound if it's playing
+            if (cookSound.isPlaying)
+            {
+                cookSound.Stop();
             }
         }
     }
