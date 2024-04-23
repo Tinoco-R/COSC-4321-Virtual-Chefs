@@ -30,6 +30,7 @@ public class SliceObject : MonoBehaviour
     public Transform endSlicePoint;
     public VelocityEstimator velocityEstimator;
     public LayerMask sliceableLayer;
+    public AudioSource sliceSound;
 
     // Start is called before the first frame update
     void Start()
@@ -262,6 +263,9 @@ public class SliceObject : MonoBehaviour
 
             // Destroys original target
             Destroy(target);
+
+            // Plays slice sound effect
+            sliceSound.Play();
 
             // Checks to see if sliced prefab can spawn in place of a hull
             CheckAndConvertToSlicePrefab(upperHull);
