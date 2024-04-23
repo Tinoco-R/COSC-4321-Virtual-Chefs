@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: -2908484046457126709}
   m_Layer: 0
   m_Name: ScoreBox
-  m_TagString: Untagged
+  m_TagString: ScoreBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

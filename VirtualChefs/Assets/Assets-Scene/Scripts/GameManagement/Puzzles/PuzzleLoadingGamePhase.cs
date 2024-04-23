@@ -63,14 +63,14 @@ namespace CrypticCabinet.GameManagement.Puzzles
         
                 if (currentWave == 1 && waveTimer >= 20f) // 3 minutes for Wave 1
                 {
-                    GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
-                    if (turnInZoneInstance != null)
+                    GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
+                    if (ScoreInstance != null)
                     {
-                        ReadFood readFood = turnInZoneInstance.GetComponent<ReadFood>();
-                        if (readFood.score >= 100)
+                        TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
+                        if (totalScore.totalScore >= 100)
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}", null, 2f);
-                            readFood.score = 0;
+                            UISystem.Instance.ShowMessage($"Your Score: {totalScore.totalScore}", null, 2f);
+                            totalScore.totalScore = 0;
                             currentWave++;
                             
                             UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
@@ -78,7 +78,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         }
                         else
                         {
-                            UISystem.Instance.ShowMessage($"Your Score: {readFood.score}! \n Game Over!!", null, -1);
+                            UISystem.Instance.ShowMessage($"Your Score: {totalScore.totalScore}! \n Game Over!!", null, -1);
                             
                             yield break;
                         }
