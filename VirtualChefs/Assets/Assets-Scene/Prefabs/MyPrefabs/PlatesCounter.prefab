@@ -336,6 +336,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[0]
       value: 
       objectReference: {fileID: 3511628094709723420}
+    - target: {fileID: -778063013152548292, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -778063013152548292, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 522176099696603127, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
       propertyPath: m_Name
       value: Plate
