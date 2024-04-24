@@ -3,12 +3,8 @@ using UnityEngine;
 
 public class CollisionDetector : MonoBehaviour
 {
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
     private List<string> foodItems = new() { "BottomBun", "BottomBunToasted", "CheeseSlice", "LettuceSlice", "TomatoSlice", "TopBun", "TopBunToasted", "RareMeat", "MediumMeat", "WellDoneMeat" };
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
