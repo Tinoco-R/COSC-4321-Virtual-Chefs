@@ -13,7 +13,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
     public class SandPuzzleGamePhase : GamePhase
     {
         [SerializeField] private GameObject[] m_prefabSandPuzzlePrefabs;
-     
+        private float waveTimer = 0f;
         private int currentWave = 1;
 
         protected override void InitializeInternal()
@@ -59,18 +59,18 @@ namespace CrypticCabinet.GameManagement.Puzzles
         {
             while (true)
             {
+                waveTimer += Time.deltaTime;
                 
-                GameObject TimerInstance = GameObject.FindGameObjectWithTag("Timer");
-                countdownTimer CountdownTimer = TimerInstance.GetComponent<countdownTimer>();
         
-                if (currentWave == 1 && CountdownTimer.gameTime <= 0f) // 3 minutes for Wave 1
+                if (currentWave == 1 && waveTimer >= 20f) // 3 minutes for Wave 1
                 {
+                    GameObject TimerInstance = GameObject.FindGameObjectWithTag("Timer");
                     
                     GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
 
                     if (ScoreInstance != null)
                     {
-                        
+                        countdownTimer CountdownTimer = TimerInstance.GetComponent<countdownTimer>();
                         TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
                         
                         if (totalScore.totalScore >= 20)
@@ -79,7 +79,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
                             currentWave++;
                             
                             UISystem.Instance.ShowMessage($" Your Score: {(int)(CountdownTimer.gameTime)}! \nYour Score: {(int)(totalScore.totalScore)}! \n Wave {currentWave}", null, 2f);
-                            
+                            waveTimer = 0f;
                             CountdownTimer.gameTime = 20f;
                             totalScore.totalScore = 0;
                             
@@ -92,12 +92,13 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         }
                     }
                 }
-                else if (currentWave == 2 && CountdownTimer.gameTime <= 0f) // 2 minutes for Wave 2
+                else if (currentWave == 2 && waveTimer >= 20f) // 2 minutes for Wave 2
                 {
+                    GameObject TimerInstance = GameObject.FindGameObjectWithTag("Timer");
                     GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
                     if (ScoreInstance != null)
                     {
-                        
+                        countdownTimer CountdownTimer = TimerInstance.GetComponent<countdownTimer>();
                         TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
                         if (totalScore.totalScore >= 20)
                         {
@@ -105,6 +106,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
                             currentWave++;
                             UISystem.Instance.ShowMessage($"Your Score: {(int)(totalScore.totalScore)}! \n Wave {currentWave}", null, 2f);
                             CountdownTimer.gameTime = 20f;
+                            waveTimer = 0f;
                             totalScore.totalScore = 0;
                          
                         }
@@ -116,11 +118,12 @@ namespace CrypticCabinet.GameManagement.Puzzles
                         }
                     }
                 }
-                else if (currentWave == 3 && CountdownTimer.gameTime <= 0f) // 2 minutes for Wave 3
+                else if (currentWave == 3 && waveTimer >= 20f) // 2 minutes for Wave 3
                 {
+                    
                     GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
                     if (ScoreInstance != null)
-                    {
+                    {   
                         TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
                         if (totalScore.totalScore >= 50)
                         {
