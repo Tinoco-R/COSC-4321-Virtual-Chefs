@@ -142,7 +142,8 @@ MonoBehaviour:
   Flags: 2305
   NetworkGuid:
     RawGuidValue: b5b3ad2264afdf74da8938feece1955e
-  NestedObjects: []
+  NestedObjects:
+  - {fileID: 8777611105188230620}
   NetworkedBehaviours:
   - {fileID: 2387822591102694943}
   SimulationBehaviours: []
@@ -323,6 +324,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3339737672797558044}
     m_Modifications:
+    - target: {fileID: -778063013152548292, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
+      propertyPath: Flags
+      value: 134145
+      objectReference: {fileID: 0}
+    - target: {fileID: -778063013152548292, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
+      propertyPath: NetworkedBehaviours.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -778063013152548292, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
+      propertyPath: NetworkedBehaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 3511628094709723420}
     - target: {fileID: 522176099696603127, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
       propertyPath: m_Name
       value: Plate
@@ -400,8 +413,30 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
+--- !u!114 &3511628094709723420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4875047498493927684, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
+  m_PrefabInstance: {fileID: 928749794819092448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7401194640463204715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7662248368466116235, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
   m_PrefabInstance: {fileID: 928749794819092448}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8777611105188230620 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -778063013152548292, guid: 4aa1c9cfe24c3944c8e2d2a26d892ae3, type: 3}
+  m_PrefabInstance: {fileID: 928749794819092448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
