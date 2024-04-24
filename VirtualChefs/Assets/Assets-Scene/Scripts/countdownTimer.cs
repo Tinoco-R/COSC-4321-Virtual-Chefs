@@ -51,10 +51,7 @@ public class countdownTimer : MonoBehaviour
             timeTextBox.color = Color.Lerp(Color.green, Color.red, 1 - normalizedTime);
             
         }
-        else
-        {
-            timeTextBox.text = "Gameover";
-        }
+
 
 
     }
