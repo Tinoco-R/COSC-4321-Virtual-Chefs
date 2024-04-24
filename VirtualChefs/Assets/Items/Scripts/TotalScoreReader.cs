@@ -18,20 +18,12 @@ public class TotalScoreReader : MonoBehaviour
       
     }
 
-    private void OnEnable()
-    {
-        ReadFood.orderGiven += CalcScore;
-    }
 
-    private void OnDisable()
-    {
-        ReadFood.orderGiven -= CalcScore;
-    }
 
-    public void CalcScore(int n, double s)
+     void Update ()
     {
 
-        totalScore += s;
+        
         TMP_Text textComponent = text.GetComponent<TMP_Text>();
         textComponent.SetText("Total Score: " + (((int)(totalScore * 100)) / 100));
     }

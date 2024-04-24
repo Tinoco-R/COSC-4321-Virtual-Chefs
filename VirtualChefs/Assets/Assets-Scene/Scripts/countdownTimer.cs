@@ -5,31 +5,40 @@ using TMPro;
 
 public class countdownTimer : MonoBehaviour
 {
-    [SerializeField] private float gameTime;
+    [SerializeField] public float gameTime;
     [SerializeField] TMP_Text timeTextBox;
-    private bool isGameOver = false;
+    private float initialGameTime;
+
 
     // Start is called before the first frame update
     void Start()
     {
         // Set initial color to green
-        timeTextBox.color = Color.red;
-
+        timeTextBox.color = Color.green;
+        initialGameTime = gameTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         UpdateGameTimer();
-        
     }
 
-    private void UpdateGameTimer() 
+    private void UpdateGameTimer()
     {
+        
+        GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
+        TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
+        
+        
         gameTime -= Time.deltaTime;
 
-
+        if (gameTime <= 0 )
+        {
+            timeTextBox.text = "Gameover";
+        }
+        else if(gameTime >0)
+        {
             var minutes = Mathf.FloorToInt(gameTime / 60);
             var seconds = Mathf.FloorToInt(gameTime - minutes * 60);
 
@@ -38,12 +47,15 @@ public class countdownTimer : MonoBehaviour
             timeTextBox.text = gameTimeClockDisplay;
 
             // Change text color based on remaining time
-            float normalizedTime = gameTime / 60.0f; // Timer at 60 seconds
+            float normalizedTime = gameTime / initialGameTime;
             timeTextBox.color = Color.Lerp(Color.green, Color.red, 1 - normalizedTime);
-            if (gameTime == 0)
-            {
-                timeTextBox.text = "GameOver";
-            }
-        
+            
+        }
+        else
+        {
+            timeTextBox.text = "Gameover";
+        }
+
+
     }
 }

@@ -63,10 +63,12 @@ namespace CrypticCabinet.GameManagement.Puzzles
         
                 if (currentWave == 1 && waveTimer >= 20f) // 3 minutes for Wave 1
                 {
+                    GameObject TimerInstance = GameObject.FindGameObjectWithTag("Timer");
                     GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
 
                     if (ScoreInstance != null)
                     {
+                        countdownTimer CountdownTimer = TimerInstance.GetComponent<countdownTimer>();
                         TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
                         
                         if (totalScore.totalScore >= 20)
@@ -74,9 +76,11 @@ namespace CrypticCabinet.GameManagement.Puzzles
                 
                             currentWave++;
                             
-                            UISystem.Instance.ShowMessage($" Your Score: {(int)(totalScore.totalScore)}! \n Wave {currentWave}", null, 2f);
+                            UISystem.Instance.ShowMessage($" Your Score: {(int)(CountdownTimer.gameTime)}! \nYour Score: {(int)(totalScore.totalScore)}! \n Wave {currentWave}", null, 2f);
                             waveTimer = 0f;
+                            CountdownTimer.gameTime = 40f;
                             totalScore.totalScore = 0;
+                            
                         }
                         else
                         {
