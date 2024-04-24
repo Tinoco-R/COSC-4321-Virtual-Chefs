@@ -183,7 +183,7 @@ public class SliceObject : MonoBehaviour
         }
         if (name == "TomatoSlice")
         {
-            lowerThreshold = 0.000100f;
+            lowerThreshold = 0.000250f;
             upperThreshold = 0.000350f;
         }
 
