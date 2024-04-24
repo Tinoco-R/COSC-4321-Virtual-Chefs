@@ -114,11 +114,15 @@ public class ReadFood : MonoBehaviour
             double totalCount = 0;
             //duplicate checkers
             bool Plate = false;
-            bool Meat = false;
+            bool RareMeat = false;
+            bool MediumMeat = false;
+            bool WellDoneMeat = false;
             bool Cheese = false;
             bool Tomato = false;
             bool TopBun = false;
             bool BotBun = false;
+            bool TopBunToasted = false;
+            bool BotBunToasted = false;
             bool Lettuce = false;
             //List<GameObject> foodCode = obj.GetComponent<Combine>().plate;
             foreach (Food items in obj.GetComponent<Combine>().plate)
@@ -131,15 +135,43 @@ public class ReadFood : MonoBehaviour
                     totalCount++;
                     Plate = true;
                 }
-                if (items.tag == "CookedMeat")
+                if (items.tag == "RareMeat")
                 {
-                    if (currentOrder[2] != '9' && Meat != true)
+                    if (currentOrder[2] == '0' && RareMeat != true)
                     {
                         //print("meat");
                         correctCount++;
                         totalCount++;
-                        Meat = true;
+                        RareMeat = true;
                     } 
+                    else
+                    {
+                        totalCount++;
+                    }
+                }
+                if (items.tag == "MediumMeat")
+                {
+                    if (currentOrder[2] == '1' && MediumMeat != true)
+                    {
+                        //print("meat");
+                        correctCount++;
+                        totalCount++;
+                        MediumMeat = true;
+                    }
+                    else
+                    {
+                        totalCount++;
+                    }
+                }
+                if (items.tag == "WellDoneMeat")
+                {
+                    if (currentOrder[2] == '2' && WellDoneMeat != true)
+                    {
+                        //print("meat");
+                        correctCount++;
+                        totalCount++;
+                        WellDoneMeat = true;
+                    }
                     else
                     {
                         totalCount++;
@@ -147,7 +179,7 @@ public class ReadFood : MonoBehaviour
                 }
                 if (items.tag == "TopBun")
                 {
-                    if (TopBun != true && currentOrder[0] != 3) {
+                    if (TopBun != true && currentOrder[1] == '0') {
                         //print("top");
                         correctCount++;
                         totalCount++;
@@ -157,14 +189,42 @@ public class ReadFood : MonoBehaviour
                         totalCount++;
                     }
                 }
+                if (items.tag == "TopBunToasted")
+                {
+                    if (TopBunToasted != true && currentOrder[1] == '1')
+                    {
+                        //print("top");
+                        correctCount++;
+                        totalCount++;
+                        TopBunToasted = true;
+                    }
+                    else
+                    {
+                        totalCount++;
+                    }
+                }
                 if (items.tag == "BottomBun")
                 {
-                    if (BotBun != true && currentOrder[0] != 3)
+                    if (BotBun != true && currentOrder[1] == '0')
                     {
                         //print("bot");
                         correctCount++;
                         totalCount++;
                         BotBun = true;
+                    }
+                    else
+                    {
+                        totalCount++;
+                    }
+                }
+                if (items.tag == "BottomBunToasted")
+                {
+                    if (BotBunToasted != true && currentOrder[1] == '1')
+                    {
+                        //print("bot");
+                        correctCount++;
+                        totalCount++;
+                        BotBunToasted = true;
                     }
                     else
                     {
@@ -219,12 +279,22 @@ public class ReadFood : MonoBehaviour
                 totalCount++;
                 //print("noe");
             }
-            if (currentOrder[1] != '9' && TopBun == false)
+            if (currentOrder[1] == '0' && TopBun == false)
             {
                 totalCount++;
                 //print("n");
             }
-            if (currentOrder[1] != '9' && BotBun == false)
+            if (currentOrder[1] == '0' && BotBun == false)
+            {
+                totalCount++;
+                //print("no");
+            }
+            if (currentOrder[1] == '1' && TopBunToasted == false)
+            {
+                totalCount++;
+                //print("n");
+            }
+            if (currentOrder[1] == '1' && BotBunToasted == false)
             {
                 totalCount++;
                 //print("no");
@@ -239,7 +309,17 @@ public class ReadFood : MonoBehaviour
                 totalCount++;
                 //print("nom");
             }
-            if (currentOrder[2] != '9' && Meat == false)
+            if (currentOrder[2] == '0' && RareMeat == false)
+            {
+                totalCount++;
+                //print("noa");
+            }
+            if (currentOrder[2] == '1' && MediumMeat == false)
+            {
+                totalCount++;
+                //print("noa");
+            }
+            if (currentOrder[2] == '2' && WellDoneMeat == false)
             {
                 totalCount++;
                 //print("noa");
