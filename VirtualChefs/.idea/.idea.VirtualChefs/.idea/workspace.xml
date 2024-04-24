@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cf565a9-781f-4892-b429-4dfc108581e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VirtualChefs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/TimerBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/TimerBox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/Puzzles/PuzzleLoadingGamePhase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/GameManagement/Puzzles/PuzzleLoadingGamePhase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/countdownTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Scripts/countdownTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/EggTable1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/EggTable1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/Fridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/Fridge.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/ScoreBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets-Scene/Prefabs/MyPrefabs/ScoreBox.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/Ticket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Prefabs/Ticket.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/Ticket.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Prefabs/Ticket.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/TicketWheelModel - w grab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Prefabs/TicketWheelModel - w grab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "network-object",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

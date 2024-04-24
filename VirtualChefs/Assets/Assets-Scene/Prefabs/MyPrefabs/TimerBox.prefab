@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a092c074a2aeae14192ff00879465756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTime: 5
+  gameTime: 300
   timeTextBox: {fileID: 8504498174076283490}
 --- !u!1 &7838665969036501098
 GameObject:
@@ -458,8 +458,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 1.7
+  m_fontSizeBase: 1.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

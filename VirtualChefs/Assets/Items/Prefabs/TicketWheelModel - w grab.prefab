@@ -340,7 +340,11 @@ MonoBehaviour:
   Flags: 2305
   NetworkGuid:
     RawGuidValue: 914e4c70133a14cae8f312cf6654f605
-  NestedObjects: []
+  NestedObjects:
+  - {fileID: 6665297959775219958}
+  - {fileID: 542248836051559412}
+  - {fileID: 9022733696556768783}
+  - {fileID: 6940770546535650860}
   NetworkedBehaviours:
   - {fileID: -6745245178752758676}
   SimulationBehaviours: []
@@ -443,6 +447,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: Flags
+      value: 3073
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: m_Name
       value: Ticket2
@@ -465,6 +481,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3474281891747509833, guid: a804195fffd08464eabb102a049b8207, type: 3}
   m_PrefabInstance: {fileID: 3786177317795666870}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &542248836051559412 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+  m_PrefabInstance: {fileID: 3786177317795666870}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814463211095791903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5814463211095791903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
@@ -546,6 +573,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: Flags
+      value: 3073
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: m_Name
       value: Ticket3
@@ -564,6 +603,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
   m_PrefabInstance: {fileID: 5636941279919367757}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9022733696556768783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+  m_PrefabInstance: {fileID: 5636941279919367757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026519505019823332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9083004823644327940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3474281891747509833, guid: a804195fffd08464eabb102a049b8207, type: 3}
@@ -645,6 +695,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: Flags
+      value: 3073
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: m_Name
       value: Ticket4
@@ -663,6 +725,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
   m_PrefabInstance: {fileID: 6007751658952633966}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6940770546535650860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+  m_PrefabInstance: {fileID: 6007751658952633966}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3991870439126838471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7163242065420884007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3474281891747509833, guid: a804195fffd08464eabb102a049b8207, type: 3}
@@ -740,6 +813,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: Flags
+      value: 3073
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7222132566771040937, guid: a804195fffd08464eabb102a049b8207, type: 3}
       propertyPath: m_Name
       value: Ticket1
@@ -771,6 +856,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 807ac579987463a48a27c5eb4d22c717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6665297959775219958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3678667133168056386, guid: a804195fffd08464eabb102a049b8207, type: 3}
+  m_PrefabInstance: {fileID: 8030662962285594804}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813056019801328157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &6865040075261345533 stripped

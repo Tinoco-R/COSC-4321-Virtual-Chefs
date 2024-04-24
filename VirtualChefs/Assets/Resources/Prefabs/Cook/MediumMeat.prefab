@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 2742619117316402132}
   - component: {fileID: 4128496787900960458}
   - component: {fileID: -8559041883934141207}
+  - component: {fileID: -8598811981375894451}
+  - component: {fileID: -7004952513105741776}
   m_Layer: 0
   m_Name: MediumMeat
   m_TagString: MediumMeat
@@ -509,7 +511,50 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 4128496787900960458}
+  - {fileID: -8598811981375894451}
+  - {fileID: -7004952513105741776}
   SimulationBehaviours: []
+--- !u!114 &-8598811981375894451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ed15df56809cf4b8d7c9d89f5bbdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  m_debugRenderer: {fileID: 0}
+  m_changeColorForAuthority: 0
+  m_grabbableCollider: {fileID: 0}
+  m_additionalGrabbableColliders: []
+  m_shouldDisableOnGrab: 1
+  m_shouldEnableOnRelease: 1
+  m_rigidbody: {fileID: 0}
+--- !u!114 &-7004952513105741776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4933a9d5da2820e4185fc735bbae7ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  m_onSpawnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onRepositionComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  m_originDistanceBeforeReposition: 60
+  m_checkFrequencySecs: 1
 --- !u!1 &1551011201078936057
 GameObject:
   m_ObjectHideFlags: 0

@@ -74,6 +74,8 @@ GameObject:
   - component: {fileID: 214630627267674834}
   - component: {fileID: -1176002932059308004}
   - component: {fileID: -1325975784396652898}
+  - component: {fileID: 4253253540624241959}
+  - component: {fileID: -8353425323375016368}
   m_Layer: 0
   m_Name: TopBunBurnt
   m_TagString: TopBunBurnt
@@ -443,4 +445,47 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: -1176002932059308004}
+  - {fileID: 4253253540624241959}
+  - {fileID: -8353425323375016368}
   SimulationBehaviours: []
+--- !u!114 &4253253540624241959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ed15df56809cf4b8d7c9d89f5bbdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  m_debugRenderer: {fileID: 0}
+  m_changeColorForAuthority: 0
+  m_grabbableCollider: {fileID: 0}
+  m_additionalGrabbableColliders: []
+  m_shouldDisableOnGrab: 1
+  m_shouldEnableOnRelease: 1
+  m_rigidbody: {fileID: 0}
+--- !u!114 &-8353425323375016368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4933a9d5da2820e4185fc735bbae7ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  m_onSpawnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onRepositionComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  m_originDistanceBeforeReposition: 60
+  m_checkFrequencySecs: 1

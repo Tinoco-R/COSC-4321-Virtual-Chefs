@@ -467,6 +467,7 @@ MonoBehaviour:
   - {fileID: 2679376425080645077}
   NetworkedBehaviours:
   - {fileID: 1745965214364514767}
+  - {fileID: 3632498213240980130}
   SimulationBehaviours: []
 --- !u!114 &1745965214364514767
 MonoBehaviour:
@@ -526,6 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95893ccf9aec7402e9844153b41085eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
   objectPrefabs:
   - {fileID: 522176099696603127, guid: e70f4aabdeac3944c8564533670696a3, type: 3}
   - {fileID: 522176099696603127, guid: 2c09d795c19854b7bb9fdaac1e321665, type: 3}
@@ -871,6 +873,9 @@ GameObject:
   - component: {fileID: 2203046969903905232}
   - component: {fileID: 2679376425080645077}
   - component: {fileID: 1107630516109653873}
+  - component: {fileID: 4105905243782277770}
+  - component: {fileID: 3564922610615653444}
+  - component: {fileID: 8360304609455200286}
   m_Layer: 16
   m_Name: Fridge_SBS_DoorL
   m_TagString: Untagged
@@ -1239,6 +1244,8 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 1107630516109653873}
+  - {fileID: 3564922610615653444}
+  - {fileID: 8360304609455200286}
   SimulationBehaviours: []
 --- !u!114 &1107630516109653873
 MonoBehaviour:
@@ -1268,6 +1275,67 @@ MonoBehaviour:
     RotTeleportRadians: 1.5
   UseLegacySharedModeInterpolation: 0
   TargetInterpolationDelay: 0.03
+--- !u!114 &4105905243782277770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203917601263697868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transferOnSecondSelection: 0
+  _addNewPointsToFront: 0
+  _forwardElement: {fileID: 0}
+  _oneGrabTransformer: {fileID: 0}
+  _twoGrabTransformer: {fileID: 0}
+  _targetTransform: {fileID: 0}
+  _maxGrabPoints: -1
+  isGrabbed: 0
+--- !u!114 &3564922610615653444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203917601263697868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ed15df56809cf4b8d7c9d89f5bbdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  m_debugRenderer: {fileID: 0}
+  m_changeColorForAuthority: 0
+  m_grabbableCollider: {fileID: 0}
+  m_additionalGrabbableColliders: []
+  m_shouldDisableOnGrab: 1
+  m_shouldEnableOnRelease: 1
+  m_rigidbody: {fileID: 0}
+--- !u!114 &8360304609455200286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203917601263697868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4933a9d5da2820e4185fc735bbae7ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  m_onSpawnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onRepositionComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  m_originDistanceBeforeReposition: 60
+  m_checkFrequencySecs: 1
 --- !u!1 &6696773323857706294
 GameObject:
   m_ObjectHideFlags: 0

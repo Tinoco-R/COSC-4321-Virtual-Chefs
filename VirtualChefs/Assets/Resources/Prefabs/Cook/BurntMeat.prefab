@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 9024879411760504076}
   - component: {fileID: 955035789625106360}
   - component: {fileID: 7912657855674694534}
+  - component: {fileID: 3044908020826845384}
+  - component: {fileID: -8378560918854622109}
   m_Layer: 0
   m_Name: BurntMeat
   m_TagString: BurntMeat
@@ -494,7 +496,50 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 955035789625106360}
+  - {fileID: 3044908020826845384}
+  - {fileID: -8378560918854622109}
   SimulationBehaviours: []
+--- !u!114 &3044908020826845384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ed15df56809cf4b8d7c9d89f5bbdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  m_debugRenderer: {fileID: 0}
+  m_changeColorForAuthority: 0
+  m_grabbableCollider: {fileID: 0}
+  m_additionalGrabbableColliders: []
+  m_shouldDisableOnGrab: 1
+  m_shouldEnableOnRelease: 1
+  m_rigidbody: {fileID: 0}
+--- !u!114 &-8378560918854622109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522176099696603127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4933a9d5da2820e4185fc735bbae7ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  m_onSpawnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onRepositionComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  m_originDistanceBeforeReposition: 60
+  m_checkFrequencySecs: 1
 --- !u!1 &4992763411409724603
 GameObject:
   m_ObjectHideFlags: 0
