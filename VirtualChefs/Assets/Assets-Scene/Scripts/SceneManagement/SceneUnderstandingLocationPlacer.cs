@@ -312,6 +312,7 @@ namespace CrypticCabinet.SceneManagement
 
             foundPosition = Vector3.zero;
             foundRotation = Quaternion.identity;
+
             return false;
         }
 
@@ -340,6 +341,7 @@ namespace CrypticCabinet.SceneManagement
 
             foundPosition = Vector3.zero;
             foundRotation = Quaternion.identity;
+            
             return false;
         }
 
@@ -442,7 +444,7 @@ namespace CrypticCabinet.SceneManagement
 
         public void RequestTotallyRandomDeskLocation(out Vector3 position)
         {
-            var foundDesks = m_horizontalSurfaces.Where(finder => finder is DeskSpaceFinder).ToList();
+            var foundDesks = m_horizontalSurfaces.Where(finder => finder is DeskSpaceFinder or FloorSpaceFinder).ToList();
 
             if (foundDesks.Count > 0)
             {

@@ -335,6 +335,12 @@ public class ReadFood : MonoBehaviour
                 multiplier = 0.25;
             }
             score = correctCount / totalCount * 100 * multiplier;
+            GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
+            TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
+            totalScore.totalScore += score;
+            
+            
+            
             if (correctCount == 1)
             {
                 score = 0;

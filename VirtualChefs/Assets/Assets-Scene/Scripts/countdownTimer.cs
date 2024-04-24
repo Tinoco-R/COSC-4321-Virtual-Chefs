@@ -5,42 +5,39 @@ using TMPro;
 
 public class countdownTimer : MonoBehaviour
 {
-    [SerializeField] private float gameTime;
+    [SerializeField] public float gameTime;
     [SerializeField] TMP_Text timeTextBox;
-    private bool isGameOver = false;
+    private float initialGameTime;
+
 
     // Start is called before the first frame update
     void Start()
     {
         // Set initial color to green
-        timeTextBox.color = Color.red;
-
+        timeTextBox.color = Color.green;
+        initialGameTime = gameTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isGameOver)
-        {
-            UpdateGameTimer();
-        }
+        UpdateGameTimer();
     }
 
-    private void UpdateGameTimer() 
+    private void UpdateGameTimer()
     {
+        
+        GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
+        TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
+        
+        
         gameTime -= Time.deltaTime;
 
-        // Stop timer when it reaches 0, and display game over
-        if (gameTime <= 0)
+        if (gameTime <= 0 )
         {
-            gameTime = 0;
-            isGameOver = true;
-            timeTextBox.text = "Game Over";
-
-            // Change timer text color to red when it reaches 0
-            timeTextBox.color = Color.red;
+            timeTextBox.text = "Gameover";
         }
-        else
+        else if(gameTime >0)
         {
             var minutes = Mathf.FloorToInt(gameTime / 60);
             var seconds = Mathf.FloorToInt(gameTime - minutes * 60);
@@ -50,8 +47,15 @@ public class countdownTimer : MonoBehaviour
             timeTextBox.text = gameTimeClockDisplay;
 
             // Change text color based on remaining time
-            float normalizedTime = gameTime / 60.0f; // Timer at 60 seconds
+            float normalizedTime = gameTime / initialGameTime;
             timeTextBox.color = Color.Lerp(Color.green, Color.red, 1 - normalizedTime);
+            
         }
+        else
+        {
+            timeTextBox.text = "Gameover";
+        }
+
+
     }
 }

@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 427522780173943087}
   - component: {fileID: 7432650379587736251}
   - component: {fileID: -2908484046457126709}
+  - component: {fileID: 1029854782344659075}
   m_Layer: 0
   m_Name: TimerBox
   m_TagString: Timer
@@ -317,6 +318,20 @@ MonoBehaviour:
   m_onObjectPlaced:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1029854782344659075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592370215941094674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a092c074a2aeae14192ff00879465756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameTime: 300
+  timeTextBox: {fileID: 8504498174076283490}
 --- !u!1 &7838665969036501098
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +343,6 @@ GameObject:
   - component: {fileID: 4261681258771277340}
   - component: {fileID: 6521597264786189315}
   - component: {fileID: 8504498174076283490}
-  - component: {fileID: 8523060345229988978}
   m_Layer: 0
   m_Name: text
   m_TagString: Untagged
@@ -489,17 +503,3 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6521597264786189315}
   m_maskType: 0
---- !u!114 &8523060345229988978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7838665969036501098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a092c074a2aeae14192ff00879465756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameTime: 300
-  timeTextBox: {fileID: 8504498174076283490}
