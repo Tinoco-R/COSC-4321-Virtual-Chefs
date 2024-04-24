@@ -13,7 +13,7 @@ namespace CrypticCabinet.GameManagement.Puzzles
     public class SandPuzzleGamePhase : GamePhase
     {
         [SerializeField] private GameObject[] m_prefabSandPuzzlePrefabs;
-        private float waveTimer = 0f;
+     
         private int currentWave = 1;
 
         protected override void InitializeInternal()
@@ -59,63 +59,79 @@ namespace CrypticCabinet.GameManagement.Puzzles
         {
             while (true)
             {
-                waveTimer += Time.deltaTime;
+                
+                GameObject TimerInstance = GameObject.FindGameObjectWithTag("Timer");
+                countdownTimer CountdownTimer = TimerInstance.GetComponent<countdownTimer>();
         
-                if (currentWave == 1 && waveTimer >= 180f) // 3 minutes for Wave 1
+                if (currentWave == 1 && CountdownTimer.gameTime <= 0f) // 3 minutes for Wave 1
                 {
-                    GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
-                    if (turnInZoneInstance != null)
+                    
+                    GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
+
+                    if (ScoreInstance != null)
                     {
-                        ReadFood readFood = turnInZoneInstance.GetComponent<ReadFood>();
-                        if (readFood.score >= 100)
+                        
+                        TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
+                        
+                        if (totalScore.totalScore >= 20)
                         {
+                
                             currentWave++;
-                            UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
-                            waveTimer = 0f;
+                            
+                            UISystem.Instance.ShowMessage($" Your Score: {(int)(CountdownTimer.gameTime)}! \nYour Score: {(int)(totalScore.totalScore)}! \n Wave {currentWave}", null, 2f);
+                            
+                            CountdownTimer.gameTime = 20f;
+                            totalScore.totalScore = 0;
+                            
                         }
                         else
                         {
-                            UISystem.Instance.ShowMessage("Game Over", null, -1);
+                            UISystem.Instance.ShowMessage($"Your Score: {(int)(totalScore.totalScore)}! \n Game Over!!", null, -1);
                             
                             yield break;
                         }
                     }
                 }
-                else if (currentWave == 2 && waveTimer >= 120f) // 2 minutes for Wave 2
+                else if (currentWave == 2 && CountdownTimer.gameTime <= 0f) // 2 minutes for Wave 2
                 {
-                    GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
-                    if (turnInZoneInstance != null)
+                    GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
+                    if (ScoreInstance != null)
                     {
-                        ReadFood readFood = turnInZoneInstance.GetComponent<ReadFood>();
-                        if (readFood.score >= 70)
+                        
+                        TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
+                        if (totalScore.totalScore >= 20)
                         {
+                   
                             currentWave++;
-                            UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
-                            waveTimer = 0f;
+                            UISystem.Instance.ShowMessage($"Your Score: {(int)(totalScore.totalScore)}! \n Wave {currentWave}", null, 2f);
+                            CountdownTimer.gameTime = 20f;
+                            totalScore.totalScore = 0;
+                         
                         }
                         else
                         {
-                            UISystem.Instance.ShowMessage("Game Over", null, -1);
+                            UISystem.Instance.ShowMessage($"Your Score: {(int)(totalScore.totalScore)}! \n Game Over!!", null, -1);
                             
                             yield break;
                         }
                     }
                 }
-                else if (currentWave == 3 && waveTimer >= 60f) // 2 minutes for Wave 3
+                else if (currentWave == 3 && CountdownTimer.gameTime <= 0f) // 2 minutes for Wave 3
                 {
-                    GameObject turnInZoneInstance = GameObject.FindGameObjectWithTag("TurnInZone");
-                    if (turnInZoneInstance != null)
+                    GameObject ScoreInstance = GameObject.FindGameObjectWithTag("ScoreBox");
+                    if (ScoreInstance != null)
                     {
-                        ReadFood readFood = turnInZoneInstance.GetComponent<ReadFood>();
-                        if (readFood.score >= 50)
+                        TotalScoreReader totalScore = ScoreInstance.GetComponent<TotalScoreReader>();
+                        if (totalScore.totalScore >= 50)
                         {
-                            currentWave++;
-                            UISystem.Instance.ShowMessage($"Wave {currentWave}", null, 2f);
-                            waveTimer = 0f;
+                         
+                  
+                            UISystem.Instance.ShowMessage($" Your Score: {(int)(totalScore.totalScore)}! \nYou Won!", null, -1);
+                      
                         }
                         else
                         {
-                            UISystem.Instance.ShowMessage("Game Over", null, -1);
+                            UISystem.Instance.ShowMessage($"Your Score: {(int)(totalScore.totalScore)}! \n Game Over!!", null, -1);
                             
                             yield break;
                         }
