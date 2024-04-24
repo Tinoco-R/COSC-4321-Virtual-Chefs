@@ -1583,6 +1583,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5405546622372643962, guid: c166a78f2f5380444bbaf049d207bd46, type: 3}
+      propertyPath: Flags
+      value: 2561
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405546622372643962, guid: c166a78f2f5380444bbaf049d207bd46, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 1821464936828927451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405546622372643962, guid: c166a78f2f5380444bbaf049d207bd46, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 6340202723970407101
+      objectReference: {fileID: 0}
     - target: {fileID: 5985049719834191147, guid: c166a78f2f5380444bbaf049d207bd46, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2355
@@ -4688,15 +4700,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548406872}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0.5}
+  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: -1.25, y: 0, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1752374444}
   - {fileID: 353146687}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!1 &550876388
 GameObject:
   m_ObjectHideFlags: 0
@@ -15000,6 +15012,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheeseSlice
       objectReference: {fileID: 0}
+    - target: {fileID: 5207458392120156823, guid: e5e7eaea82a8b9443bda146d3029cad3, type: 3}
+      propertyPath: Flags
+      value: 2561
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207458392120156823, guid: e5e7eaea82a8b9443bda146d3029cad3, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: -6967686491714546405
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207458392120156823, guid: e5e7eaea82a8b9443bda146d3029cad3, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: -7151183707508527444
+      objectReference: {fileID: 0}
     - target: {fileID: 5340245842376717063, guid: e5e7eaea82a8b9443bda146d3029cad3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1058
@@ -16679,6 +16703,18 @@ PrefabInstance:
     - target: {fileID: 1561783889523466064, guid: d61ffaac7f7f7c444a30dcb853adddbb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569429128062618505, guid: d61ffaac7f7f7c444a30dcb853adddbb, type: 3}
+      propertyPath: Flags
+      value: 2561
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569429128062618505, guid: d61ffaac7f7f7c444a30dcb853adddbb, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 1318445060374255640
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569429128062618505, guid: d61ffaac7f7f7c444a30dcb853adddbb, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 7290779675187400850
       objectReference: {fileID: 0}
     - target: {fileID: 8195069552191914451, guid: d61ffaac7f7f7c444a30dcb853adddbb, type: 3}
       propertyPath: m_Name

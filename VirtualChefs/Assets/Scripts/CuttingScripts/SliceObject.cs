@@ -137,7 +137,17 @@ public class SliceObject : MonoBehaviour
 
         if (slicePrefab != null)
         {
-            Instantiate(slicePrefab, slicedObject.transform.position, slicedObject.transform.rotation);
+            GameObject instantiatedPrefab = Instantiate(slicePrefab, slicedObject.transform.position, slicedObject.transform.rotation);
+            Rigidbody rb = instantiatedPrefab.GetComponent<Rigidbody>();
+
+            // Fix to remove flying prefab objects when spawning
+            if (rb != null)
+            {
+                rb.useGravity = true;
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
+
             Destroy(slicedObject);
         }
         else
@@ -302,6 +312,10 @@ public class SliceObject : MonoBehaviour
             rb.useGravity = true;
             rb.isKinematic = false;
         }
+
+        // Reset the velocity to prevent the object from flying
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
 
         // Add MeshCollider component to the slicedObject
         MeshCollider collider = slicedObject.AddComponent<MeshCollider>();
