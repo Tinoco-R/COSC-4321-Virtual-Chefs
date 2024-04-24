@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using CrypticCabinet.Photon;
 using UnityEngine;
+using Fusion;
 
-public class spawner : MonoBehaviour
+public class PhotonSpawner : NetworkBehaviour
 {
     public GameObject[] objectPrefabs; // Array of object prefabs to spawn
     public Transform[] spawnPoints; // Array of spawn points
     public float respawnTime = 3f; // Time before respawning an object
 
-    private GameObject[] spawnedObjects; // Array to hold spawned objects
+    private NetworkObject[] spawnedObjects; // Array to hold spawned objects
     private Vector3[] lastObjectPositions; // Array to store last known positions of spawned objects
 
     void Start()
     {
         // Array to hold spawned objects will now be as big as the amount of spawn points there is for our script
-        spawnedObjects = new GameObject[spawnPoints.Length];
+        spawnedObjects = new NetworkObject[spawnPoints.Length];
         // Array to hold last known positions will now be as big as the amount of spawn points there is for our script
         lastObjectPositions = new Vector3[spawnPoints.Length];
         SpawnInitialObjects();
@@ -29,14 +31,13 @@ public class spawner : MonoBehaviour
         }
     }
 
+
     void SpawnObject(int index)
     {
         // Instantiate one of the prefabs from the list with the random index and select a spawn point position with the random index too
-        GameObject newObject = Instantiate(objectPrefabs[index], spawnPoints[index].position, Quaternion.identity);
-        // Keep track of the newly spawned object by placing it in the spawnedObjects list
-        spawnedObjects[index] = newObject;
+        spawnedObjects[index] = PhotonConnector.Instance.Runner.Spawn(objectPrefabs[index], spawnPoints[index].position, Quaternion.identity);
         // Keep track of the newly spawned object position by placing it in the lastObjectPositions list
-        lastObjectPositions[index] = newObject.transform.position;
+        lastObjectPositions[index] = spawnedObjects[index].transform.position;
     }
 
     IEnumerator RespawnObject(int index)
