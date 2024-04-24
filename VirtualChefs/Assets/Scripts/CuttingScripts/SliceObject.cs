@@ -163,18 +163,18 @@ public class SliceObject : MonoBehaviour
         print(name);
         if (name == "CheeseSlice")
         {
-            lowerThreshold = 0.000220f; //next was 0.00001130f; 1/3 of block
-            upperThreshold = 0.000280f;     // Orig 0.00001215f; next was 0.00001300f;
+            lowerThreshold = 0.000130f;//0.000220f; //next was 0.00001130f; 1/3 of block
+            upperThreshold = 0.000350f;     // Orig 0.00001215f; next was 0.00001300f;
         }
         if (name == "LettuceSlice")
         {
-            lowerThreshold = 0.00001840f;
-            upperThreshold = 0.00001940f; // Orig 0.00001890f;
+            lowerThreshold = 0.000100f;
+            upperThreshold = 0.000350f; // Orig 0.00001890f;
         }
         if (name == "TomatoSlice")
         {
-            lowerThreshold = 0.000300f;
-            upperThreshold = 0.000475f;
+            lowerThreshold = 0.000100f;
+            upperThreshold = 0.000350f;
         }
 
         print(lowerThreshold + " " + upperThreshold);
