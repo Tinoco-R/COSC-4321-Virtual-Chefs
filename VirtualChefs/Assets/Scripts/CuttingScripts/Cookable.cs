@@ -195,6 +195,15 @@ public class Cookable : MonoBehaviour
         // Places cut version of object on original position
         GameObject cookedObject = Instantiate(cookedPrefab, meatPosition, meatRotation);
 
+        // Ensure the cooked object has a Rigidbody and configure it
+        Rigidbody rb = cookedObject.GetComponent<Rigidbody>();
+        if (rb == null)
+        {
+            rb = cookedObject.AddComponent<Rigidbody>();
+        }
+        rb.useGravity = true; // Enable gravity
+        rb.isKinematic = false; // Ensure the object is not kinematic
+
         // Access the Cookable component attached to the cookedObject and set initial properties
         Cookable cookedCookable = cookedObject.GetComponent<Cookable>();
         cookedCookable.InitializeCookable(initialPlaybackTime);
