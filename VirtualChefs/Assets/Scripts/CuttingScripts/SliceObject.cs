@@ -137,7 +137,17 @@ public class SliceObject : MonoBehaviour
 
         if (slicePrefab != null)
         {
-            Instantiate(slicePrefab, slicedObject.transform.position, slicedObject.transform.rotation);
+            GameObject instantiatedPrefab = Instantiate(slicePrefab, slicedObject.transform.position, slicedObject.transform.rotation);
+            Rigidbody rb = instantiatedPrefab.GetComponent<Rigidbody>();
+
+            // Fix to remove flying prefab objects when spawning
+            if (rb != null)
+            {
+                rb.useGravity = true;
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
+
             Destroy(slicedObject);
         }
         else
@@ -163,18 +173,18 @@ public class SliceObject : MonoBehaviour
         print(name);
         if (name == "CheeseSlice")
         {
-            lowerThreshold = 0.000220f; //next was 0.00001130f; 1/3 of block
-            upperThreshold = 0.000280f;     // Orig 0.00001215f; next was 0.00001300f;
+            lowerThreshold = 0.000130f;//0.000220f; //next was 0.00001130f; 1/3 of block
+            upperThreshold = 0.000350f;     // Orig 0.00001215f; next was 0.00001300f;
         }
         if (name == "LettuceSlice")
         {
-            lowerThreshold = 0.00001840f;
-            upperThreshold = 0.00001940f; // Orig 0.00001890f;
+            lowerThreshold = 0.000100f;
+            upperThreshold = 0.000350f; // Orig 0.00001890f;
         }
         if (name == "TomatoSlice")
         {
-            lowerThreshold = 0.000300f;
-            upperThreshold = 0.000475f;
+            lowerThreshold = 0.000250f;
+            upperThreshold = 0.000350f;
         }
 
         print(lowerThreshold + " " + upperThreshold);
@@ -302,6 +312,10 @@ public class SliceObject : MonoBehaviour
             rb.useGravity = true;
             rb.isKinematic = false;
         }
+
+        // Reset the velocity to prevent the object from flying
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
 
         // Add MeshCollider component to the slicedObject
         MeshCollider collider = slicedObject.AddComponent<MeshCollider>();
